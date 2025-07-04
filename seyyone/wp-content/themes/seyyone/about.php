@@ -28,7 +28,7 @@ get_header();
             <div class="col-lg-5">
                 <div class="thumbnail-bannr-service-right jarallax">
                     <div id="jarallax-container-0" class="jarallax-container" style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; overflow: hidden; z-index: -100; clip-path: polygon(0px 0px, 100% 0px, 100% 100%, 0px 100%);">
-                        <img class="jarallax-img" src="<?php echo get_template_directory_uri(); ?>/assets/images/seyyone/home/core_values1.png" alt="service-area" style="object-fit: cover; object-position: 50% 50%; max-width: none; position: absolute; top: 0px; left: 0px; width: 522.5px; height: 495.5px; overflow: hidden; pointer-events: none; transform-style: preserve-3d; backface-visibility: hidden; margin-top: -2.25px; transform: translate3d(0px, -89.25px, 0px);">
+                        <img class="jarallax-img" src="<?php echo get_template_directory_uri(); ?>/assets/images/seyyone/home/core_values_2.png" alt="service-area" style="object-fit: cover; object-position: 50% 50%; max-width: none; position: absolute; top: 0px; left: 0px; width: 522.5px; height: 495.5px; overflow: hidden; pointer-events: none; transform-style: preserve-3d; backface-visibility: hidden; margin-top: -2.25px; transform: translate3d(0px, -89.25px, 0px);">
                     </div>
                 </div>
             </div>
@@ -73,7 +73,7 @@ get_header();
                                     </div>
                                 </div>
                                 <div class="thumbnail-working-process">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/seyyone/home/about-as-service-contact-information-concept.jpg" alt="">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/seyyone/home/26975.jpg" alt="">
                                 </div>
                             </div>
                             <div class="col-lg-6">
