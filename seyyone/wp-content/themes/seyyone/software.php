@@ -36,10 +36,12 @@ get_header();
                 </div>
             </div>
             <div class="col-lg-5">
-                <div class="thumbnail-bannr-service-right jarallax">
-                    <img class="jarallax-img" src="<?php echo get_template_directory_uri(); ?>/assets/images/seyyone/home/software page banner.jpg" alt="software-banner">
+                <div class="thumbnail-bannr-service-right  ">
+                    <img class="" src="<?php echo get_template_directory_uri(); ?>/assets/images/seyyone/home/software page banner.jpg" style="height:500px;" alt="software-banner">
                 </div>
+                
             </div>
+            
         </div>
     </div>
     <div class="shape-area-start">

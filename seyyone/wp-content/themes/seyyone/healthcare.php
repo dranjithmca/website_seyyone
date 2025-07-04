@@ -36,8 +36,10 @@ get_header();
                 </div>
             <div class="col-lg-5">
                <div class="thumbnail-bannr-service-right jarallax">
-                        <img class="jarallax-img" src="<?php echo get_template_directory_uri(); ?>/assets/images/seyyone/home/medical-banner-with-stethoscope.jpg" alt="serivce-area"  >
+                    <div id="jarallax-container-0" class="jarallax-container"  >
+                            <img class=" " src="<?php echo get_template_directory_uri(); ?>/assets/images/seyyone/home/medical-banner-with-stethoscope.jpg" alt="serivce-area"  >
                     </div>
+                </div>
                 
             </div>
         </div>
