@@ -65,6 +65,17 @@ get_header();
                 <div class="why-choose-us-working-process rts-section-gap">
                     <div class="container">
                         <div class="row g-5">
+                             <div class="col-lg-6 pr--50">
+                                <div class="why-choose-process-left pb--50">
+                                    <div class="text-left-title-bg-white">
+                                        <h2 class="title">About Us</h2>
+                                        <p>For over 25 years, Seyyone has been at the forefront of delivering comprehensive Healthcare Process Management and IT Solutions, blending deep domain expertise with technology-driven innovation.</p>
+                                    </div>
+                                </div>
+                                <div class="thumbnail-working-process">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/seyyone/home/about-as-service-contact-information-concept.jpg" alt="">
+                                </div>
+                            </div>
                             <div class="col-lg-6">
                                 <div class="single-working-process-choose-us wow fadeInUp">
                                     <h5 class="title">Global Healthcare Expertise</h5>
@@ -79,17 +90,7 @@ get_header();
                                     <i class="far fa-check-circle"></i> At Seyyone, client satisfaction is at the heart of everything we do. We are dedicated to relieving our clients from the challenges of managing their back-office operations, allowing them to focus on their core business. Our unwavering commitment to quality, customer satisfaction, and continuous improvement ensures long-term partnerships built on trust and excellence.
                                 </div>
                             </div>
-                            <div class="col-lg-6 pr--50">
-                                <div class="why-choose-process-left pb--50">
-                                    <div class="text-left-title-bg-white">
-                                        <h2 class="title">About Us</h2>
-                                        <p>For over 25 years, Seyyone has been at the forefront of delivering comprehensive Healthcare Process Management and IT Solutions, blending deep domain expertise with technology-driven innovation.</p>
-                                    </div>
-                                </div>
-                                <div class="thumbnail-working-process">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/seyyone/home/about-as-service-contact-information-concept.jpg" alt="">
-                                </div>
-                            </div>
+                           
                         </div>
                     </div>
                 </div>
@@ -139,6 +140,17 @@ get_header();
 <div class="why-choose-us-working-process rts-section-gap">
     <div class="container">
         <div class="row g-5">
+             <div class="col-lg-6 pr--50">
+                <div class="why-choose-process-left pb--50">
+                    <div class="text-left-title-bg-white">
+                        <h2 class="title">Our Culture</h2>
+                        <p>Behind our success is a people-first culture that nurtures talent, encourages innovation, and empowers every voice.</p>
+                    </div>
+                </div>
+                <div class="thumbnail-working-process">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/seyyone/home/our_culture_1.jpg" alt="">
+                </div>
+            </div>
             <div class="col-lg-6">
                 <div class="single-working-process-choose-us wow fadeInUp">
                     <h5 class="title">Collaborative, Transparent Culture</h5>
@@ -158,17 +170,7 @@ get_header();
                     <i class="far fa-check-circle"></i> Vibrant workplace culture filled with creativity and camaraderie.
                 </div>
             </div>
-            <div class="col-lg-6 pr--50">
-                <div class="why-choose-process-left pb--50">
-                    <div class="text-left-title-bg-white">
-                        <h2 class="title">Our Culture</h2>
-                        <p>Behind our success is a people-first culture that nurtures talent, encourages innovation, and empowers every voice.</p>
-                    </div>
-                </div>
-                <div class="thumbnail-working-process">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/seyyone/home/our_culture_1.jpg" alt="">
-                </div>
-            </div>
+           
         </div>
     </div>
 </div>

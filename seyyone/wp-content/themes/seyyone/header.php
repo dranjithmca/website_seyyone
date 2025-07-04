@@ -38,13 +38,7 @@
                                     </ul>
                                 </li>
 
-                                <li class="has-dropdown">
-                                    <a class="nav-link" href="#">Join Us <i class="fa-duotone fa-regular fa-chevron-down"></i></a>
-                                    <ul class="submenu parent-nav with-border">
-                                        <li><a href="<?php echo home_url('/career'); ?>"><i class="fa-sharp fa-regular fa-chevron-right"></i>Career</a></li>
-                                        <li><a href="<?php echo home_url('/career#job-openings'); ?>"><i class="fa-sharp fa-regular fa-chevron-right"></i>Open Positions</a></li>
-                                    </ul>
-                                </li>
+                                
 
                                 <li class="has-dropdown position-static with-megamenu">
     <a class="nav-link" href="#">What we do <i class="fa-duotone fa-regular fa-chevron-down"></i></a>
