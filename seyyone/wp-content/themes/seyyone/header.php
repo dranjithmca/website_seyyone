@@ -94,7 +94,7 @@
                                     <ul class="submenu parent-nav with-border">
                                         <li><a href="<?php echo home_url('/blogs'); ?>"><i class="fa-sharp fa-regular fa-chevron-right"></i>Blogs</a></li>
                                         <li><a href="<?php echo home_url('/articles'); ?>"><i class="fa-sharp fa-regular fa-chevron-right"></i>Articles</a></li>
-                                        <li><a href="<?php echo home_url('/infographics'); ?>"><i class="fa-sharp fa-regular fa-chevron-right"></i>Infographics</a></li>
+                                      <!--  <li><a href="<?php echo home_url('/infographics'); ?>"><i class="fa-sharp fa-regular fa-chevron-right"></i>Infographics</a></li>-->
                                         <li><a href="<?php echo home_url('/case-studies'); ?>"><i class="fa-sharp fa-regular fa-chevron-right"></i>Case Study</a></li>
                                     </ul>
                                 </li>
@@ -199,7 +199,7 @@
                                     <ul class="submenu parent-nav with-border">
                                         <li><a href="<?php echo home_url('/blogs'); ?>"><i class="fa-sharp fa-regular fa-chevron-right"></i>Blogs</a></li>
                                         <li><a href="<?php echo home_url('/articles'); ?>"><i class="fa-sharp fa-regular fa-chevron-right"></i>Articles</a></li>
-                                        <li><a href="<?php echo home_url('/infographics'); ?>"><i class="fa-sharp fa-regular fa-chevron-right"></i>Infographics</a></li>
+                                      <!--  <li><a href="<?php echo home_url('/infographics'); ?>"><i class="fa-sharp fa-regular fa-chevron-right"></i>Infographics</a></li>-->
                                         <li><a href="<?php echo home_url('/case-studies'); ?>"><i class="fa-sharp fa-regular fa-chevron-right"></i>Case Study</a></li>
                                     </ul>
                                 </li>
