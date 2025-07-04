@@ -73,27 +73,27 @@ get_header();
                         <fieldset class="gfield_checkbox" id="input_1_7">
                             <label class="for-messages">Our Services <span class="gfield_required" style="color: red;">*</span></label>
                             <div class="">
-                                <input class="form-check-label" type="checkbox" value="Healthcare KPO" id="healthcare_check" name="services[]">
+                                <input class="form-check-label" type="checkbox" value="Healthcare KPO" id="healthcare_check" name="services[]" >
                                  Healthcare KPO 
                             </div>
                             <div class="">
                                 <input class="form-check-label" type="checkbox" value="Software" id="software_check" name="services[]">
                                 Software Services 
                             </div>
+                            
                         </fieldset>
                     </div>
 
-                    
-
+                     
                     <div class="form-check">
                         <input class="form-check-input" type="checkbox" value="1" id="defaultCheck1" name="agree" required>
                         <label class="form-check-label" for="defaultCheck1">
-                            You agree to our friendly privacy policy.
+                            You agree to our friendly <a href="/policy" class="text-primary" target="_blank">privacy policy</a>.
                         </label>
                     </div>
 
                     <br>
-                    
+
                     <button type="submit" class="rts-btn btn-primary">
                         Send message
                         <img class="injectable" src="<?php echo get_template_directory_uri(); ?>/assets/images/service/icons/13.svg" alt="arrow">
@@ -146,3 +146,7 @@ get_header();
 <br><br>
 
 <?php get_footer(); ?>
+
+<script>
+
+    </script>
