@@ -26,7 +26,7 @@ get_header();
             </div>
 
             <div class="col-lg-12">
-                <form id="contact-form" class="contact-form" method="POST" action="https://formspree.io/f/myzjqebg">
+                <form id="contact-form" class="contact-form" method="POST" >
                     <div class="half-input-wrapper">
                         <div class="single">
                             <label for="name">First name</label>
