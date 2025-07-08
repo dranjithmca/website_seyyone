@@ -9,7 +9,7 @@
 (function ($) {
     'use strict';
     // Get the form.
-    var form = $('#contact-form');
+   /* var form = $('#contact-form');
 
     // Get the messages div.
     var formMessages = $('#form-messages');
@@ -51,6 +51,6 @@
                     $(formMessages).text('Oops! An error occured and your message could not be sent.');
                 }
             });
-    });
+    }); */
 
 })(jQuery);

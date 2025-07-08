@@ -140,26 +140,17 @@ document.getElementById("contact-form").addEventListener("submit", async functio
   const message = form.message.value;
   const userType = form.user_type.value;
   const services = Array.from(form.querySelectorAll('input[name="services[]"]:checked')).map(el => el.value).join(', ');
-  const agree = form.agree.checked ? 'Yes' : 'No';
+ 
   const fullName = `${firstName} ${lastName}`;
 
   const plainMessage = 
-`New Contact Submission
-
-Name: ${fullName}
-Email: ${email}
-Phone: ${phone}
+`Phone: ${phone}
 User Type: ${userType}
 Services: ${services}
-Agreed to Policy: ${agree}
+
 Message:
 ${message}
-
-From:
-Seyyone Group of Companies
-73, Anna Nagar, Ramanathapuram,
-Coimbatore-641045, TN, India.
-Phone: 91 (422) 2310240`;
+`;
 
   const formData = new FormData();
   formData.append("name", fullName);

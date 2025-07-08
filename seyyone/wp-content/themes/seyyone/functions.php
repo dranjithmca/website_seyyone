@@ -46,6 +46,7 @@ require_once get_template_directory() . '/inc/software-functions.php';
 require_once get_template_directory() . '/inc/healthcare-functions.php';
 require_once get_template_directory() . '/inc/blog-functions.php';
 require_once get_template_directory() . '/inc/career-functions.php';
+require_once get_template_directory() . '/inc/article-functions.php';
 
 
 // Deregister default WordPress jQuery to avoid conflicts with our custom loading
