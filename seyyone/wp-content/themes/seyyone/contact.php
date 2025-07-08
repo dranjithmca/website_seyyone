@@ -26,7 +26,7 @@ get_header();
             </div>
 
             <div class="col-lg-12">
-                <form id="contact-form" class="contact-form">
+                <form id="contact-form" class="contact-form" method="POST" >
                     <div class="half-input-wrapper">
                         <div class="single">
                             <label for="name">First name</label>
@@ -70,7 +70,7 @@ get_header();
 
                     <!-- Agreement -->
                     <div class="form-check">
-                        <input type="checkbox" id="agree" name="agree" value="Yes" required>
+                        <input type="checkbox" id="agree" name="agree" value="yes" required>
                         <label for="agree">
                             You agree to our friendly <a href="/policy" target="_blank">privacy policy</a>.
                         </label>
@@ -82,44 +82,24 @@ get_header();
                         Send message
                         <img class="injectable" src="<?php echo get_template_directory_uri(); ?>/assets/images/service/icons/13.svg" alt="arrow">
                     </button>
+
+                    <!-- Message box -->
+                    <div id="form-messages" style="margin-top: 1rem;"></div>
                 </form>
             </div>
         </div>
     </div>
 </div>
+<!-- contact area form wrapper end -->
 
-<!-- Success Modal -->
-<div id="successModal" style="
-    display: none;
-    position: fixed;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    background-color: rgba(0,0,0,0.6);
-    z-index: 9999;
-    align-items: center;
-    justify-content: center;
-">
-  <div style="
-      background-color: white;
-      padding: 2rem;
-      border-radius: 8px;
-      max-width: 400px;
-      text-align: center;
-  ">
-    <h3>✅ Message Sent!</h3>
-    <p>Thank you for contacting us.</p>
-    <button onclick="closeModal()">Close</button>
-  </div>
-</div>
-
-<!-- contact map and address -->
+<!-- contact map and address (no changes here) -->
 <div class="rts-google-map-area rts-section-gapTop">
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
                 <div class="google-map-wrapper">
                     <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18..."
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3916.4691124052!2d76.99833857465073!3d10.997699855732064!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba859de62eed28d%3A0xad06f849d619bbf!2sSeyyone%20Group%20of%20Companies!5e0!3m2!1sen!2sin!4v1695127865421!5m2!1sen!2sin"
                         width="600" height="500" style="border:0;" allowfullscreen="" loading="lazy"
                         referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
@@ -150,59 +130,38 @@ get_header();
 
 <?php get_footer(); ?>
 
-<!-- JS SCRIPT -->
+<!-- AJAX submit script -->
 <script>
-function closeModal() {
-    document.getElementById("successModal").style.display = "none";
-    window.location.href = window.location.pathname; // same page
-}
-
 document.getElementById("contact-form").addEventListener("submit", async function (e) {
     e.preventDefault();
 
     const form = e.target;
     const formData = new FormData(form);
-
-    // Format form content into a readable message
-    const fullName = formData.get("first_name") + " " + formData.get("last_name");
-    const services = formData.getAll("services[]").join(", ");
-    const formattedMessage = `
-        <strong>New Contact Submission</strong><br><br>
-        <b>Name:</b> ${fullName}<br>
-        <b>Email:</b> ${formData.get("email")}<br>
-        <b>Phone:</b> ${formData.get("phone")}<br>
-        <b>User Type:</b> ${formData.get("user_type")}<br>
-        <b>Services:</b> ${services}<br>
-        <b>Agreed to Policy:</b> ${formData.get("agree")}<br>
-        <b>Message:</b><br>${formData.get("message")}
-    `;
-
-    const payload = new FormData();
-    payload.append("email", formData.get("email"));
-    payload.append("name", fullName);
-    payload.append("message", formattedMessage);
-
-    // Choose correct endpoint based on user_type
-    const userType = formData.get("user_type");
-    const formspreeURL = userType === "Client"
-        ? "https://formspree.io/f/xvgrjkya"    // Replace with your actual Formspree endpoint for Client
-        : "https://formspree.io/f/your_jobseeker_id"; // Replace with your actual Formspree endpoint for Jobseeker
+    const formMessages = document.getElementById("form-messages");
 
     try {
-        const res = await fetch(formspreeURL, {
+        const response = await fetch("https://formspree.io/f/xvgrjkya", {
             method: "POST",
-            headers: { "Accept": "application/json" },
-            body: payload
+            headers: {
+                "Accept": "application/json"
+            },
+            body: formData
         });
 
-        if (res.ok) {
+        if (response.ok) {
+            formMessages.innerHTML = '<div style="color:green;">✅ Thank you! Your message has been sent.</div>';
             form.reset();
-            document.getElementById("successModal").style.display = "flex";
         } else {
-            alert("❌ Error sending message.");
+            const data = await response.json();
+            if (data.errors) {
+                const errors = data.errors.map(error => error.message).join("<br>");
+                formMessages.innerHTML = '<div style="color:red;">❌ ' + errors + '</div>';
+            } else {
+                formMessages.innerHTML = '<div style="color:red;">❌ Something went wrong. Please try again.</div>';
+            }
         }
     } catch (error) {
-        alert("❌ Network error.");
+        formMessages.innerHTML = '<div style="color:red;">❌ Network error. Please check your internet connection.</div>';
     }
 });
 </script>
