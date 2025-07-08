@@ -132,15 +132,47 @@ get_header();
 
 <!-- AJAX submit script -->
 <script>
+ <script>
 document.getElementById("contact-form").addEventListener("submit", async function (e) {
     e.preventDefault();
 
     const form = e.target;
-    const formData = new FormData(form);
     const formMessages = document.getElementById("form-messages");
 
+    const firstName = form.first_name.value;
+    const lastName = form.last_name.value;
+    const email = form.email.value;
+    const phone = form.phone.value;
+    const message = form.message.value;
+    const userType = form.user_type.value;
+    const services = Array.from(form.querySelectorAll('input[name="services[]"]:checked')).map(el => el.value).join(', ');
+    const agree = form.agree.checked ? 'Yes' : 'No';
+
+    const fullName = `${firstName} ${lastName}`;
+    const plainMessage = 
+`New Submission
+
+Name: ${fullName}
+Email: ${email}
+Phone: ${phone}
+User Type: ${userType}
+Services: ${services}
+ 
+Message:
+${message}`;
+
+    const formData = new FormData();
+    formData.append("name", fullName);
+    formData.append("email", email);
+    formData.append("message", plainMessage);
+    formData.append("_subject", userType === "Client" ? "Client Request" : "Jobseeker Request");
+
+    const endpoint = userType === "Client"
+        ? "https://formspree.io/f/xvgrjkya"
+        : "https://formspree.io/f/manjgerv";
+
     try {
-        const response = await fetch("https://formspree.io/f/xvgrjkya", {
+        const response = await fetch(endpoint, {
             method: "POST",
             headers: {
                 "Accept": "application/json"
@@ -149,19 +181,18 @@ document.getElementById("contact-form").addEventListener("submit", async functio
         });
 
         if (response.ok) {
-            formMessages.innerHTML = '<div style="color:green;">✅ Thank you! Your message has been sent.</div>';
+            formMessages.innerHTML = `✅ Thank you, ${firstName}. Your message has been sent.`;
             form.reset();
+            setTimeout(() => window.location.reload(), 3000);
         } else {
             const data = await response.json();
-            if (data.errors) {
-                const errors = data.errors.map(error => error.message).join("<br>");
-                formMessages.innerHTML = '<div style="color:red;">❌ ' + errors + '</div>';
-            } else {
-                formMessages.innerHTML = '<div style="color:red;">❌ Something went wrong. Please try again.</div>';
-            }
+            const errors = data.errors ? data.errors.map(e => e.message).join("\n") : "Unknown error";
+            formMessages.innerHTML = `❌ ${errors}`;
         }
-    } catch (error) {
-        formMessages.innerHTML = '<div style="color:red;">❌ Network error. Please check your internet connection.</div>';
+    } catch (err) {
+        formMessages.innerHTML = `❌ Network error. Please try again.`;
     }
 });
+</script>
+
 </script>
