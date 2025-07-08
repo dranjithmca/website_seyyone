@@ -11,9 +11,10 @@ get_header();
 ?>
 
 <!-- rts case studies banner area start -->
+ 
 <div class="rts-case-studies-banner-area">
     <div class="container">
-        <div class="row">
+       <!-- <div class="row">
             <div class="col-lg-12">
                 <div class="case-studies-banner-top">
                     <h1 class="title">
@@ -23,168 +24,37 @@ get_header();
                 </div>
             </div>
         </div>
-    </div>
+    </div>-->
     <div class="shape-left-top">
         <img src="<?php echo get_template_directory_uri(); ?>/assets/images/case-studies/01.png" alt="case">
     </div>
-</div>
+</div>  
 <!-- rts case studies banner area end -->
 
 <!-- case studies area start -->
 <div class="single-large-case-studies-area rts-section-gapBottom">
     <div class="container">
-        <div class="row g-80">
+        <div class="row">
             <div class="col-lg-12">
-                <div class="single-case-studies">
-                    <a href="<?php echo home_url('/case-studies-single'); ?>" class="thumbnail">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/case-studies/18.webp" alt="image">
-                    </a>
-                    <div class="inner-content">
-                        <span>Healthcare KPO, Medical Transcription</span>
-                        <a href="<?php echo home_url('/case-studies-single'); ?>">
-                            <h3 class="title animated fadeIn">Streamlining Medical Documentation for Multi-Specialty Clinic</h3>
-                        </a>
-                        <a href="<?php echo home_url('/case-studies-single'); ?>" class="rts-btn btn-border">
-                            View Case Study
-                            <img class="injectable" src="<?php echo get_template_directory_uri(); ?>/assets/images/service/icons/13.svg" alt="arrow">
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-6 wow fadeInUp" data-wow-offset="120" data-wow-delay=".2s">
-                <div class="single-case-studies">
-                    <a href="<?php echo home_url('/case-studies-single'); ?>" class="thumbnail">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/case-studies/01.webp" alt="image">
-                    </a>
-                    <div class="inner-content">
-                        <span>Software Solutions, EHR Integration</span>
-                        <a href="<?php echo home_url('/case-studies-single'); ?>">
-                            <h3 class="title animated fadeIn">Custom EHR Integration for Regional Hospital Network</h3>
-                        </a>
-                        <a href="<?php echo home_url('/case-studies-single'); ?>" class="rts-btn btn-border">
-                            View Case Study
-                            <img class="injectable" src="<?php echo get_template_directory_uri(); ?>/assets/images/service/icons/13.svg" alt="arrow">
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-6 wow fadeInUp" data-wow-offset="120" data-wow-delay=".4s">
-                <div class="single-case-studies">
-                    <a href="<?php echo home_url('/case-studies-single'); ?>" class="thumbnail">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/case-studies/03.webp" alt="image">
-                    </a>
-                    <div class="inner-content">
-                        <span>Medical Billing, Revenue Cycle</span>
-                        <a href="<?php echo home_url('/case-studies-single'); ?>">
-                            <h3 class="title animated fadeIn">Optimizing Revenue Cycle Management for Cardiology Practice</h3>
-                        </a>
-                        <a href="<?php echo home_url('/case-studies-single'); ?>" class="rts-btn btn-border">
-                            View Case Study
-                            <img class="injectable" src="<?php echo get_template_directory_uri(); ?>/assets/images/service/icons/13.svg" alt="arrow">
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-6 wow fadeInUp" data-wow-offset="120" data-wow-delay=".2s">
-                <div class="single-case-studies">
-                    <a href="<?php echo home_url('/case-studies-single'); ?>" class="thumbnail">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/case-studies/02.webp" alt="image">
-                    </a>
-                    <div class="inner-content">
-                        <span>Remote Medical Scribe, Virtual Assistance</span>
-                        <a href="<?php echo home_url('/case-studies-single'); ?>">
-                            <h3 class="title animated fadeIn">Implementing Remote Medical Scribe Services for Orthopedic Group</h3>
-                        </a>
-                        <a href="<?php echo home_url('/case-studies-single'); ?>" class="rts-btn btn-border">
-                            View Case Study
-                            <img class="injectable" src="<?php echo get_template_directory_uri(); ?>/assets/images/service/icons/13.svg" alt="arrow">
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-6 wow fadeInUp" data-wow-offset="120" data-wow-delay=".4s">
-                <div class="single-case-studies">
-                    <a href="<?php echo home_url('/case-studies-single'); ?>" class="thumbnail">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/case-studies/04.webp" alt="image">
-                    </a>
-                    <div class="inner-content">
-                        <span>Cloud Solutions, Data Migration</span>
-                        <a href="<?php echo home_url('/case-studies-single'); ?>">
-                            <h3 class="title animated fadeIn">HIPAA-Compliant Cloud Migration for Healthcare System</h3>
-                        </a>
-                        <a href="<?php echo home_url('/case-studies-single'); ?>" class="rts-btn btn-border">
-                            View Case Study
-                            <img class="injectable" src="<?php echo get_template_directory_uri(); ?>/assets/images/service/icons/13.svg" alt="arrow">
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-6 wow fadeInUp" data-wow-offset="120" data-wow-delay=".2s">
-                <div class="single-case-studies">
-                    <a href="<?php echo home_url('/case-studies-single'); ?>" class="thumbnail">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/case-studies/05.webp" alt="image">
-                    </a>
-                    <div class="inner-content">
-                        <span>Medical Record Summarization, APS</span>
-                        <a href="<?php echo home_url('/case-studies-single'); ?>">
-                            <h3 class="title animated fadeIn">Automated Medical Record Summarization for Insurance Provider</h3>
-                        </a>
-                        <a href="<?php echo home_url('/case-studies-single'); ?>" class="rts-btn btn-border">
-                            View Case Study
-                            <img class="injectable" src="<?php echo get_template_directory_uri(); ?>/assets/images/service/icons/13.svg" alt="arrow">
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-6 wow fadeInUp" data-wow-offset="120" data-wow-delay=".4s">
-                <div class="single-case-studies">
-                    <a href="<?php echo home_url('/case-studies-single'); ?>" class="thumbnail">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/case-studies/06.webp" alt="image">
-                    </a>
-                    <div class="inner-content">
-                        <span>AI/ML Solutions, Analytics</span>
-                        <a href="<?php echo home_url('/case-studies-single'); ?>">
-                            <h3 class="title animated fadeIn">AI-Powered Analytics Dashboard for Healthcare Network</h3>
-                        </a>
-                        <a href="<?php echo home_url('/case-studies-single'); ?>" class="rts-btn btn-border">
-                            View Case Study
-                            <img class="injectable" src="<?php echo get_template_directory_uri(); ?>/assets/images/service/icons/13.svg" alt="arrow">
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-6 wow fadeInUp" data-wow-offset="120" data-wow-delay=".2s">
-                <div class="single-case-studies">
-                    <a href="<?php echo home_url('/case-studies-single'); ?>" class="thumbnail">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/case-studies/07.webp" alt="image">
-                    </a>
-                    <div class="inner-content">
-                        <span>Mobile Solutions, Patient Portal</span>
-                        <a href="<?php echo home_url('/case-studies-single'); ?>">
-                            <h3 class="title animated fadeIn">Mobile Patient Portal Development for Pediatric Practice</h3>
-                        </a>
-                        <a href="<?php echo home_url('/case-studies-single'); ?>" class="rts-btn btn-border">
-                            View Case Study
-                            <img class="injectable" src="<?php echo get_template_directory_uri(); ?>/assets/images/service/icons/13.svg" alt="arrow">
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-6 wow fadeInUp" data-wow-offset="120" data-wow-delay=".4s">
-                <div class="single-case-studies">
-                    <a href="<?php echo home_url('/case-studies-single'); ?>" class="thumbnail">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/case-studies/08.webp" alt="image">
-                    </a>
-                    <div class="inner-content">
-                        <span>Peer Review, Quality Assurance</span>
-                        <a href="<?php echo home_url('/case-studies-single'); ?>">
-                            <h3 class="title animated fadeIn">Comprehensive Peer Review System for Medical Group</h3>
-                        </a>
-                        <a href="<?php echo home_url('/case-studies-single'); ?>" class="rts-btn btn-border">
-                            View Case Study
-                            <img class="injectable" src="<?php echo get_template_directory_uri(); ?>/assets/images/service/icons/13.svg" alt="arrow">
-                        </a>
-                    </div>
+                <div style="text-align: center; padding: 80px 20px; background: #f8f9fa; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.05);">
+                    
+                    
+                    <!-- Title with animated underline -->
+                    <h2 style="color: #1F1F25; margin-bottom: 20px; font-size: 36px; font-weight: 700;">
+                        <span style="position: relative; display: inline-block;">
+                            <span style="position: relative; z-index: 1;">Exciting Case Studies Coming Soon</span>
+                            <span style="position: absolute; bottom: 0; left: 0; width: 100%; height: 8px; background-color: rgba(0, 113, 220, 0.2); z-index: 0;"></span>
+                        </span>
+                    </h2>
+                    
+                    <!-- Description -->
+                    <p style="color: #6c757d; margin-bottom: 30px; font-size: 18px; max-width: 700px; margin-left: auto; margin-right: auto; line-height: 1.6;">
+                        We're currently preparing detailed case studies that showcase our successful client partnerships and innovative solutions. Check back soon to explore real-world examples of how we've helped businesses transform and grow.
+                    </p>
+                    
+                    
+                    
+                   
                 </div>
             </div>
         </div>
@@ -193,7 +63,7 @@ get_header();
 <!-- case studies area end -->
 
 <!-- rts call to action area start -->
-<div class="rts-call-to-action-area-about">
+<!--<div class="rts-call-to-action-area-about">
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
@@ -209,7 +79,7 @@ get_header();
             </div>
         </div>
     </div>
-</div>
+</div>-->
 <!-- rts call to action area end -->
 
 <br><br>
