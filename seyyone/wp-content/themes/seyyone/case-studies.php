@@ -52,7 +52,36 @@ get_header();
                         We're currently preparing detailed case studies that showcase our successful client partnerships and innovative solutions. Check back soon to explore real-world examples of how we've helped businesses transform and grow.
                     </p>
                     
-                    
+                      <!-- Features preview -->
+                    <div class="row justify-content-center" style="margin-bottom: 40px;">
+                        <div class="col-md-4 col-sm-6 mb-4">
+                            <div style="background: white; padding: 25px; border-radius: 10px; height: 100%; box-shadow: 0 5px 15px rgba(0,0,0,0.03);">
+                                <div style="font-size: 36px; color: #0071DC; margin-bottom: 15px;">
+                                    <i class="fas fa-chart-line"></i>
+                                </div>
+                                <h4 style="font-size: 20px; margin-bottom: 10px; color: #1F1F25;">Business Growth</h4>
+                                <p style="color: #6c757d; font-size: 15px;">Success stories of businesses achieving remarkable growth through our solutions.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6 mb-4">
+                            <div style="background: white; padding: 25px; border-radius: 10px; height: 100%; box-shadow: 0 5px 15px rgba(0,0,0,0.03);">
+                                <div style="font-size: 36px; color: #0071DC; margin-bottom: 15px;">
+                                    <i class="fas fa-cogs"></i>
+                                </div>
+                                <h4 style="font-size: 20px; margin-bottom: 10px; color: #1F1F25;">Technical Solutions</h4>
+                                <p style="color: #6c757d; font-size: 15px;">Complex technical challenges solved with innovative approaches.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6 mb-4">
+                            <div style="background: white; padding: 25px; border-radius: 10px; height: 100%; box-shadow: 0 5px 15px rgba(0,0,0,0.03);">
+                                <div style="font-size: 36px; color: #0071DC; margin-bottom: 15px;">
+                                    <i class="fas fa-users"></i>
+                                </div>
+                                <h4 style="font-size: 20px; margin-bottom: 10px; color: #1F1F25;">Client Success</h4>
+                                <p style="color: #6c757d; font-size: 15px;">Real testimonials and measurable results from our satisfied clients.</p>
+                            </div>
+                        </div>
+                    </div>
                     
                    
                 </div>
