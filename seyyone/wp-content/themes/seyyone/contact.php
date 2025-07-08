@@ -26,7 +26,7 @@ get_header();
                 </div>
             </div>
             <div class="col-lg-12">
-                <form class="contact-form" action="<?php echo admin_url('admin-post.php'); ?>" method="post" id="contact-form">
+                <form class="contact-form"  action="https://formspree.io/f/myzjqebg" method="post" id="contact-form">
                     <input type="hidden" name="action" value="contact_form_submission">
                     <?php wp_nonce_field('contact_form_nonce', 'contact_nonce'); ?>
                     
