@@ -90,19 +90,19 @@ get_header();
 </div>
 
 <!-- address and map (unchanged) -->
-<div class="rts-google-map-area rts-section-gapTop">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-12">
-        <div class="google-map-wrapper">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3916.4691124052!2d76.99833857465073!3d10.997699855732064"
-            width="600" height="500" style="border:0;" allowfullscreen="" loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"></iframe>
+ <div class="rts-google-map-area rts-section-gapTop">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="google-map-wrapper">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3916.4691124052!2d76.99833857465073!3d10.997699855732064!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba859de62eed28d%3A0xad06f849d619bbf!2sSeyyone%20Group%20of%20Companies!5e0!3m2!1sen!2sin!4v1695127865421!5m2!1sen!2sin"
+                        width="600" height="500" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-  </div>
 </div>
 
 <div class="rts-location-contact-area pt--70">
