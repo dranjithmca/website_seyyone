@@ -140,7 +140,7 @@ document.getElementById("contact-form").addEventListener("submit", async functio
     const formMessages = document.getElementById("form-messages");
 
     try {
-        const response = await fetch("https://formspree.io/f/myzjqebg", {
+        const response = await fetch("https://formspree.io/f/xvgrjkya", {
             method: "POST",
             headers: {
                 "Accept": "application/json"
