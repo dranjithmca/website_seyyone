@@ -146,7 +146,11 @@ document.getElementById("contact-form").addEventListener("submit", async functio
   const plainMessage = 
 `Phone: ${phone}
 User Type: ${userType}
-Services: ${services}`;
+Services: ${services}
+
+Message:
+${message}
+`;
 
   const formData = new FormData();
   formData.append("name", fullName);
@@ -155,8 +159,8 @@ Services: ${services}`;
  
 
   const endpoint = userType === "Client"
-    ? "https://formspree.io/f/xvgrjyob"
-    : "https://formspree.io/f/xvgrjyob";
+    ? "https://formspree.io/f/xvgrjkya"
+    : "https://formspree.io/f/manjgerv";
 
   try {
     const response = await fetch(endpoint, {
