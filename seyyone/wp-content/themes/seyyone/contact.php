@@ -155,7 +155,7 @@ ${message}
   const formData = new FormData();
   formData.append("name", fullName);
   formData.append("email", email);
-  formData.append("message", plainMessage);
+  formData.append("info", plainMessage);
  
 
   const endpoint = userType === "Client"
