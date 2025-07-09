@@ -116,27 +116,55 @@ get_header();
         </div>
         
         <!-- Pagination -->
-        <?php if ($article_posts->max_num_pages > 1) : ?>
-        <div class="row">
-            <div class="col-12">
-                <div class="pagination-area">
-                    <?php
-                    echo paginate_links(array(
-                        'base' => str_replace(999999999, '%#%', esc_url(get_pagenum_link(999999999))),
-                        'format' => '?paged=%#%',
-                        'current' => max(1, get_query_var('paged')),
-                        'total' => $article_posts->max_num_pages,
-                        'prev_text' => '<i class="fas fa-angle-left"></i>',
-                        'next_text' => '<i class="fas fa-angle-right"></i>',
-                        'type' => 'list',
-                        'end_size' => 3,
-                        'mid_size' => 3
-                    ));
-                    ?>
-                </div>
-            </div>
+      <?php if ($article_posts->max_num_pages > 1) : ?>
+<div class="row">
+    <div class="col-lg-12">
+        <div class="pagination-one">
+            <ul class="justify-content-center">
+                <?php
+                // Previous page button
+                if (get_query_var('paged') > 1) {
+                    echo '<li><button class="prev-page" onclick="window.location.href=\'' . get_pagenum_link(get_query_var('paged') - 1) . '\'"><i class="fa-solid fa-chevrons-left"></i></button></li>';
+                }
+                
+                // Calculate page range
+                $current_page = max(1, get_query_var('paged'));
+                $total_pages = $article_posts->max_num_pages;
+                $end_size = 3; // How many numbers on either end of the pagination
+                $mid_size = 3; // How many numbers to either side of the current page
+                
+                // Start of pagination
+                $start = max(1, $current_page - $mid_size);
+                $end = min($total_pages, $current_page + $mid_size);
+                
+                // Adjust if we're close to the beginning or end
+                if ($start <= $end_size) {
+                    $end = min($total_pages, $end_size * 2);
+                }
+                if ($end >= $total_pages - $end_size + 1) {
+                    $start = max(1, $total_pages - $end_size * 2);
+                }
+                
+                // Generate the page numbers
+                for ($i = $start; $i <= $end; $i++) {
+                    $active_class = ($i == $current_page) ? 'active' : '';
+                    $page_num = str_pad($i, 2, '0', STR_PAD_LEFT); // Format as 01, 02, etc.
+                    echo '<li><button class="' . $active_class . '" onclick="window.location.href=\'' . get_pagenum_link($i) . '\'">' . $page_num . '</button></li>';
+                }
+                
+                // Next page button
+                if ($current_page < $total_pages) {
+                    echo '<li><button class="next-page" onclick="window.location.href=\'' . get_pagenum_link($current_page + 1) . '\'"><i class="fa-solid fa-chevrons-right"></i></button></li>';
+                }
+                ?>
+            </ul>
         </div>
-        <?php endif; ?>
+    </div>
+</div>
+<?php endif; ?>
+
+
+        
         
         <?php wp_reset_postdata(); ?>
     </div>
