@@ -159,8 +159,8 @@ ${message}
  
 
   const endpoint = userType === "Client"
-    ? "https://formspree.io/f/xvgrjkya"
-    : "https://formspree.io/f/manjgerv";
+    ? "https://formspree.io/f/xvgrjyob"
+    : "https://formspree.io/f/xvgrjyob";
 
   try {
     const response = await fetch(endpoint, {
