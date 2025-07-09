@@ -146,21 +146,17 @@ document.getElementById("contact-form").addEventListener("submit", async functio
   const plainMessage = 
 `Phone: ${phone}
 User Type: ${userType}
-Services: ${services}
-
-Message:
-${message}
-`;
+Services: ${services}`;
 
   const formData = new FormData();
   formData.append("name", fullName);
   formData.append("email", email);
   formData.append("message", plainMessage);
-  formData.append("_subject", userType === "Client" ? "Client Request" : "Jobseeker Request");
+ 
 
   const endpoint = userType === "Client"
-    ? "https://formspree.io/f/xvgrjkya"
-    : "https://formspree.io/f/manjgerv";
+    ? "https://formspree.io/f/xvgrjyob"
+    : "https://formspree.io/f/xvgrjyob";
 
   try {
     const response = await fetch(endpoint, {
