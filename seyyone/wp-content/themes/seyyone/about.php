@@ -27,9 +27,16 @@ get_header();
             
             <div class="col-lg-5">
                 <div class="thumbnail-bannr-service-right jarallax">
-                    <div id="jarallax-container-0" class="jarallax-container"  >
-                        <img class=" " src="<?php echo get_template_directory_uri(); ?>/assets/images/seyyone/home/core_values_2.png" alt="service-area"  >
-                    </div>
+                  <div id="jarallax-container-0" class="jarallax-container">
+    <?php 
+    $hero_image = get_field('about_hero_image');
+    if($hero_image): ?>
+        <img class=" " src="<?php echo esc_url($hero_image['url']); ?>" alt="<?php echo esc_attr($hero_image['alt'] ? $hero_image['alt'] : 'service-area'); ?>">
+    <?php else: ?>
+        <img class=" " src="<?php echo get_template_directory_uri(); ?>/assets/images/seyyone/home/core_values_2.png" alt="service-area">
+    <?php endif; ?>
+</div>
+
                 </div>
             </div>
         </div>
@@ -73,8 +80,15 @@ get_header();
                                     </div>
                                 </div>
                                 <div class="thumbnail-working-process">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/seyyone/home/26975.jpg" alt="">
-                                </div>
+    <?php 
+    $about_image = get_field('about_section_image');
+    if($about_image): ?>
+        <img src="<?php echo esc_url($about_image['url']); ?>" alt="<?php echo esc_attr($about_image['alt'] ? $about_image['alt'] : 'About Seyyone'); ?>">
+    <?php else: ?>
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/seyyone/home/26975.jpg" alt="">
+    <?php endif; ?>
+</div>
+
                             </div>
                             <div class="col-lg-6">
                                 <div class="single-working-process-choose-us wow fadeInUp">
@@ -111,8 +125,15 @@ get_header();
                     </div>
                 </div>
                 <div class="thumbnail-working-process">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/seyyone/home/our_team_1.jpg" alt="">
-                </div>
+    <?php 
+    $team_image = get_field('team_section_image');
+    if($team_image): ?>
+        <img src="<?php echo esc_url($team_image['url']); ?>" alt="<?php echo esc_attr($team_image['alt'] ? $team_image['alt'] : 'Our Team'); ?>">
+    <?php else: ?>
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/seyyone/home/our_team_1.jpg" alt="">
+    <?php endif; ?>
+</div>
+
             </div>
             <div class="col-lg-6">
                 <div class="single-working-process-choose-us wow fadeInUp">
@@ -148,8 +169,15 @@ get_header();
                     </div>
                 </div>
                 <div class="thumbnail-working-process">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/seyyone/home/our_culture_1.jpg" alt="">
-                </div>
+    <?php 
+    $culture_image = get_field('culture_section_image');
+    if($culture_image): ?>
+        <img src="<?php echo esc_url($culture_image['url']); ?>" alt="<?php echo esc_attr($culture_image['alt'] ? $culture_image['alt'] : 'Our Culture'); ?>">
+    <?php else: ?>
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/seyyone/home/our_culture_1.jpg" alt="">
+    <?php endif; ?>
+</div>
+
             </div>
             <div class="col-lg-6">
                 <div class="single-working-process-choose-us wow fadeInUp">
@@ -187,8 +215,15 @@ get_header();
                     </div>
                 </div>
                 <div class="thumbnail-working-process">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/seyyone/home/why_choose_seyyone.jpg" style="height: 550px;" alt="">
-                </div>
+    <?php 
+    $why_choose_image = get_field('why_choose_section_image');
+    if($why_choose_image): ?>
+        <img src="<?php echo esc_url($why_choose_image['url']); ?>" alt="<?php echo esc_attr($why_choose_image['alt'] ? $why_choose_image['alt'] : 'Why Choose Seyyone'); ?>" style="height: 550px;">
+    <?php else: ?>
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/seyyone/home/why_choose_seyyone.jpg" style="height: 550px;" alt="">
+    <?php endif; ?>
+</div>
+
             </div>
             <div class="col-lg-6">
                 <div class="single-working-process-choose-us wow fadeInUp">

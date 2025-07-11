@@ -267,4 +267,6 @@ function seyyone_admin_bar_fix() {
     }
 }
 add_action('wp_head', 'seyyone_admin_bar_fix');
+
+
 ?>

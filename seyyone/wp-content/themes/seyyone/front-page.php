@@ -152,9 +152,22 @@ $banner_url = get_field('home_banner_image');
                         </a>
                     </div>
                     <div class="col-md-5">
-                        <div class="h-100 d-flex align-items-center">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/seyyone/home/Home - healthcare kpo1.jpg" alt="Healthcare KPO" class="img-fluid rounded" style="width: 100%; object-fit: cover;">
-                        </div>
+                         <div class="h-100 d-flex align-items-center">
+    <?php 
+    $healthcare_image = get_field('healthcare_kpo_image');
+    if($healthcare_image): ?>
+        <img src="<?php echo esc_url($healthcare_image['url']); ?>" 
+             alt="<?php echo esc_attr($healthcare_image['alt'] ? $healthcare_image['alt'] : 'Healthcare KPO'); ?>" 
+             class="img-fluid rounded" 
+             style="width: 100%; object-fit: cover;">
+    <?php else: ?>
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/seyyone/home/Home - healthcare kpo1.jpg" 
+             alt="Healthcare KPO" 
+             class="img-fluid rounded" 
+             style="width: 100%; object-fit: cover;">
+    <?php endif; ?>
+</div>
+
                     </div>
                 </div>
             </div>
@@ -188,8 +201,21 @@ $banner_url = get_field('home_banner_image');
                     </div>
                     <div class="col-md-5">
                         <div class="h-100 d-flex align-items-center">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/seyyone/home/Home - software services.jpg" alt="Software Solutions" class="img-fluid rounded" style="width: 100%; object-fit: cover;">
-                        </div>
+    <?php 
+    $software_image = get_field('software_solutions_image');
+    if($software_image): ?>
+        <img src="<?php echo esc_url($software_image['url']); ?>" 
+             alt="<?php echo esc_attr($software_image['alt'] ? $software_image['alt'] : 'Software Solutions'); ?>" 
+             class="img-fluid rounded" 
+             style="width: 100%; object-fit: cover;">
+    <?php else: ?>
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/seyyone/home/Home - software services.jpg" 
+             alt="Software Solutions" 
+             class="img-fluid rounded" 
+             style="width: 100%; object-fit: cover;">
+    <?php endif; ?>
+</div>
+
                     </div>
                 </div>
             </div>
