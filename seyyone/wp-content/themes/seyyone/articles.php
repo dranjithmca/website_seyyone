@@ -27,7 +27,7 @@ get_header();
             
             $args = array(
                 'post_type' => 'seyyone_article',
-                'posts_per_page' => 9,
+                'posts_per_page' => 18,
                 'paged' => $paged,
                 'post_status' => 'publish',
                 'orderby' => 'date',
@@ -62,9 +62,9 @@ get_header();
                             <?php else : ?>
                                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/blog/01.webp" alt="<?php echo esc_attr($title); ?>" style="width: 100%; height: 250px; object-fit: cover;">
                             <?php endif; ?>
-                            <div class="post_date">
+                            <!-- <div class="post_date">
                                 <?php echo get_the_date('M d Y'); ?>
-                            </div>
+                            </div> -->
                         </div>
                     </a>
                     <div class="inner-content-area">

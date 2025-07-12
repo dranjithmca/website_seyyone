@@ -36,10 +36,21 @@ get_header();
                 </div>
             <div class="col-lg-5">
                <div class="thumbnail-bannr-service-right jarallax">
-                    <div id="jarallax-container-0" class="jarallax-container"  >
-                            <img class=" " src="<?php echo get_template_directory_uri(); ?>/assets/images/seyyone/home/medical-banner-with-stethoscope.jpg" alt="serivce-area"  >
-                    </div>
-                </div>
+    <div id="jarallax-container-0" class="jarallax-container">
+        <?php 
+        $healthcare_hero_bg = get_field('healthcare_hero_background');
+        if($healthcare_hero_bg): ?>
+            <img class=" " 
+                 src="<?php echo esc_url($healthcare_hero_bg['url']); ?>" 
+                 alt="<?php echo esc_attr($healthcare_hero_bg['alt'] ? $healthcare_hero_bg['alt'] : 'Healthcare Services'); ?>">
+        <?php else: ?>
+            <img class=" " 
+                 src="<?php echo get_template_directory_uri(); ?>/assets/images/seyyone/home/medical-banner-with-stethoscope.jpg" 
+                 alt="service-area">
+        <?php endif; ?>
+    </div>
+</div>
+
                 
             </div>
         </div>
