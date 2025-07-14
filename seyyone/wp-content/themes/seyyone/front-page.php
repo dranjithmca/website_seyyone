@@ -576,40 +576,64 @@ $banner_url = get_field('home_banner_image');
         </div>
        <div class="row mt-4 d-none d-md-block">
             <div class="col-lg-12">
-                <div class="thumbnail-map" style="position: relative; height: 350px; overflow: hidden;">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/contact/01.webp" alt="banner" style="width: 100%; height: auto; max-height: 350px; object-fit: contain;">
-                    <!-- Adjusted tooltip positions with percentage-based positioning -->
-                    <div class="map-tool-tip-single" style="position: absolute; top: 30%; left: 35%;">
-                        <a href="#" class="map-tooltip" data-tooltip="California USA,Mid Hourse #25" tabindex="0">
-                            <span></span>
-                        </a>
-                    </div>
-                    <div class="map-tool-tip-single two" style="position: absolute; top: 45%; left: 55%;">
-                        <a href="#" class="map-tooltip" data-tooltip="Dubai USA,Mid Hourse #25" tabindex="0">
-                            <span></span>
-                        </a>
-                    </div>
-                    <div class="map-tool-tip-single three" style="position: absolute; top: 35%; left: 30%;">
-                        <a href="#" class="map-tooltip" data-tooltip="Los Angeles" tabindex="0">
-                            <span></span>
-                        </a>
-                    </div>
-                                        <div class="map-tool-tip-single four" style="position: absolute; top: 40%; left: 60%;">
-                        <a href="#" class="map-tooltip" data-tooltip="Dubai DU,Mid Hourse #25" tabindex="0">
-                            <span></span>
-                        </a>
-                    </div>
-                    <div class="map-tool-tip-single five" style="position: absolute; top: 35%; left: 70%;">
-                        <a href="#" class="map-tooltip" data-tooltip="japan USA,Mid Hourse #25" tabindex="0">
-                            <span></span>
-                        </a>
-                    </div>
-                    <div class="map-tool-tip-single six" style="position: absolute; top: 30%; left: 65%;">
-                        <a href="#" class="map-tooltip" data-tooltip="Koria USA,Mid Hourse #25" tabindex="0">
-                            <span></span>
-                        </a>
-                    </div>
-                </div>
+                 <div class="thumbnail-map" style="position: relative; height: 350px; overflow: hidden;">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/contact/01.webp" alt="World Map" style="width: 100%; height: auto; max-height: 350px; object-fit: contain;">
+            <!-- USA tooltip -->
+            <div class="map-tool-tip-single" style="position: absolute; top: 35%; left: 35%;">
+                <a href="#" class="map-tooltip" data-tooltip="United States" tabindex="0">
+                    <span></span>
+                </a>
+            </div>
+            <!-- UK tooltip -->
+            
+             <div class="map-tool-tip-single" style="position: absolute; top: 23%; left: 47%;">
+                <a href="#" class="map-tooltip" data-tooltip="United Kingdom" tabindex="0">
+                    <span></span>
+                </a>
+            </div>
+            <!-- Ireland tooltip -->
+            <div class="map-tool-tip-single seven" style="position: absolute; top: 27%; left: 46%;">
+                <a href="#" class="map-tooltip" data-tooltip="Ireland" tabindex="0">
+                    <span></span>
+                </a>
+            </div>
+
+              <!-- Germany tooltip -->
+            <div class="map-tool-tip-single six" style="position: absolute; top: 28%; left: 50%;">
+                <a href="#" class="map-tooltip" data-tooltip="Germany" tabindex="0">
+                    <span></span>
+                </a>
+            </div>
+
+              <!-- Netherlands tooltip -->
+            <div class="map-tool-tip-single eight" style="position: absolute; top: 26%; left: 49%;">
+                <a href="#" class="map-tooltip" data-tooltip="Netherlands" tabindex="0">
+                    <span></span>
+                </a>
+            </div>
+
+            <!-- Canada tooltip -->
+            <div class="map-tool-tip-single three" style="position: absolute; top: 21%; left: 30%;">
+                <a href="#" class="map-tooltip" data-tooltip="Canada" tabindex="0">
+                    <span></span>
+                </a>
+            </div>
+            <!-- Australia tooltip -->
+            <div class="map-tool-tip-single four" style="position: absolute; top: 75%; left: 68%;">
+                <a href="#" class="map-tooltip" data-tooltip="Australia" tabindex="0">
+                    <span></span>
+                </a>
+            </div>
+            <!-- India tooltip -->
+            <div class="map-tool-tip-single four" style="position: absolute; top: 55%; left: 60%;">
+                <a href="#" class="map-tooltip" data-tooltip="Inda" tabindex="0">
+                    <span></span>
+                </a>
+            </div>
+           
+
+
+        </div>
             </div>
         </div>
 
