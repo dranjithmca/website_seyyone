@@ -16,9 +16,9 @@ get_header();
         <div class="row">
             <div class="col-lg-12">
                 <div class="case-studies-banner-top">
-                    <h1 class="title">
+                    <h2 class="title">
                         Frequently Asked Questions
-                    </h1>
+                    </h2>
                     <p>Find answers to common questions about our services and solutions.</p>
                 </div>
             </div>
