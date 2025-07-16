@@ -50,8 +50,8 @@
                             <ul>
                                 <li><a href="<?php echo home_url('/terms'); ?>">Terms and Conditions</a></li>
                                 <li><a href="<?php echo home_url('/policy'); ?>">Privacy Policy</a></li>
-                                <li><a href="<?php echo home_url('/blogs'); ?>">HIPAA Compliance</a></li>
-                                <li><a href="<?php echo home_url('/case'); ?>">FAQ</a></li>
+                                <li><a href="<?php echo home_url('/hipaa-compliance'); ?>">HIPAA Compliance</a></li>
+                                <li><a href="<?php echo home_url('/faq'); ?>">FAQ</a></li>
                               
                             </ul>
                         </div>
