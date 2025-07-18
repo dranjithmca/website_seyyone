@@ -73,10 +73,10 @@
                     <p>&copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?>. All rights reserved.</p>
                     <div class="social-copyright-area">
                         <ul>
-                            <li aria-label="Visit our Facebook page"><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
-                            <li aria-label="Visit our Twitter page"><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
-                            <li aria-label="Visit our Youtube page"><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
-                            <li aria-label="Visit our Linkedin page"><a href="#"><i class="fa-brands fa-linkedin"></i></a></li>
+                            <li aria-label="Visit our Facebook page"><a href="https://www.facebook.com/SeyyoneGroupOfCompanies"><i class="fa-brands fa-facebook-f"></i></a></li>
+                            <li aria-label="Visit our Twitter page"><a href="https://x.com/Seyyone"><i class="fa-brands fa-twitter"></i></a></li>
+                            <li aria-label="Visit our Youtube page"><a href="https://www.youtube.com/@seyyonegroupofcompanies"><i class="fa-brands fa-youtube"></i></a></li>
+                            <li aria-label="Visit our Linkedin page"><a href="https://in.linkedin.com/company/seyyone-group-of-companies"><i class="fa-brands fa-linkedin"></i></a></li>
                         </ul>
                     </div>
                 </div>
