@@ -42,11 +42,12 @@ function add_healthcare_service_meta_boxes() {
 }
 add_action('add_meta_boxes', 'add_healthcare_service_meta_boxes');
 
-// Meta Box Callback - Only Service ID
+// Meta Box Callback - Service ID and Order
 function healthcare_service_meta_box_callback($post) {
     wp_nonce_field('save_healthcare_service_meta', 'healthcare_service_meta_nonce');
     
     $service_id = get_post_meta($post->ID, '_healthcare_service_id', true);
+    $service_order = get_post_meta($post->ID, '_healthcare_service_order', true);
     
     ?>
     <table class="form-table">
@@ -57,12 +58,20 @@ function healthcare_service_meta_box_callback($post) {
                 <p class="description">Enter unique healthcare service ID (e.g., ehr-emr, transcription, scribe, billing, summarization, aps, peer-review)</p>
             </td>
         </tr>
+        <tr>
+            <th><label for="healthcare_service_order">Display Order</label></th>
+            <td>
+                <input type="number" id="healthcare_service_order" name="healthcare_service_order" value="<?php echo esc_attr($service_order); ?>" style="width: 100px;" min="1" />
+                <p class="description">Enter a number to determine the display order (1 will appear first, then 2, etc.)</p>
+            </td>
+        </tr>
     </table>
     
     <div style="background: #f0f0f1; padding: 15px; border-radius: 5px; margin-top: 15px;">
         <h4>🏥 How to Add Healthcare KPO Content:</h4>
         <ol>
             <li><strong>Service ID:</strong> Enter unique ID (like "ehr-emr", "transcription")</li>
+            <li><strong>Display Order:</strong> Set the order number (1 will appear first, then 2, etc.)</li>
             <li><strong>Title:</strong> Enter healthcare service name above</li>
             <li><strong>Featured Image:</strong> Set featured image (shows in modal header)</li>
             <li><strong>Excerpt:</strong> Write short description in excerpt box</li>
@@ -89,6 +98,10 @@ function save_healthcare_service_meta($post_id) {
     
     if (isset($_POST['healthcare_service_id'])) {
         update_post_meta($post_id, '_healthcare_service_id', sanitize_text_field($_POST['healthcare_service_id']));
+    }
+    
+    if (isset($_POST['healthcare_service_order'])) {
+        update_post_meta($post_id, '_healthcare_service_order', intval($_POST['healthcare_service_order']));
     }
 }
 add_action('save_post', 'save_healthcare_service_meta');

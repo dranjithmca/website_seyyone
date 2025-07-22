@@ -63,7 +63,7 @@ get_header();
 </div>
 
 <!-- Healthcare Services Section -->
-<div class="rts-service-area">
+ <div class="rts-service-area">
     <div class="container">
         <div class="bg-gradient-one-industry">
             <br><br>
@@ -75,12 +75,13 @@ get_header();
                 <div class="container">
                     <div class="row g-80 mt--0">
                         <?php
-                        // Get Healthcare Services from WordPress
+                        // Get Healthcare Services from WordPress - Ordered by custom order field
                         $healthcare_services = new WP_Query(array(
                             'post_type' => 'healthcare_service',
                             'posts_per_page' => -1,
                             'post_status' => 'publish',
-                            'orderby' => 'date',
+                            'meta_key' => '_healthcare_service_order',
+                            'orderby' => 'meta_value_num',
                             'order' => 'ASC'
                         ));
 
@@ -124,8 +125,6 @@ get_header();
                                         <h4 class="title"><?php echo esc_html($title); ?></h4>
                                     </a>
                                     <p><?php echo $excerpt ? esc_html($excerpt) : 'Click to learn more about this healthcare service.'; ?></p>
-                                    
-                                    
                                 </div>
                             </div>
                         </div>
@@ -146,6 +145,7 @@ get_header();
         </div>
     </div>
 </div>
+
 
 <!-- CTA Section -->
 <div class="rts-cts-area pt--120 pt_md--60 pt_sm--50">
