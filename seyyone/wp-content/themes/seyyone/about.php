@@ -93,7 +93,7 @@ get_header();
                             <div class="col-lg-6">
                                 <div class="single-working-process-choose-us wow fadeInUp">
                                     <h5 class="title">Global Healthcare Expertise</h5>
-                                    <i class="far fa-check-circle"></i> With over 25 years of experience, Seyyone has been a trusted partner for healthcare providers, payers, and businesses across the USA, Australia, Canada, Ireland, Germany, and beyond. Our deep domain knowledge allows us to simplify complex healthcare operations and deliver comprehensive healthcare process management and IT solutions.
+                                    <i class="far fa-check-circle"></i> With over 25 years of experience, Seyyone has been a trusted partner for healthcare providers, payers, and businesses across the USA, UK, Australia, Canada, Ireland, Germany, and beyond. Our deep domain knowledge allows us to simplify complex healthcare operations and deliver comprehensive healthcare process management and IT solutions.
                                 </div>
                                 <div class="single-working-process-choose-us wow fadeInUp" data-wow-delay=".2s">
                                     <h5 class="title">Skilled Professionals & Advanced Technology</h5>
@@ -121,7 +121,7 @@ get_header();
                 <div class="why-choose-process-left pb--50">
                     <div class="text-left-title-bg-white">
                         <h2 class="title">Our Team</h2>
-                        <p>Behind our success is a people-first culture that nurtures talent, encourages innovation, and empowers every voice.</p>
+                        <p>Meet the Experts Powering Technology with Precision and Passion.</p>
                     </div>
                 </div>
                 <div class="thumbnail-working-process">
@@ -211,7 +211,8 @@ get_header();
                 <div class="why-choose-process-left pb--50">
                     <div class="text-left-title-bg-white">
                         <h2 class="title">Why Choose Seyyone?</h2>
-                        <p>Behind our success is a people-first culture that nurtures talent, encourages innovation, and empowers every voice.</p>
+                        <p>Across Time Zones, Aligned with Your Mission,
+Empowering through Tailored Tech Solutions, 24/7 Support, and Unmatched Quality.</p>
                     </div>
                 </div>
                 <div class="thumbnail-working-process">

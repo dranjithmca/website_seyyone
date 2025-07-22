@@ -27,7 +27,7 @@ get_header();
                       
                         <h1 class="title wow fadeInUp" data-wow-delay=".3s" style="font-size: 55px">Be the most <br> trusted & respected <span>healthcare</span>
                             KPO</h1>
-                        <p class="wow fadeInUp" data-wow-delay=".5s">Seyyone provides complete revenue cycle management solutions to the healthcare community, that allow our exclusive clientele to have more face time with their patients and distress about billing and collections.</p>
+                        <p class="wow fadeInUp" data-wow-delay=".5s">Seyyone provides complete revenue cycle management solutions to the healthcare community, that allow our exclusive clientele to have more face time with their patients and no stress about billing and collections.</p>
                         <a href="#healthcare-services" class="rts-btn btn-primary wow fadeInUp" data-wow-delay=".7s">
                             View Solutions
                          <img class="injectable" src="<?php echo get_template_directory_uri(); ?>/assets/images/banner/01.svg" alt="icons">

@@ -419,7 +419,7 @@ $banner_url = get_field('home_banner_image');
     <div class="rts-brand-area-start pt--20" dir="ltr" >
         <div class="container">
             <div class="title-area-center-inner-with-sub">
-                <span>Our Clients</span><br>
+                <span>Our Clients & EMRs</span><br>
             </div>
             <br><br>
             <div class="row">
@@ -495,7 +495,7 @@ $banner_url = get_field('home_banner_image');
 <br><br>
 
  <!-- Testimonials Section Start -->
-<div class="rts-testimonials-area-about rts-section-gap bg-dark-1" dir="ltr" id="testimonials">
+ <div class="rts-testimonials-area-about rts-section-gap bg-dark-1" dir="ltr" id="testimonials">
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
@@ -510,10 +510,10 @@ $banner_url = get_field('home_banner_image');
                 </div>
             </div>
             <div class="col-lg-12 mt--55">
-                <div class="row">
+                <div class="row" style="display: flex; flex-wrap: wrap;">
                     <div class="col-lg-4 col-md-6 mb-4">
-                        <div class="single-testimonials-about" style="height: 250px; padding: 20px; display: flex; flex-direction: column; justify-content: space-between;">
-                            <p class="disc" style="flex-grow: 1; overflow: hidden;">
+                        <div class="single-testimonials-about" style="height: 100%; display: flex; flex-direction: column;">
+                            <p class=" " style="flex-grow: 1; overflow: hidden; font-style: italic;">
                                 "Thx for all of your help. You're a good teammate.
                                 I know that it has saved my practice and enjoyment of medicine."
                             </p>
@@ -525,10 +525,9 @@ $banner_url = get_field('home_banner_image');
                             </div>
                         </div>
                     </div>
-                    
                     <div class="col-lg-4 col-md-6 mb-4">
-                        <div class="single-testimonials-about" style="height: 250px; padding: 20px; display: flex; flex-direction: column; justify-content: space-between;">
-                            <p class="disc" style="flex-grow: 1; overflow: hidden;">
+                        <div class="single-testimonials-about" style="height: 100%; display: flex; flex-direction: column;">
+                            <p class=" " style="flex-grow: 1; overflow: hidden; font-style: italic;">
                                 "We feel your company is trustworthy and would like to give you the business instead of looking
                                 elsewhere and thanks for keeping up a high standard."
                             </p>
@@ -540,10 +539,9 @@ $banner_url = get_field('home_banner_image');
                             </div>
                         </div>
                     </div>
-                    
                     <div class="col-lg-4 col-md-6 mb-4">
-                        <div class="single-testimonials-about" style="height: 250px; padding: 20px; display: flex; flex-direction: column; justify-content: space-between;">
-                            <p class="disc" style="flex-grow: 1; overflow: hidden;">
+                        <div class="single-testimonials-about" style="height: 100%; display: flex; flex-direction: column;">
+                            <p class=" " style="flex-grow: 1; overflow: hidden; font-style: italic;">
                                 "Thank you for continuing to do a wonderful job with our transcription!
                                 Great job! I'm impressed. Thank you so much! I'm excited that this transition is turning out to be easier
                                 than I was expecting."
@@ -561,6 +559,7 @@ $banner_url = get_field('home_banner_image');
         </div>
     </div>
 </div>
+
 <!-- Testimonials Section End -->
 
 
