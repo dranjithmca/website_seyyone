@@ -146,7 +146,7 @@ $banner_url = get_field('home_banner_image');
                             <li><i class="fa fa-check-circle" style="color: #3534ff; ; margin-right: 8px;"></i> Peer Review Summary</li>
                         </ul>
 
-                        <a href="<?php echo home_url('/healthcare-kpo'); ?>" class="rts-btn btn-border mb-4">
+                        <a href="<?php echo home_url('/healthcare'); ?>" class="rts-btn btn-border mb-4">
                             Explore Healthcare KPO
                             <img class="injectable" src="<?php echo get_template_directory_uri(); ?>/assets/images/service/icons/13.svg" alt="arrow">
                         </a>
@@ -194,7 +194,7 @@ $banner_url = get_field('home_banner_image');
                             <li><i class="fa fa-check-circle" style="color: #3534ff ; margin-right: 8px;"></i> Talent Management</li>
                             <li><i class="fa fa-check-circle" style="color: #3534ff ; margin-right: 8px;"></i> Remote Hardware Infra</li>
                         </ul>
-                        <a href="<?php echo home_url('/software-solutions'); ?>" class="rts-btn btn-border mb-4">
+                        <a href="<?php echo home_url('/software'); ?>" class="rts-btn btn-border mb-4">
                             Explore Software Solutions
                             <img class="injectable" src="<?php echo get_template_directory_uri(); ?>/assets/images/service/icons/13.svg" alt="arrow">
                         </a>
