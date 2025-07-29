@@ -76,20 +76,20 @@ get_header();
                     <div class="check-wrapper-main">
                         <div class="check-wrapper">
                             <div class="single-check">
-                               <p> <i class="fa fa-chevron-right" style="color: #3534ff  "></i>
+                               <p> <i class="fa fa-chevron-right" style="color: #3f5cd6  "></i>
                                   A dynamic, forward-thinking environment</p>
                             </div>
                             <div class="single-check">
-                                 <p> <i class="fa fa-chevron-right" style="color: #3534ff  "></i> Opportunities for continuous learning & development</p>
+                                 <p> <i class="fa fa-chevron-right" style="color: #3f5cd6  "></i> Opportunities for continuous learning & development</p>
                             </div>
                             <div class="single-check">
-                                <p> <i class="fa fa-chevron-right" style="color: #3534ff  "></i> Exposure to cutting-edge technologies and real-world business challenges</p>
+                                <p> <i class="fa fa-chevron-right" style="color: #3f5cd6  "></i> Exposure to cutting-edge technologies and real-world business challenges</p>
                             </div>
                             <div class="single-check">
-                                 <p> <i class="fa fa-chevron-right" style="color: #3534ff  "></i> Collaborative culture that values diverse perspectives</p>
+                                 <p> <i class="fa fa-chevron-right" style="color: #3f5cd6  "></i> Collaborative culture that values diverse perspectives</p>
                             </div>
                             <div class="single-check">
-                               <p> <i class="fa fa-chevron-right" style="color: #3534ff  "></i> Enhancing Data-Driven Decisions</p>
+                               <p> <i class="fa fa-chevron-right" style="color: #3f5cd6  "></i> Enhancing Data-Driven Decisions</p>
                             </div>
                         </div>
 
