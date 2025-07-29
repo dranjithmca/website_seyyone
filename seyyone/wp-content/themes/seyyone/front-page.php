@@ -136,14 +136,14 @@ $banner_url = get_field('home_banner_image');
                 <div class="row">
                     <div class="col-md-7">
                         <ul class="service-list mb-4" style="list-style: none;">
-                            <li><i class="fa fa-check-circle" style="color: #3534ff ; margin-right: 8px;"></i> EHR/EMR – Virtual Assistance</li>
-                            <li><i class="fa fa-check-circle" style="color: #3534ff ; margin-right: 8px;"></i> Medical Transcription</li>
-                            <li><i class="fa fa-check-circle" style="color: #3534ff ; margin-right: 8px;"></i> Medical Scribe</li>
-                            <li><i class="fa fa-check-circle" style="color: #3534ff ; margin-right: 8px;"></i> Medical Billing</li>
-                            <li><i class="fa fa-check-circle" style="color: #3534ff ; margin-right: 8px;"></i> Remote Medical Scribe Services</li>
-                            <li><i class="fa fa-check-circle" style="color: #3534ff ; margin-right: 8px;"></i> Medical Record Summarization</li>
-                            <li><i class="fa fa-check-circle" style="color: #3534ff ; margin-right: 8px;"></i> APS Summary</li>
-                            <li><i class="fa fa-check-circle" style="color: #3534ff; ; margin-right: 8px;"></i> Peer Review Summary</li>
+                            <li><i class="fa fa-chevron-right" style="color: #3534ff ; margin-right: 8px;"></i> EHR/EMR – Virtual Assistance</li>
+                            <li><i class="fa fa-chevron-right" style="color: #3534ff ; margin-right: 8px;"></i> Medical Transcription</li>
+                            <li><i class="fa fa-chevron-right" style="color: #3534ff ; margin-right: 8px;"></i> Medical Scribe</li>
+                            <li><i class="fa fa-chevron-right" style="color: #3534ff ; margin-right: 8px;"></i> Medical Billing</li>
+                            <li><i class="fa fa-chevron-right" style="color: #3534ff ; margin-right: 8px;"></i> Remote Medical Scribe Services</li>
+                            <li><i class="fa fa-chevron-right" style="color: #3534ff ; margin-right: 8px;"></i> Medical Record Summarization</li>
+                            <li><i class="fa fa-chevron-right" style="color: #3534ff ; margin-right: 8px;"></i> APS Summary</li>
+                            <li><i class="fa fa-chevron-right" style="color: #3534ff; ; margin-right: 8px;"></i> Peer Review Summary</li>
                         </ul>
 
                         <a href="<?php echo home_url('/healthcare'); ?>" class="rts-btn btn-border mb-4">
@@ -185,14 +185,14 @@ $banner_url = get_field('home_banner_image');
                 <div class="row">
                     <div class="col-md-7">
                         <ul class="service-list mb-4" style="list-style: none;">
-                            <li><i class="fa fa-check-circle" style="color: #3534ff ; margin-right: 6px;"></i> Application Services</li>
-                            <li><i class="fa fa-check-circle" style="color: #3534ff ; margin-right: 6px;"></i> Application development</li>
-                            <li><i class="fa fa-check-circle" style="color: #3534ff ; margin-right: 6px;"></i> Mobile Solutions</li>
-                            <li><i class="fa fa-check-circle" style="color: #3534ff ; margin-right: 6px;"></i> Cloud Solutions</li>
-                            <li><i class="fa fa-check-circle" style="color: #3534ff ; margin-right: 6px;"></i> AI/ML Solutions</li>
-                            <li><i class="fa fa-check-circle" style="color: #3534ff ; margin-right: 6px;"></i> Analytical and Reporting</li>
-                            <li><i class="fa fa-check-circle" style="color: #3534ff ; margin-right: 8px;"></i> Talent Management</li>
-                            <li><i class="fa fa-check-circle" style="color: #3534ff ; margin-right: 8px;"></i> Remote Hardware Infra</li>
+                            <li><i class="fa fa-chevron-right" style="color: #3534ff ; margin-right: 6px;"></i> Application Services</li>
+                            <li><i class="fa fa-chevron-right" style="color: #3534ff ; margin-right: 6px;"></i> Application development</li>
+                            <li><i class="fa fa-chevron-right" style="color: #3534ff ; margin-right: 6px;"></i> Mobile Solutions</li>
+                            <li><i class="fa fa-chevron-right" style="color: #3534ff ; margin-right: 6px;"></i> Cloud Solutions</li>
+                            <li><i class="fa fa-chevron-right" style="color: #3534ff ; margin-right: 6px;"></i> AI/ML Solutions</li>
+                            <li><i class="fa fa-chevron-right" style="color: #3534ff ; margin-right: 6px;"></i> Analytical and Reporting</li>
+                            <li><i class="fa fa-chevron-right" style="color: #3534ff ; margin-right: 8px;"></i> Talent Management</li>
+                            <li><i class="fa fa-chevron-right" style="color: #3534ff ; margin-right: 8px;"></i> Remote Hardware Infra</li>
                         </ul>
                         <a href="<?php echo home_url('/software'); ?>" class="rts-btn btn-border mb-4">
                             Explore Software Solutions

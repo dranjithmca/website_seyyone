@@ -76,26 +76,24 @@ get_header();
                     <div class="check-wrapper-main">
                         <div class="check-wrapper">
                             <div class="single-check">
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/service/01.svg" alt="service">
-                                <p>A dynamic, forward-thinking environment</p>
+                               <p> <i class="fa fa-chevron-right" style="color: #3534ff  "></i>
+                                  A dynamic, forward-thinking environment</p>
                             </div>
                             <div class="single-check">
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/service/01.svg" alt="service">
-                                <p>Opportunities for continuous learning & development</p>
+                                 <p> <i class="fa fa-chevron-right" style="color: #3534ff  "></i> Opportunities for continuous learning & development</p>
                             </div>
                             <div class="single-check">
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/service/01.svg" alt="service">
-                                <p>Exposure to cutting-edge technologies and real-world business challenges</p>
+                                <p> <i class="fa fa-chevron-right" style="color: #3534ff  "></i> Exposure to cutting-edge technologies and real-world business challenges</p>
                             </div>
                             <div class="single-check">
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/service/01.svg" alt="service">
-                                <p>Collaborative culture that values diverse perspectives</p>
+                                 <p> <i class="fa fa-chevron-right" style="color: #3534ff  "></i> Collaborative culture that values diverse perspectives</p>
                             </div>
                             <div class="single-check">
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/service/01.svg" alt="service">
-                                <p>Enhancing Data-Driven Decisions</p>
+                               <p> <i class="fa fa-chevron-right" style="color: #3534ff  "></i> Enhancing Data-Driven Decisions</p>
                             </div>
                         </div>
+
+                        
                     </div>
                 </div>
             </div>
