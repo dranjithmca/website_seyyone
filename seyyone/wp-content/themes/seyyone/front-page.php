@@ -138,13 +138,13 @@ $banner_url = get_field('home_banner_image');
                 <div class="row">
                     <div class="col-md-7">
                         <div class="service-list mb-4" style="margin-left: 5px; ">
-                            <div class="service-item" style="margin-bottom: 12px; "><i class="fa fa-chevron-right" style="color: #3f5cd6;"></i> Medical Record Summarization</div>
-                            <div class="service-item" style="margin-bottom: 12px;"><i class="fa fa-chevron-right" style="color: #3f5cd6;"></i> Peer Review Summary</div>
-                            <div class="service-item" style="margin-bottom: 12px;"><i class="fa fa-chevron-right" style="color: #3f5cd6;"></i> APS Summary</div>
-                            <div class="service-item" style="margin-bottom: 12px;"><i class="fa fa-chevron-right" style="color: #3f5cd6;"></i> Medical Transcription</div>
-                            <div class="service-item" style="margin-bottom: 12px;"><i class="fa fa-chevron-right" style="color: #3f5cd6;"></i> Medical Scribe</div>
-                            <div class="service-item" style="margin-bottom: 12px;"><i class="fa fa-chevron-right" style="color: #3f5cd6;"></i> Medical Billing</div>
-                            <div class="service-item" style="margin-bottom: 12px;"><i class="fa fa-chevron-right" style="color: #3f5cd6;"></i> EHR/EMR – Virtual Assistance</div>
+                            <div class="service-item" style="margin-bottom: 12px; "><i class="fa fa-chevron-right" style="color: #3f5cd6; margin-right: 5px;"></i> Medical Record Summarization</div>
+                            <div class="service-item" style="margin-bottom: 12px;"><i class="fa fa-chevron-right" style="color: #3f5cd6; margin-right: 5px;"></i> Peer Review Summary</div>
+                            <div class="service-item" style="margin-bottom: 12px;"><i class="fa fa-chevron-right" style="color: #3f5cd6; margin-right: 5px;"></i> APS Summary</div>
+                            <div class="service-item" style="margin-bottom: 12px;"><i class="fa fa-chevron-right" style="color: #3f5cd6; margin-right: 5px;"></i> Medical Transcription</div>
+                            <div class="service-item" style="margin-bottom: 12px;"><i class="fa fa-chevron-right" style="color: #3f5cd6; margin-right: 5px;"></i> Medical Scribe</div>
+                            <div class="service-item" style="margin-bottom: 12px;"><i class="fa fa-chevron-right" style="color: #3f5cd6; margin-right: 5px;"></i> Medical Billing</div>
+                            <div class="service-item" style="margin-bottom: 12px;"><i class="fa fa-chevron-right" style="color: #3f5cd6; margin-right: 5px;"></i> EHR/EMR – Virtual Assistance</div>
                              
 
                              
@@ -189,13 +189,13 @@ $banner_url = get_field('home_banner_image');
                 <div class="row">
                     <div class="col-md-7">
                         <div class="service-list mb-4" style="margin-left: 4px;">
-                            <div class="service-item" style="margin-bottom: 12px;"><i class="fa fa-chevron-right" style="color: #3f5cd6;"></i> Software Services</div>
-                            <div class="service-item" style="margin-bottom: 12px;"><i class="fa fa-chevron-right" style="color: #3f5cd6;"></i> Mobile Solutions</div>
-                            <div class="service-item" style="margin-bottom: 12px;"><i class="fa fa-chevron-right" style="color: #3f5cd6;"></i> Cloud Solutions</div>
-                            <div class="service-item" style="margin-bottom: 12px;"><i class="fa fa-chevron-right" style="color: #3f5cd6;"></i> AI/ML Solutions</div>
-                            <div class="service-item" style="margin-bottom: 12px;"><i class="fa fa-chevron-right" style="color: #3f5cd6;"></i> Analytical and Reporting</div>
-                            <div class="service-item" style="margin-bottom: 12px;"><i class="fa fa-chevron-right" style="color: #3f5cd6;"></i> Talent Management</div>
-                            <div class="service-item" style="margin-bottom: 12px;"><i class="fa fa-chevron-right" style="color: #3f5cd6;"></i> Remote Hardware Infra</div>
+                            <div class="service-item" style="margin-bottom: 12px;"><i class="fa fa-chevron-right" style="color: #3f5cd6; margin-right: 5px;"></i> Software Services</div>
+                            <div class="service-item" style="margin-bottom: 12px;"><i class="fa fa-chevron-right" style="color: #3f5cd6; margin-right: 5px;"></i> Mobile Solutions</div>
+                            <div class="service-item" style="margin-bottom: 12px;"><i class="fa fa-chevron-right" style="color: #3f5cd6; margin-right: 5px;"></i> Cloud Solutions</div>
+                            <div class="service-item" style="margin-bottom: 12px;"><i class="fa fa-chevron-right" style="color: #3f5cd6; margin-right: 5px;"></i> AI/ML Solutions</div>
+                            <div class="service-item" style="margin-bottom: 12px;"><i class="fa fa-chevron-right" style="color: #3f5cd6; margin-right: 5px;"></i> Analytical and Reporting</div>
+                            <div class="service-item" style="margin-bottom: 12px;"><i class="fa fa-chevron-right" style="color: #3f5cd6; margin-right: 5px;"></i> Talent Management</div>
+                            <div class="service-item" style="margin-bottom: 12px;"><i class="fa fa-chevron-right" style="color: #3f5cd6; margin-right: 5px;"></i> Remote Hardware Infra</div>
                         </div>
                         <a href="<?php echo home_url('/software'); ?>" class="rts-btn btn-border mb-4">
                             Explore Software Solutions
