@@ -25,8 +25,8 @@ get_header();
               <div class="col-lg-7 mb_md--30 mb_sm--30">
                       <div class="banner-wrapper-one">
 
-                        <h1 class="title wow fadeInUp" data-wow-delay=".3s" style="font-size: 55px">End-to-End  <br> KPO Services, Tailored to Your <span>Healthcare</span> Practice Needs</h1>
-                        <p class="wow fadeInUp" data-wow-delay=".5s">Seyyone provides complete revenue cycle management solutions to the healthcare community, that allow our exclusive clientele to have more face time with their patients and no stress about billing and collections.</p>
+                        <h1 class="title wow fadeInUp" data-wow-delay=".3s" style="font-size: 55px">End-to-End<br><span>KPO Services</span><br>Tailored To Suit Your <span>Healthcare</span> Practice</h1>
+                        <p class="wow fadeInUp" data-wow-delay=".5s">We provides complete revenue cycle management solutions to the healthcare community, that allow our exclusive clientele to have more face time with their patients and no stress about <br> billing and collections.</p>
                         <a href="#healthcare-services" class="rts-btn btn-primary wow fadeInUp" data-wow-delay=".7s">
                             View Solutions
                          <img class="injectable" src="<?php echo get_template_directory_uri(); ?>/assets/images/banner/01.svg" alt="icons">

@@ -15,8 +15,8 @@ $banner_url = get_field('home_banner_image');
 
 <!-- Banner Section Start -->
 <div class="about-banner-area-bg">
-    <div class="banner-four-area banner-four-bg rts-section-gap jarallax" style="background-image: url('<?php echo esc_url($banner_url); ?>');">
-     
+   <!-- <div class="banner-four-area banner-four-bg rts-section-gap jarallax" style="background-image: url('<?php echo esc_url($banner_url); ?>');">-->
+     <div class="banner-four-area   rts-section-gap jarallax" >
          <div class="container">
             <div class="row">
                 <div class="col-lg-12">
@@ -137,8 +137,8 @@ $banner_url = get_field('home_banner_image');
                 </p>
                 <div class="row">
                     <div class="col-md-7">
-                        <div class="service-list mb-4">
-                            <div class="service-item" style="margin-bottom: 12px;"><i class="fa fa-chevron-right" style="color: #3f5cd6;"></i> Medical Record Summarization</div>
+                        <div class="service-list mb-4" style="margin-left: 5px; ">
+                            <div class="service-item" style="margin-bottom: 12px; "><i class="fa fa-chevron-right" style="color: #3f5cd6;"></i> Medical Record Summarization</div>
                             <div class="service-item" style="margin-bottom: 12px;"><i class="fa fa-chevron-right" style="color: #3f5cd6;"></i> Peer Review Summary</div>
                             <div class="service-item" style="margin-bottom: 12px;"><i class="fa fa-chevron-right" style="color: #3f5cd6;"></i> APS Summary</div>
                             <div class="service-item" style="margin-bottom: 12px;"><i class="fa fa-chevron-right" style="color: #3f5cd6;"></i> Medical Transcription</div>
@@ -150,7 +150,10 @@ $banner_url = get_field('home_banner_image');
                              
                         </div>
                         
-                           
+                            <a href="<?php echo home_url('/healthcare'); ?>" class="rts-btn btn-border mb-4">
+                                Explore Healthcare KPO
+                                <img class="injectable" src="<?php echo get_template_directory_uri(); ?>/assets/images/service/icons/13.svg" alt="arrow">
+                            </a>
                        
                     </div>
                     <div class="col-md-5">
@@ -170,13 +173,7 @@ $banner_url = get_field('home_banner_image');
                                 <?php endif; ?>
                         </div>
                     </div>
-                     <!-- Centered button with inline styles -->
-                    <div style="display: flex; justify-content: center; width: 100%; margin-top: 10px;">
-                        <a href="<?php echo home_url('/healthcare'); ?>" class="rts-btn btn-border">
-                            Explore Healthcare KPO
-                            <img class="injectable" src="<?php echo get_template_directory_uri(); ?>/assets/images/service/icons/13.svg" alt="arrow">
-                        </a>
-                    </div>
+        
                 </div>
             </div>
         </div>
@@ -191,9 +188,8 @@ $banner_url = get_field('home_banner_image');
                 </p>
                 <div class="row">
                     <div class="col-md-7">
-                        <div class="service-list mb-4">
-                            <div class="service-item" style="margin-bottom: 12px;"><i class="fa fa-chevron-right" style="color: #3f5cd6;"></i> Application Services</div>
-                            <div class="service-item" style="margin-bottom: 12px;"><i class="fa fa-chevron-right" style="color: #3f5cd6;"></i> Application development</div>
+                        <div class="service-list mb-4" style="margin-left: 4px;">
+                            <div class="service-item" style="margin-bottom: 12px;"><i class="fa fa-chevron-right" style="color: #3f5cd6;"></i> Software Services</div>
                             <div class="service-item" style="margin-bottom: 12px;"><i class="fa fa-chevron-right" style="color: #3f5cd6;"></i> Mobile Solutions</div>
                             <div class="service-item" style="margin-bottom: 12px;"><i class="fa fa-chevron-right" style="color: #3f5cd6;"></i> Cloud Solutions</div>
                             <div class="service-item" style="margin-bottom: 12px;"><i class="fa fa-chevron-right" style="color: #3f5cd6;"></i> AI/ML Solutions</div>
@@ -201,31 +197,28 @@ $banner_url = get_field('home_banner_image');
                             <div class="service-item" style="margin-bottom: 12px;"><i class="fa fa-chevron-right" style="color: #3f5cd6;"></i> Talent Management</div>
                             <div class="service-item" style="margin-bottom: 12px;"><i class="fa fa-chevron-right" style="color: #3f5cd6;"></i> Remote Hardware Infra</div>
                         </div>
-                        
-                    </div>
-                    <div class="col-md-5">
-                        <div class="h-100 d-flex align-items-center">
-                            <?php 
-                            $software_image = get_field('software_solutions_image');
-                            if($software_image): ?>
-                                <img src="<?php echo esc_url($software_image['url']); ?>" 
-                                    alt="<?php echo esc_attr($software_image['alt'] ? $software_image['alt'] : 'Software Solutions'); ?>" 
-                                    class="img-fluid rounded" 
-                                    style="width: 100%; object-fit: cover;">
-                            <?php else: ?>
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/seyyone/home/Home - software services.jpg" 
-                                    alt="Software Solutions" 
-                                    class="img-fluid rounded" 
-                                    style="width: 100%; object-fit: cover;">
-                            <?php endif; ?>
-                        </div>
-                    </div>
-
-                    <div style="display: flex; justify-content: center; width: 100%; margin-top: 10px;">
                         <a href="<?php echo home_url('/software'); ?>" class="rts-btn btn-border mb-4">
                             Explore Software Solutions
                             <img class="injectable" src="<?php echo get_template_directory_uri(); ?>/assets/images/service/icons/13.svg" alt="arrow">
                         </a>
+                    </div>
+                    <div class="col-md-5">
+                        <div class="h-100 d-flex align-items-center">
+    <?php 
+    $software_image = get_field('software_solutions_image');
+    if($software_image): ?>
+        <img src="<?php echo esc_url($software_image['url']); ?>" 
+             alt="<?php echo esc_attr($software_image['alt'] ? $software_image['alt'] : 'Software Solutions'); ?>" 
+             class="img-fluid rounded" 
+             style="width: 100%; object-fit: cover;">
+    <?php else: ?>
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/seyyone/home/Home - software services.jpg" 
+             alt="Software Solutions" 
+             class="img-fluid rounded" 
+             style="width: 100%; object-fit: cover;">
+    <?php endif; ?>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -499,13 +492,12 @@ $banner_url = get_field('home_banner_image');
                 </div>
             </div>
             
-           <!-- Disclaimer text - Option 1: Standard Legal Disclaimer -->
-<div class="row mt-3">
-    <div class="col-lg-12 text-center">
-        <p class="small text-muted">Disclaimer: All brand logos are owned by the respective companies and are used here for identification purposes only.</p>
-    </div>
-</div>
-
+            <!-- Disclaimer text -->
+            <div class="row mt-3">
+                <div class="col-lg-12 text-center">
+                    <p class="small text-muted">Disclaimer: All brand logos are owned by the respective companies and are used here for identification purposes only.</p>
+                </div>
+            </div>
         </div>
     </div>
 </div>
