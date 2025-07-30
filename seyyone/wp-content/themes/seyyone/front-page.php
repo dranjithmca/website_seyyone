@@ -171,7 +171,7 @@ $banner_url = get_field('home_banner_image');
                         </div>
                     </div>
                      <!-- Centered button with inline styles -->
-                    <div style="display: flex; justify-content: center; width: 100%; margin-top: 48px;">
+                    <div style="display: flex; justify-content: center; width: 100%; margin-top: 10px;">
                         <a href="<?php echo home_url('/healthcare'); ?>" class="rts-btn btn-border">
                             Explore Healthcare KPO
                             <img class="injectable" src="<?php echo get_template_directory_uri(); ?>/assets/images/service/icons/13.svg" alt="arrow">
