@@ -13340,7 +13340,7 @@ li.has-dropdown:hover .submenu {
 }
 
 .banner-four-bg {
-  background-image: url(../images/banner/04.webp);
+ /* background-image: url(../images/banner/04.webp); */
   height: 853px !important;
   background-repeat: no-repeat;
   background-position: center;
