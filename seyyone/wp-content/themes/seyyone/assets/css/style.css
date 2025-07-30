@@ -16326,7 +16326,7 @@ li.has-dropdown:hover .submenu {
 }
 
 .bg_cta-one {
-  background-image: url(../images/cta/01.webp);
+ /* background-image: url(../images/cta/01.webp);*/
   background-repeat: no-repeat;
   background-position: center center;
   /* position: relative; */
