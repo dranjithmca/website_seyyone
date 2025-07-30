@@ -137,44 +137,49 @@ $banner_url = get_field('home_banner_image');
                 </p>
                 <div class="row">
                     <div class="col-md-7">
-                        <ul class="service-list mb-4" style="list-style: none;">
-                            <li><i class="fa fa-chevron-right" style="color: #3f5cd6 ; "></i> EHR/EMR – Virtual Assistance</li>
-                            <li><i class="fa fa-chevron-right" style="color: #3f5cd6 ;  "></i> Medical Transcription</li>
-                            <li><i class="fa fa-chevron-right" style="color: #3f5cd6 ;  "></i> Medical Scribe</li>
-                            <li><i class="fa fa-chevron-right" style="color: #3f5cd6 ;  "></i> Medical Billing</li>
-                            <li><i class="fa fa-chevron-right" style="color: #3f5cd6 ;  "></i> Remote Medical Scribe Services</li>
-                            <li><i class="fa fa-chevron-right" style="color: #3f5cd6 ;  "></i> Medical Record Summarization</li>
-                            <li><i class="fa fa-chevron-right" style="color: #3f5cd6 ;  "></i> APS Summary</li>
-                            <li><i class="fa fa-chevron-right" style="color: #3f5cd6; ;  "></i> Peer Review Summary</li>
-                        </ul>
+                        <div class="service-list mb-4">
+                            <div class="service-item" style="margin-bottom: 12px;"><i class="fa fa-chevron-right" style="color: #3f5cd6;"></i> Medical Record Summarization</div>
+                            <div class="service-item" style="margin-bottom: 12px;"><i class="fa fa-chevron-right" style="color: #3f5cd6;"></i> Peer Review Summary</div>
+                            <div class="service-item" style="margin-bottom: 12px;"><i class="fa fa-chevron-right" style="color: #3f5cd6;"></i> APS Summary</div>
+                            <div class="service-item" style="margin-bottom: 12px;"><i class="fa fa-chevron-right" style="color: #3f5cd6;"></i> Medical Transcription</div>
+                            <div class="service-item" style="margin-bottom: 12px;"><i class="fa fa-chevron-right" style="color: #3f5cd6;"></i> Medical Scribe</div>
+                            <div class="service-item" style="margin-bottom: 12px;"><i class="fa fa-chevron-right" style="color: #3f5cd6;"></i> Medical Billing</div>
+                            <div class="service-item" style="margin-bottom: 12px;"><i class="fa fa-chevron-right" style="color: #3f5cd6;"></i> EHR/EMR – Virtual Assistance</div>
+                             
 
-                        <a href="<?php echo home_url('/healthcare'); ?>" class="rts-btn btn-border mb-4">
+                             
+                        </div>
+                        
+                           
+                       
+                    </div>
+                    <div class="col-md-5">
+                        <div class="h-100 d-flex align-items-center">
+                                <?php 
+                                $healthcare_image = get_field('healthcare_kpo_image');
+                                if($healthcare_image): ?>
+                                    <img src="<?php echo esc_url($healthcare_image['url']); ?>" 
+                                        alt="<?php echo esc_attr($healthcare_image['alt'] ? $healthcare_image['alt'] : 'Healthcare KPO'); ?>" 
+                                        class="img-fluid rounded" 
+                                        style="width: 100%; object-fit: cover;">
+                                <?php else: ?>
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/seyyone/home/Home - healthcare kpo1.jpg" 
+                                        alt="Healthcare KPO" 
+                                        class="img-fluid rounded" 
+                                        style="width: 100%; object-fit: cover;">
+                                <?php endif; ?>
+                        </div>
+                    </div>
+                     <!-- Centered button with inline styles -->
+                    <div style="display: flex; justify-content: center; width: 100%; margin-top: 48px;">
+                        <a href="<?php echo home_url('/healthcare'); ?>" class="rts-btn btn-border">
                             Explore Healthcare KPO
                             <img class="injectable" src="<?php echo get_template_directory_uri(); ?>/assets/images/service/icons/13.svg" alt="arrow">
                         </a>
                     </div>
-                    <div class="col-md-5">
-                         <div class="h-100 d-flex align-items-center">
-    <?php 
-    $healthcare_image = get_field('healthcare_kpo_image');
-    if($healthcare_image): ?>
-        <img src="<?php echo esc_url($healthcare_image['url']); ?>" 
-             alt="<?php echo esc_attr($healthcare_image['alt'] ? $healthcare_image['alt'] : 'Healthcare KPO'); ?>" 
-             class="img-fluid rounded" 
-             style="width: 100%; object-fit: cover;">
-    <?php else: ?>
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/seyyone/home/Home - healthcare kpo1.jpg" 
-             alt="Healthcare KPO" 
-             class="img-fluid rounded" 
-             style="width: 100%; object-fit: cover;">
-    <?php endif; ?>
-</div>
-
-                    </div>
                 </div>
             </div>
         </div>
-
         <!-- Software Solutions Card -->
         <div class="col-lg-6 mb-4">
             <div class="service-card bg-light p-5 rounded h-100 wow fadeInRight" data-wow-delay="0.3s">
@@ -196,28 +201,31 @@ $banner_url = get_field('home_banner_image');
                             <div class="service-item" style="margin-bottom: 12px;"><i class="fa fa-chevron-right" style="color: #3f5cd6;"></i> Talent Management</div>
                             <div class="service-item" style="margin-bottom: 12px;"><i class="fa fa-chevron-right" style="color: #3f5cd6;"></i> Remote Hardware Infra</div>
                         </div>
+                        
+                    </div>
+                    <div class="col-md-5">
+                        <div class="h-100 d-flex align-items-center">
+                            <?php 
+                            $software_image = get_field('software_solutions_image');
+                            if($software_image): ?>
+                                <img src="<?php echo esc_url($software_image['url']); ?>" 
+                                    alt="<?php echo esc_attr($software_image['alt'] ? $software_image['alt'] : 'Software Solutions'); ?>" 
+                                    class="img-fluid rounded" 
+                                    style="width: 100%; object-fit: cover;">
+                            <?php else: ?>
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/seyyone/home/Home - software services.jpg" 
+                                    alt="Software Solutions" 
+                                    class="img-fluid rounded" 
+                                    style="width: 100%; object-fit: cover;">
+                            <?php endif; ?>
+                        </div>
+                    </div>
+
+                    <div style="display: flex; justify-content: center; width: 100%; margin-top: 10px;">
                         <a href="<?php echo home_url('/software'); ?>" class="rts-btn btn-border mb-4">
                             Explore Software Solutions
                             <img class="injectable" src="<?php echo get_template_directory_uri(); ?>/assets/images/service/icons/13.svg" alt="arrow">
                         </a>
-                    </div>
-                    <div class="col-md-5">
-                        <div class="h-100 d-flex align-items-center">
-    <?php 
-    $software_image = get_field('software_solutions_image');
-    if($software_image): ?>
-        <img src="<?php echo esc_url($software_image['url']); ?>" 
-             alt="<?php echo esc_attr($software_image['alt'] ? $software_image['alt'] : 'Software Solutions'); ?>" 
-             class="img-fluid rounded" 
-             style="width: 100%; object-fit: cover;">
-    <?php else: ?>
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/seyyone/home/Home - software services.jpg" 
-             alt="Software Solutions" 
-             class="img-fluid rounded" 
-             style="width: 100%; object-fit: cover;">
-    <?php endif; ?>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
@@ -416,6 +424,7 @@ $banner_url = get_field('home_banner_image');
 <br>
 
 <!-- Our Clients Section Start -->
+ <!-- Our Clients Section Start -->
 <div class="single-benefits-area-wrapper bg-light" id="clients">
     <div class="rts-brand-area-start pt--20" dir="ltr" >
         <div class="container">
@@ -489,9 +498,18 @@ $banner_url = get_field('home_banner_image');
                     </div>
                 </div>
             </div>
+            
+           <!-- Disclaimer text - Option 1: Standard Legal Disclaimer -->
+<div class="row mt-3">
+    <div class="col-lg-12 text-center">
+        <p class="small text-muted">Disclaimer: All brand logos are owned by the respective companies and are used here for identification purposes only.</p>
+    </div>
+</div>
+
         </div>
     </div>
 </div>
+
 
 <br><br>
 
