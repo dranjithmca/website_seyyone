@@ -49,7 +49,7 @@ $banner_url = get_field('home_banner_image');
             <div class="col-6 col-sm-6 col-md-4 col-lg-2">
                 <div class="single-counter-up-one border-top border-left card" style="padding: 30px 10px;">
                     <div class="icon-area">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/seyyone/index/icons8-calendar-32.png" alt="icon">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/seyyone/index/v1/calendar_1.png" style="width: 33px; height: 32px;" alt="icon">
                     </div>
                     <h3 class="title" style="font-size: clamp(18px, 3vw, 24px);">
                         <span class="counter">25</span>+ Years
@@ -59,6 +59,7 @@ $banner_url = get_field('home_banner_image');
             <div class="col-6 col-sm-6 col-md-4 col-lg-2">
                 <div class="single-counter-up-one border-top" style="padding: 30px 10px;">
                     <div class="icon-area">
+                        
                         <img src="<?php echo get_template_directory_uri(); ?>/assets/images/about/icons/08.svg" alt="icon">
                     </div>
                     <h3 class="title" style="font-size: clamp(18px, 3vw, 24px);">
@@ -71,6 +72,7 @@ $banner_url = get_field('home_banner_image');
             <div class="col-6 col-sm-6 col-md-4 col-lg-2">
                 <div class="single-counter-up-one border-top" style="padding: 30px 10px;">
                     <div class="icon-area">
+                        
                         <img src="<?php echo get_template_directory_uri(); ?>/assets/images/about/icons/04.svg" alt="icon">
                     </div>
                     <h3 class="title" style="font-size: clamp(18px, 3vw, 24px);">
@@ -136,14 +138,14 @@ $banner_url = get_field('home_banner_image');
                 <div class="row">
                     <div class="col-md-7">
                         <ul class="service-list mb-4" style="list-style: none;">
-                            <li><i class="fa fa-chevron-right" style="color: #3f5cd6 ; margin-right: 8px;"></i> EHR/EMR – Virtual Assistance</li>
-                            <li><i class="fa fa-chevron-right" style="color: #3f5cd6 ; margin-right: 8px;"></i> Medical Transcription</li>
-                            <li><i class="fa fa-chevron-right" style="color: #3f5cd6 ; margin-right: 8px;"></i> Medical Scribe</li>
-                            <li><i class="fa fa-chevron-right" style="color: #3f5cd6 ; margin-right: 8px;"></i> Medical Billing</li>
-                            <li><i class="fa fa-chevron-right" style="color: #3f5cd6 ; margin-right: 8px;"></i> Remote Medical Scribe Services</li>
-                            <li><i class="fa fa-chevron-right" style="color: #3f5cd6 ; margin-right: 8px;"></i> Medical Record Summarization</li>
-                            <li><i class="fa fa-chevron-right" style="color: #3f5cd6 ; margin-right: 8px;"></i> APS Summary</li>
-                            <li><i class="fa fa-chevron-right" style="color: #3f5cd6; ; margin-right: 8px;"></i> Peer Review Summary</li>
+                            <li><i class="fa fa-chevron-right" style="color: #3f5cd6 ; "></i> EHR/EMR – Virtual Assistance</li>
+                            <li><i class="fa fa-chevron-right" style="color: #3f5cd6 ;  "></i> Medical Transcription</li>
+                            <li><i class="fa fa-chevron-right" style="color: #3f5cd6 ;  "></i> Medical Scribe</li>
+                            <li><i class="fa fa-chevron-right" style="color: #3f5cd6 ;  "></i> Medical Billing</li>
+                            <li><i class="fa fa-chevron-right" style="color: #3f5cd6 ;  "></i> Remote Medical Scribe Services</li>
+                            <li><i class="fa fa-chevron-right" style="color: #3f5cd6 ;  "></i> Medical Record Summarization</li>
+                            <li><i class="fa fa-chevron-right" style="color: #3f5cd6 ;  "></i> APS Summary</li>
+                            <li><i class="fa fa-chevron-right" style="color: #3f5cd6; ;  "></i> Peer Review Summary</li>
                         </ul>
 
                         <a href="<?php echo home_url('/healthcare'); ?>" class="rts-btn btn-border mb-4">
@@ -184,16 +186,16 @@ $banner_url = get_field('home_banner_image');
                 </p>
                 <div class="row">
                     <div class="col-md-7">
-                        <ul class="service-list mb-4" style="list-style: none;">
-                            <li><i class="fa fa-chevron-right" style="color: #3f5cd6 ; margin-right: 6px;"></i> Application Services</li>
-                            <li><i class="fa fa-chevron-right" style="color: #3f5cd6 ; margin-right: 6px;"></i> Application development</li>
-                            <li><i class="fa fa-chevron-right" style="color: #3f5cd6 ; margin-right: 6px;"></i> Mobile Solutions</li>
-                            <li><i class="fa fa-chevron-right" style="color: #3f5cd6 ; margin-right: 6px;"></i> Cloud Solutions</li>
-                            <li><i class="fa fa-chevron-right" style="color: #3f5cd6 ; margin-right: 6px;"></i> AI/ML Solutions</li>
-                            <li><i class="fa fa-chevron-right" style="color: #3f5cd6 ; margin-right: 6px;"></i> Analytical and Reporting</li>
-                            <li><i class="fa fa-chevron-right" style="color: #3f5cd6 ; margin-right: 8px;"></i> Talent Management</li>
-                            <li><i class="fa fa-chevron-right" style="color: #3f5cd6 ; margin-right: 8px;"></i> Remote Hardware Infra</li>
-                        </ul>
+                        <div class="service-list mb-4">
+                            <div class="service-item" style="margin-bottom: 12px;"><i class="fa fa-chevron-right" style="color: #3f5cd6;"></i> Application Services</div>
+                            <div class="service-item" style="margin-bottom: 12px;"><i class="fa fa-chevron-right" style="color: #3f5cd6;"></i> Application development</div>
+                            <div class="service-item" style="margin-bottom: 12px;"><i class="fa fa-chevron-right" style="color: #3f5cd6;"></i> Mobile Solutions</div>
+                            <div class="service-item" style="margin-bottom: 12px;"><i class="fa fa-chevron-right" style="color: #3f5cd6;"></i> Cloud Solutions</div>
+                            <div class="service-item" style="margin-bottom: 12px;"><i class="fa fa-chevron-right" style="color: #3f5cd6;"></i> AI/ML Solutions</div>
+                            <div class="service-item" style="margin-bottom: 12px;"><i class="fa fa-chevron-right" style="color: #3f5cd6;"></i> Analytical and Reporting</div>
+                            <div class="service-item" style="margin-bottom: 12px;"><i class="fa fa-chevron-right" style="color: #3f5cd6;"></i> Talent Management</div>
+                            <div class="service-item" style="margin-bottom: 12px;"><i class="fa fa-chevron-right" style="color: #3f5cd6;"></i> Remote Hardware Infra</div>
+                        </div>
                         <a href="<?php echo home_url('/software'); ?>" class="rts-btn btn-border mb-4">
                             Explore Software Solutions
                             <img class="injectable" src="<?php echo get_template_directory_uri(); ?>/assets/images/service/icons/13.svg" alt="arrow">
@@ -214,8 +216,7 @@ $banner_url = get_field('home_banner_image');
              class="img-fluid rounded" 
              style="width: 100%; object-fit: cover;">
     <?php endif; ?>
-</div>
-
+                        </div>
                     </div>
                 </div>
             </div>
