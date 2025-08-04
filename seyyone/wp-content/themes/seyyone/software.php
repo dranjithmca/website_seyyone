@@ -122,7 +122,7 @@ get_header();
                                 </a>
                                 
                                 <!-- Service Content -->
-                                <div class="inner-content" style="padding: 12px 20px 20px; flex-grow: 1; display: flex; flex-direction: column;">
+                                <div class="inner-content" style="padding: 12px 12px 20px; flex-grow: 1; display: flex; flex-direction: column;">
                                     <a href="#" onclick="openModal('<?php echo esc_js($service_id); ?>')" style="text-decoration: none; color: inherit;">
                                         <h4 class="title" style="margin-top: 0; margin-bottom: 8px; font-size: 20px; color: #333; min-height: 50px; display: flex; align-items: center;"><?php echo esc_html($title); ?></h4>
                                     </a>
