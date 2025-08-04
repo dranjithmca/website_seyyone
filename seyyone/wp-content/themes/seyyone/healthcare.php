@@ -60,19 +60,21 @@ get_header();
 
     </div>
 </div>
+ 
 
-<!-- Healthcare Services Section -->
- <div class="rts-service-area">
+
+ <!-- Healthcare Services Section -->
+<div class="rts-service-area">
     <div class="container">
         <div class="bg-gradient-one-industry">
             <br><br>
             <div class="title-area-center-inner-with-sub" id="healthcare-services">
                 <span>Our Services</span>
             </div>
-
+            <br>
             <div class="rts-case-studies-area rts-section-gapBottom mt_sm--30">
                 <div class="container">
-                    <div class="row g-80 mt--0">
+                    <div class="row g-4">
                         <?php
                         // Get Healthcare Services from WordPress - Ordered by custom order field
                         $healthcare_services = new WP_Query(array(
@@ -98,17 +100,17 @@ get_header();
                         ?>
                         
                         <!-- Healthcare Service Card with ID for URL anchoring -->
-                        <div class="col-lg-4 col-md-6 col-sm-12 wow fadeInUp" data-wow-offset="120"<?php echo $delay_attr; ?> id="<?php echo esc_attr($service_id); ?>">
-                            <div class="single-case-studies-three">
+                        <div class="col-lg-4 col-md-6 col-sm-12 wow fadeInUp" data-wow-offset="120"<?php echo $delay_attr; ?> id="<?php echo esc_attr($service_id); ?>" style="margin-bottom: 30px;">
+                            <div class="single-case-studies-three" style="background-color: #f8f9fa; border-radius: 10px; box-shadow: 0 10px 30px rgba(0,0,0,0.08); overflow: hidden; transition: all 0.3s ease; height: 100%; display: flex; flex-direction: column; ">
                                 <!-- Service Image -->
-                                <a href="#" onclick="openModal('<?php echo esc_js($service_id); ?>')" class="thumbnail">
+                                <a href="#" onclick="openModal('<?php echo esc_js($service_id); ?>')" class="thumbnail" style="display: block; flex-shrink: 0; margin-bottom: 1px;">
                                     <?php if (has_post_thumbnail()) : ?>
                                         <?php the_post_thumbnail('medium', array(
                                             'alt' => 'healthcare-service',
-                                            'style' => 'width: 100%; height: 250px; object-fit: cover;'
+                                            'style' => 'width: 100%; height: 280px; object-fit: cover;'
                                         )); ?>
                                     <?php else : ?>
-                                        <div style="width: 100%; height: 250px; background: #f8f9fa; display: flex; align-items: center; justify-content: center; color: #6c757d; border: 2px dashed #dee2e6;">
+                                        <div style="width: 100%; height: 280px; background: #f8f9fa; display: flex; align-items: center; justify-content: center; color: #6c757d; border-bottom: 2px dashed #dee2e6;">
                                             <div style="text-align: center;">
                                                 <i class="fa fa-heartbeat" style="font-size: 48px; margin-bottom: 10px; display: block; color: #28a745;"></i>
                                                 <strong>No Image Set</strong><br>
@@ -119,24 +121,24 @@ get_header();
                                 </a>
                                 
                                 <!-- Service Content -->
-                                <div class="inner-content">
-                                    <a href="#" onclick="openModal('<?php echo esc_js($service_id); ?>')">
-                                        <h4 class="title"><?php echo esc_html($title); ?></h4>
+                                <div class="inner-content" style="padding: 12px 20px 20px; flex-grow: 1; display: flex; flex-direction: column;">
+                                    <a href="#" onclick="openModal('<?php echo esc_js($service_id); ?>')" style="text-decoration: none; color: inherit;">
+                                        <h4 class="title" style="margin-top: 0; margin-bottom: 8px; font-size: 20px; color: #333; min-height: 50px; display: flex; align-items: center;"><?php echo esc_html($title); ?></h4>
                                     </a>
-                                    <p><?php echo $excerpt ? esc_html($excerpt) : 'Click to learn more about this healthcare service.'; ?></p>
+                                    <p style="color: #666; font-size: 16px; line-height: 1.6; margin-bottom: 0; flex-grow: 1; display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; overflow: hidden; height: 96px;"><?php echo $excerpt ? esc_html($excerpt) : 'Click to learn more about this healthcare service.'; ?></p>
                                 </div>
                             </div>
                         </div>
                         
-                        <?php 
-                                $delay_counter++;
+                        <?php
+                            $delay_counter++;
                             endwhile;
                             wp_reset_postdata();
                         else :
                         ?>
-                        
-                       
-                        
+                            <div class="col-12 text-center">
+                                <p>No healthcare services found. Please add some services to display here.</p>
+                            </div>
                         <?php endif; ?>
                     </div>
                 </div>
@@ -145,8 +147,12 @@ get_header();
     </div>
 </div>
 
+
+ 
+
+
 <!-- Healthcare Services Section -->
-<div class="rts-service-area">
+<!-- <div class="rts-service-area">
     <div class="container">
         <div class="bg-gradient-one-industry">
             <br><br>
@@ -158,7 +164,7 @@ get_header();
                 <div class="container">
                     <div class="row">
                         <?php
-                        // Get Healthcare Services from WordPress - Ordered by custom order field
+                       
                         $healthcare_services = new WP_Query(array(
                             'post_type' => 'healthcare_service',
                             'posts_per_page' => -1,
@@ -198,7 +204,7 @@ get_header();
                                 ?>
                                 <div class="service-card <?php echo ($i < $column1_count - 1) ? 'mb-4' : ''; ?> wow fadeInUp" data-wow-delay="<?php echo $delay; ?>" data-wow-offset="120" id="<?php echo esc_attr($service_id); ?>">
                                     <div class="single-case-studies-three" style="background-color: #f8f9fa; border-radius: 15px !important; box-shadow: 0 10px 30px rgba(0,0,0,0.08); overflow: hidden; transition: all 0.3s ease; max-width: 90%; margin: 0 auto;">
-                                        <!-- Service Image -->
+                                        
                                         <a href="#" onclick="openModal('<?php echo esc_js($service_id); ?>')" class="thumbnail">
                                             <?php if (has_post_thumbnail($post_id)) : ?>
                                                 <?php echo get_the_post_thumbnail($post_id, 'medium', array(
@@ -216,7 +222,7 @@ get_header();
                                             <?php endif; ?>
                                         </a>
                                         
-                                        <!-- Service Content -->
+                                         
                                         <div class="inner-content" style="padding: 20px; text-align: center;">
                                             <a href="#" onclick="openModal('<?php echo esc_js($service_id); ?>')" style="text-decoration: none; color: inherit;">
                                                 <h4 class="title" style="margin-bottom: 15px; font-size: 20px; color: #333;"><?php echo esc_html($title); ?></h4>
@@ -232,7 +238,7 @@ get_header();
                             </div>
                             <?php endif; ?>
                             
-                            <!-- Column 2 (3 cards) -->
+                            
                             <?php if ($column2_count > 0) : ?>
                             <div class="col-md-4">
                                 <?php 
@@ -247,7 +253,7 @@ get_header();
                                 ?>
                                 <div class="service-card <?php echo ($i < $column2_count - 1) ? 'mb-4' : ''; ?> wow fadeInUp" data-wow-delay="<?php echo $delay; ?>" data-wow-offset="120" id="<?php echo esc_attr($service_id); ?>">
                                     <div class="single-case-studies-three" style="background-color: #f8f9fa; border-radius: 15px !important; box-shadow: 0 10px 30px rgba(0,0,0,0.08); overflow: hidden; transition: all 0.3s ease; max-width: 90%; margin: 0 auto;">
-                                        <!-- Service Image -->
+                                        
                                         <a href="#" onclick="openModal('<?php echo esc_js($service_id); ?>')" class="thumbnail">
                                             <?php if (has_post_thumbnail($post_id)) : ?>
                                                 <?php echo get_the_post_thumbnail($post_id, 'medium', array(
@@ -265,7 +271,7 @@ get_header();
                                             <?php endif; ?>
                                         </a>
                                         
-                                        <!-- Service Content -->
+                                      
                                         <div class="inner-content" style="padding: 20px; text-align: center;">
                                             <a href="#" onclick="openModal('<?php echo esc_js($service_id); ?>')" style="text-decoration: none; color: inherit;">
                                                 <h4 class="title" style="margin-bottom: 15px; font-size: 20px; color: #333;"><?php echo esc_html($title); ?></h4>
@@ -281,7 +287,7 @@ get_header();
                             </div>
                             <?php endif; ?>
                             
-                            <!-- Column 3 (2 cards) -->
+                            
                             <?php if ($column3_count > 0) : ?>
                             <div class="col-md-4 d-flex flex-column justify-content-center">
                                 <?php 
@@ -296,7 +302,7 @@ get_header();
                                 ?>
                                 <div class="service-card <?php echo ($i < $column3_count - 1) ? 'mb-4' : ''; ?> wow fadeInUp" data-wow-delay="<?php echo $delay; ?>" data-wow-offset="120" id="<?php echo esc_attr($service_id); ?>">
                                     <div class="single-case-studies-three" style="background-color: #f8f9fa; border-radius: 15px !important; box-shadow: 0 10px 30px rgba(0,0,0,0.08); overflow: hidden; transition: all 0.3s ease; max-width: 90%; margin: 0 auto;">
-                                        <!-- Service Image -->
+                                       
                                         <a href="#" onclick="openModal('<?php echo esc_js($service_id); ?>')" class="thumbnail">
                                             <?php if (has_post_thumbnail($post_id)) : ?>
                                                 <?php echo get_the_post_thumbnail($post_id, 'medium', array(
@@ -314,7 +320,7 @@ get_header();
                                             <?php endif; ?>
                                         </a>
                                         
-                                        <!-- Service Content -->
+                                        
                                         <div class="inner-content" style="padding: 20px; text-align: center;">
                                             <a href="#" onclick="openModal('<?php echo esc_js($service_id); ?>')" style="text-decoration: none; color: inherit;">
                                                 <h4 class="title" style="margin-bottom: 15px; font-size: 20px; color: #333;"><?php echo esc_html($title); ?></h4>
@@ -340,7 +346,7 @@ get_header();
             </div>
         </div>
     </div>
-</div>
+</div> -->
 
 
 <!-- CTA Section -->
