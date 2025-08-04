@@ -103,15 +103,15 @@ get_header();
 <br>
 
 <!-- company values area start -->
-<div class="company-values-area rts-section-gap" style="background-color: whitesmoke;">
+<div class="company-values-area rts-section-gap" style="background-color: #8192a2;">
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
                 <div class="title-between-area-wrapper-main">
                     <div class="title-left-area">
-                        <h2 class="title">Our Values in Action</h2>
+                        <h2 class="title" style="color: white;">Our Values in Action</h2>
                     </div>
-                    <p class="disc">
+                    <p class="disc" style="color: white;">
                         Our values shape who we are and how we work. They define our culture, influence
                         our decisions, and guide us as we serve our clients with excellence.
                     </p>
