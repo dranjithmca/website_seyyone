@@ -93,15 +93,15 @@ get_header();
                             <div class="col-lg-6">
                                 <div class="single-working-process-choose-us wow fadeInUp">
                                     <h5 class="title">Global Healthcare Expertise</h5>
-                                    <i class="far fa-check-circle"></i> With over 25 years of experience, Seyyone has been a trusted partner for healthcare providers, payers, and businesses across the USA, UK, Australia, Canada, Ireland, Germany, and beyond. Our deep domain knowledge allows us to simplify complex healthcare operations and deliver comprehensive healthcare process management and IT solutions.
+                                     With over 25 years of experience, Seyyone has been a trusted partner for healthcare providers, payers, and businesses across the USA, UK, Australia, Canada, Ireland, Germany, and beyond. Our deep domain knowledge allows us to simplify complex healthcare operations and deliver comprehensive healthcare process management and IT solutions.
                                 </div>
                                 <div class="single-working-process-choose-us wow fadeInUp" data-wow-delay=".2s">
                                     <h5 class="title">Skilled Professionals & Advanced Technology</h5>
-                                    <i class="far fa-check-circle"></i> Seyyone blends a highly skilled workforce with advanced technologies, enabling us to offer a wide spectrum of healthcare and IT services. Operating from our HIPAA-compliant, world-class infrastructure in Coimbatore, India, we ensure secure, efficient, and technology-driven service delivery that meets international standards.
+                                     Seyyone blends a highly skilled workforce with advanced technologies, enabling us to offer a wide spectrum of healthcare and IT services. Operating from our HIPAA-compliant, world-class infrastructure in Coimbatore, India, we ensure secure, efficient, and technology-driven service delivery that meets international standards.
                                 </div>
                                 <div class="single-working-process-choose-us wow fadeInUp" data-wow-delay=".4s">
                                     <h5 class="title">Client Commitment & Service Excellence</h5>
-                                    <i class="far fa-check-circle"></i> At Seyyone, client satisfaction is at the heart of everything we do. We are dedicated to relieving our clients from the challenges of managing their back-office operations, allowing them to focus on their core business. Our unwavering commitment to quality, customer satisfaction, and continuous improvement ensures long-term partnerships built on trust and excellence.
+                                      At Seyyone, client satisfaction is at the heart of everything we do. We are dedicated to relieving our clients from the challenges of managing their back-office operations, allowing them to focus on their core business. Our unwavering commitment to quality, customer satisfaction, and continuous improvement ensures long-term partnerships built on trust and excellence.
                                 </div>
                             </div>
                            
@@ -138,20 +138,20 @@ get_header();
             <div class="col-lg-6">
                 <div class="single-working-process-choose-us wow fadeInUp">
                     <h5 class="title">A Woman-Empowered Workforce</h5>
-                    <i class="far fa-check-circle"></i> 80% of our team are women—leaders, coders, strategists, and innovators
-                    <br> <i class="far fa-check-circle"></i> We champion diversity and create equal growth opportunities for all.
+                    80% of our team are women—leaders, coders, strategists, and innovators
+                    <br>   We champion diversity and create equal growth opportunities for all.
                 </div>
                 <div class="single-working-process-choose-us wow fadeInUp" data-wow-delay=".2s">
                     <h5 class="title">Experienced & Skilled Team</h5>
-                    <i class="far fa-check-circle"></i> 100% graduate professionals.<br>
-                    <i class="far fa-check-circle"></i> 60% with over 12 years of dedicated experience.<br>
-                    <i class="far fa-check-circle"></i> Continuous learning through in-house training and certifications.
+                     100% graduate professionals.<br>
+                     60% with over 12 years of dedicated experience.<br>
+                     Continuous learning through in-house training and certifications.
                 </div>
                 <div class="single-working-process-choose-us wow fadeInUp" data-wow-delay=".4s">
                     <h5 class="title">Empowering IT Talent</h5>
                     At Seyyone, our software professionals work on cutting-edge technologies across web, mobile, and cloud platforms. We provide:<br>
-                    <i class="far fa-check-circle"></i> Exposure to real-time projects in healthcare tech, enterprise apps, and cloud-native solutions.<br>
-                    <i class="far fa-check-circle"></i> Internal mentorship, code reviews, and career paths tailored for tech growth and leadership.
+                     Exposure to real-time projects in healthcare tech, enterprise apps, and cloud-native solutions.<br>
+                      Internal mentorship, code reviews, and career paths tailored for tech growth and leadership.
                 </div>
             </div>
         </div>
@@ -182,20 +182,20 @@ get_header();
             <div class="col-lg-6">
                 <div class="single-working-process-choose-us wow fadeInUp">
                     <h5 class="title">Collaborative, Transparent Culture</h5>
-                    <i class="far fa-check-circle"></i> Open-door policy with zero hierarchy barriers.
-                    <br> <i class="far fa-check-circle"></i> Cross-functional teamwork and knowledge sharing.
-                    <br> <i class="far fa-check-circle"></i> Regular feedback, performance recognition, and peer appreciation.
+                     Open-door policy with zero hierarchy barriers.
+                    <br>  Cross-functional teamwork and knowledge sharing.
+                    <br>   Regular feedback, performance recognition, and peer appreciation.
                 </div>
                 <div class="single-working-process-choose-us wow fadeInUp" data-wow-delay=".2s">
                     <h5 class="title">Personal Growth & Work-Life Harmony</h5>
-                    <i class="far fa-check-circle"></i> Flexible work options including remote and hybrid models.<br>
-                    <i class="far fa-check-circle"></i> Family-friendly policies and employee wellness initiatives.<br>
-                    <i class="far fa-check-circle"></i> Career development programs tailored to individual goals.
+                     Flexible work options including remote and hybrid models.<br>
+                     Family-friendly policies and employee wellness initiatives.<br>
+                      Career development programs tailored to individual goals.
                 </div>
                 <div class="single-working-process-choose-us wow fadeInUp" data-wow-delay=".4s">
                     <h5 class="title">Fun, Festivities & Community</h5>
-                    <i class="far fa-check-circle"></i> Celebrations, team outings, wellness days<br>
-                    <i class="far fa-check-circle"></i> Vibrant workplace culture filled with creativity and camaraderie.
+                     Celebrations, team outings, wellness days<br>
+                     Vibrant workplace culture filled with creativity and camaraderie.
                 </div>
             </div>
            
@@ -229,15 +229,15 @@ Empowering through Tailored Tech Solutions, 24/7 Support, and Unmatched Quality.
             <div class="col-lg-6">
                 <div class="single-working-process-choose-us wow fadeInUp">
                     <h5 class="title">Proven Experience & Industry Trust</h5>
-                    <i class="far fa-check-circle"></i> Seyyone brings decades of proven experience, trusted by healthcare organizations worldwide. Our industry expertise transforms healthcare providers by delivering reliable, efficient, and results-driven solutions that simplify operations and support growth.
+                   Seyyone brings decades of proven experience, trusted by healthcare organizations worldwide. Our industry expertise transforms healthcare providers by delivering reliable, efficient, and results-driven solutions that simplify operations and support growth.
                 </div>
                 <div class="single-working-process-choose-us wow fadeInUp" data-wow-delay=".2s">
                     <h5 class="title">Global Delivery & Client-Focused Solutions</h5>
-                    <i class="far fa-check-circle"></i> With global delivery capabilities, Seyyone offers flexible service models that cater to each client's specific needs. Our client-centric approach ensures tailored solutions, seamless collaboration, and consistent service excellence across diverse geographies.
+                    With global delivery capabilities, Seyyone offers flexible service models that cater to each client's specific needs. Our client-centric approach ensures tailored solutions, seamless collaboration, and consistent service excellence across diverse geographies.
                 </div>
                 <div class="single-working-process-choose-us wow fadeInUp" data-wow-delay=".4s">
                     <h5 class="title">Quality & Compliance Excellence</h5>
-                    <i class="far fa-check-circle"></i> We prioritize quality and compliance, adhering to HIPAA and global regulatory standards. By integrating cutting-edge technology with personalized service, Seyyone delivers innovative solutions that drive operational excellence while maintaining the highest standards of security and compliance.
+                   We prioritize quality and compliance, adhering to HIPAA and global regulatory standards. By integrating cutting-edge technology with personalized service, Seyyone delivers innovative solutions that drive operational excellence while maintaining the highest standards of security and compliance.
                 </div>
             </div>
         </div>
