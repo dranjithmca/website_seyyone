@@ -13789,7 +13789,7 @@ li.has-dropdown:hover .submenu {
   background-repeat: no-repeat;
   background-position: center;
   position: relative;
-  clip-path: polygon(0% 0%, 100% 0%, 100% 90.323%, 0% 100%, 0% 0%);
+ /* clip-path: polygon(0% 0%, 100% 0%, 100% 90.323%, 0% 100%, 0% 0%); */
 }
 @media only screen and (max-width: 767px) {
   .about-banner-area-bg {

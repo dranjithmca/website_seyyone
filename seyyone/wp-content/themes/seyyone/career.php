@@ -74,22 +74,21 @@ get_header();
                     <p>We don't just offer jobs, we offer careers that empower individuals to learn, grow,
                         and make an impact. As part of the Seyyone family, you'll benefit from:</p>
                     <div class="check-wrapper-main">
-                        <div class="check-wrapper">
+                        <div class="check-wrapper" style="margin-left: 4px; ">
                             <div class="single-check">
-                               <p> <i class="fa fa-chevron-right" style="color: #3f5cd6  "></i>
-                                  A dynamic, forward-thinking environment</p>
+                               <p> <i class="fa fa-chevron-right" style="color: #3f5cd6; margin-right: 5px; "></i> A dynamic, forward-thinking environment</p>
                             </div>
                             <div class="single-check">
-                                 <p> <i class="fa fa-chevron-right" style="color: #3f5cd6  "></i> Opportunities for continuous learning & development</p>
+                                 <p> <i class="fa fa-chevron-right" style="color: #3f5cd6;  margin-right: 5px;"></i> Opportunities for continuous learning & development</p>
                             </div>
                             <div class="single-check">
-                                <p> <i class="fa fa-chevron-right" style="color: #3f5cd6  "></i> Exposure to cutting-edge technologies and real-world business challenges</p>
+                                <p> <i class="fa fa-chevron-right" style="color: #3f5cd6;  margin-right: 5px;"></i> Exposure to cutting-edge technologies and real-world business challenges</p>
                             </div>
                             <div class="single-check">
-                                 <p> <i class="fa fa-chevron-right" style="color: #3f5cd6  "></i> Collaborative culture that values diverse perspectives</p>
+                                 <p> <i class="fa fa-chevron-right" style="color: #3f5cd6;  margin-right: 5px;"></i> Collaborative culture that values diverse perspectives</p>
                             </div>
                             <div class="single-check">
-                               <p> <i class="fa fa-chevron-right" style="color: #3f5cd6  "></i> Enhancing Data-Driven Decisions</p>
+                               <p> <i class="fa fa-chevron-right" style="color: #3f5cd6;  margin-right: 5px;"></i> Enhancing Data-Driven Decisions</p>
                             </div>
                         </div>
 
@@ -120,11 +119,12 @@ get_header();
             </div>
         </div>
         <div class="row g-5 mt--30">
-            <div class="col-lg-4 wow fadeInUp" data-wow-delay=".1s">
-                <div class="single-values-in-action">
+            <div class="col-lg-4 wow fadeInUp" data-wow-delay=".1s" >
+                <div class="single-values-in-action " style="background-color: floralwhite;">
                     <div class="icon">
-                        <img src="https://cdn-icons-png.freepik.com/512/8747/8747255.png" style="height: 100px; width: 100px;" alt="icon">
-                    <!--<img src="https://seyyone.xcomvpn.com/wp-content/themes/seyyone/assets/images/career/01.svg" alt="icon">-->
+ 
+                       <img src="<?php echo get_template_directory_uri(); ?>/assets/images/seyyone/career/integrity.png" style="height: 95px; width: 95px;" alt="icon"> 
+                        <!--<img src="https://seyyone.xcomvpn.com/wp-content/themes/seyyone/assets/images/career/01.svg" alt="icon">-->
                     </div>
                     <div class="information">
                         <h6 class="title">Integrity</h6>
@@ -134,11 +134,11 @@ get_header();
                 </div>
             </div>
             <div class="col-lg-4 wow fadeInUp" data-wow-delay=".3s">
-                <div class="single-values-in-action">
+                <div class="single-values-in-action" style="background-color: floralwhite;">
                     <div class="icon">
-                         <img src=" https://cdn-icons-png.freepik.com/512/9329/9329103.png" style="height: 80px; width: 80px;" alt="icon">
                        
-                       <!-- <img src="<?php echo get_template_directory_uri(); ?>/assets/images/career/05.svg" alt="icon">-->
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/seyyone/career/innovation.png" style="height: 75px; width: 75px;" alt="icon"> 
+                       
                     </div>
                     <div class="information">
                         <h6 class="title">Innovation</h6>
@@ -148,10 +148,10 @@ get_header();
                 </div>
             </div>
             <div class="col-lg-4 wow fadeInUp" data-wow-delay=".5s">
-                <div class="single-values-in-action">
+                <div class="single-values-in-action" style="background-color: floralwhite;">
                     <div class="icon">
-                        <img src=" https://static.vecteezy.com/system/resources/previews/014/315/135/non_2x/collaboration-silhouette-icon-group-of-people-community-team-work-pictogram-social-communication-and-business-teamwork-connect-color-icon-isolated-illustration-vector.jpg" style="height: 90px; width: 90px;" alt="icon">
-                       <!-- <img src="<?php echo get_template_directory_uri(); ?>/assets/images/career/04.svg" alt="icon"> -->
+                       
+                          <img src="<?php echo get_template_directory_uri(); ?>/assets/images/seyyone/career/collaboration.png" style="height: 90px; width: 90px;" alt="icon"> 
                     </div>
                     <div class="information">
                         <h6 class="title">Collaboration</h6>
@@ -161,12 +161,10 @@ get_header();
                 </div>
             </div>
             <div class="col-lg-4 wow fadeInUp" data-wow-delay=".1s">
-                <div class="single-values-in-action">
+                <div class="single-values-in-action" style="background-color: floralwhite;">
                     <div class="icon">
-  <img src="https://cdn-icons-png.flaticon.com/512/6462/6462958.png" style="height: 70px; width: 70px;" alt="icon">
-                
-                       <!-- <img src="<?php echo get_template_directory_uri(); ?>/assets/images/career/03.svg" alt="icon">-->
-                    </div>
+                         <img src="<?php echo get_template_directory_uri(); ?>/assets/images/seyyone/career/excellence.png" style="height: 70px; width: 70px;" alt="icon"> 
+                     </div>
                     <div class="information">
                         <h6 class="title">Excellence</h6>
                         <p>We strive for excellence in everything we do, from service delivery to client
@@ -175,12 +173,10 @@ get_header();
                 </div>
             </div>
             <div class="col-lg-4 wow fadeInUp" data-wow-delay=".3s">
-                <div class="single-values-in-action">
+                <div class="single-values-in-action" style="background-color: floralwhite;">
                     <div class="icon">
-                       
-                        <img src="https://sdmntprwestus2.oaiusercontent.com/files/00000000-6e6c-61f8-9e4a-e85380f37291/raw?se=2025-07-30T05%3A27%3A17Z&sp=r&sv=2024-08-04&sr=b&scid=36f97d0c-d4bc-5f20-aa18-68808d8ea1d1&skoid=5c72dd08-68ae-4091-b4e1-40ccec0693ae&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-07-29T18%3A53%3A23Z&ske=2025-07-30T18%3A53%3A23Z&sks=b&skv=2024-08-04&sig=DXBjca65rvPBG9wiYp%2BnClNs/kKHdmH0ctled2ONad4%3D" style="height: 80px; width: 80px;" alt="icon">
-                       <!-- <img src="<?php echo get_template_directory_uri(); ?>/assets/images/career/02.svg" alt="icon">-->
-                    </div>
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/seyyone/career/customer-focus.png" style="height: 90px; width: 90px;" alt="icon"> 
+                       </div>
                     <div class="information">
                         <h6 class="title">Customer Focus</h6>
                         <p>Our clients' success is our top priority. We listen, understand, and tailor our solutions
@@ -189,11 +185,9 @@ get_header();
                 </div>
             </div>
             <div class="col-lg-4 wow fadeInUp" data-wow-delay=".5s">
-                <div class="single-values-in-action">
+                <div class="single-values-in-action" style="background-color: floralwhite;">
                     <div class="icon">
-                        
-                         <img src="https://static.vecteezy.com/system/resources/previews/053/498/585/non_2x/accountability-glyph-two-color-icon-design-vector.jpg" style="height: 65px; width: 65px;" alt="icon"> 
-                        <!--<img src="<?php echo get_template_directory_uri(); ?>/assets/images/career/06.svg" alt="icon">-->
+                         <img src="<?php echo get_template_directory_uri(); ?>/assets/images/seyyone/career/accountability.jpg" style="height: 80px; width: 80px;" alt="icon"> 
                     </div>
                     <div class="information">
                         <h6 class="title">Accountability</h6>

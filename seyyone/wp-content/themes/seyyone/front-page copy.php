@@ -14,22 +14,22 @@ $banner_url = get_field('home_banner_image');
 ?>
 
 <!-- Banner Section Start -->
-<div class="about-banner-area-bg" style="   background-color: #e1dcda;">
+<div class="about-banner-area-bg" style="   background-color: floralwhite;">
    <!-- <div class="banner-four-area banner-four-bg rts-section-gap jarallax" style="background-image: url('<?php echo esc_url($banner_url); ?>');">-->
-     <div class="banner-four-area   rts-section-gap jarallax">
+     <div class="banner-four-area   rts-section-gap jarallax" >
          <div class="container">
             <div class="row">
                 <div class="col-lg-12">
                     <div class="banner-four-wrapper">
-                        <div class="inner-left" style="background-color: floralwhite;padding: 20px;border-radius: 10px;max-width: 98%;">
-                            <h1 class="title wow fadeInUp" data-wow-offset="120" data-wow-delay=".2s" style="font-size: 75px;visibility: visible;animation-delay: 0.2s;animation-name: fadeInUp;text-align: center; color: #262626;">
+                        <div class="inner-left" style="background-color: rgba(0, 0, 0, 0.7); padding: 20px; border-radius: 10px; max-width: 90%;">
+                            <h1 class="title wow fadeInUp" data-wow-offset="120" data-wow-delay=".2s" style="font-size: 30px;">
                                 Transforming
-                                <span class="wow move-right" data-wow-offset="120" style="color: #3534ff; display: inline-block;margin-right: 10px;visibility: visible;animation-name: moveright;">Businesses</span>
+                                <span class="wow move-right" data-wow-offset="120" style="color: #85c4f1; display: inline-block; margin-right: 10px;">Businesses</span>
                                 Through
-                                <span class="wow move-right" data-wow-offset="120" style="color: #3534ff; display: inline-block;margin-right: 10px;visibility: visible;animation-name: moveright;">Technology</span>
-                                &amp; Expertise
+                                <span class="wow move-right" data-wow-offset="120" style="color: #85c4f1; display: inline-block; margin-right: 10px;">Technology</span>
+                                & Expertise
                             </h1>
-                            <p class="disc wow fadeInUp" data-wow-offset="120" data-wow-delay=".4s" style="visibility: visible;animation-delay: 0.4s;animation-name: fadeInUp;text-align: center; color: #262626;">
+                            <p class="disc wow fadeInUp" data-wow-offset="120" data-wow-delay=".4s">
                                 For over 25 years, Seyyone has been delivering innovative solutions in Healthcare KPO and Software Development to clients worldwide. Our
                                 HIPAA-compliant services and cutting-edge technology solutions help businesses achieve operational excellence.
                             </p>
@@ -43,7 +43,7 @@ $banner_url = get_field('home_banner_image');
 <!-- Banner Section End -->
 
 <!-- Statistics Section Start -->
-<!--<div class="counter-up-wrapper mt-dec-80">
+<div class="counter-up-wrapper mt-dec-80">
     <div class="container">
         <div class="row g-0">
             <div class="col-6 col-sm-6 col-md-4 col-lg-2">
@@ -120,9 +120,9 @@ $banner_url = get_field('home_banner_image');
             </div>
         </div>
     </div>
-</div> -->
+</div>
 <!-- Statistics Section End -->
-<br>
+<br><br>
 
 <!-- Dual Expertise Section Start -->
 <div class="container">
@@ -418,87 +418,8 @@ $banner_url = get_field('home_banner_image');
 <!-- Our Values Section End -->
 <br>
 
-<div class="counter-up-wrapper mt-dec-80">
-    <div class="container">
-        <div class="row g-0">
-            <div class="col-6 col-sm-6 col-md-4 col-lg-2">
-                <div class="single-counter-up-one border-top border-left card" style="padding: 30px 10px;">
-                    <div class="icon-area">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/seyyone/index/v1/calendar_1.png" style="width: 33px; height: 32px;" alt="icon">
-                    </div>
-                    <h3 class="title" style="font-size: clamp(18px, 3vw, 24px);">
-                        <span class="counter">25</span>+ Years
-                    </h3>                    <p style="font-size: clamp(12px, 2vw, 14px);">Industry Experience</p>
-                </div>
-            </div>
-            <div class="col-6 col-sm-6 col-md-4 col-lg-2">
-                <div class="single-counter-up-one border-top" style="padding: 30px 10px;">
-                    <div class="icon-area">
-                        
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/about/icons/08.svg" alt="icon">
-                    </div>
-                    <h3 class="title" style="font-size: clamp(18px, 3vw, 24px);">
-                        <span class="counter">70</span>+ Clients
-                    </h3>
-                    <p style="font-size: clamp(12px, 2vw, 14px);">across 8 countries</p>
-                </div>
-            </div>
-          
-            <div class="col-6 col-sm-6 col-md-4 col-lg-2">
-                <div class="single-counter-up-one border-top" style="padding: 30px 10px;">
-                    <div class="icon-area">
-                        
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/about/icons/04.svg" alt="icon">
-                    </div>
-                    <h3 class="title" style="font-size: clamp(18px, 3vw, 24px);">
-                        <span class="counter">150</span>+
-                    </h3>
-                    <p style="font-size: clamp(12px, 2vw, 14px);">Employees</p>
-                </div>
-            </div>
-            
-            <div class="col-6 col-sm-6 col-md-4 col-lg-2">
-                <div class="single-counter-up-one border-top" style="padding: 30px 10px;">
-                    <div class="icon-area">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/seyyone/index/icons8-application-32.png" alt="icon">
-                    </div>
-                    <h3 class="title" style="font-size: clamp(18px, 3vw, 24px);">
-                        <span class="counter">40</span>+
-                    </h3>
-                    <p style="font-size: clamp(12px, 2vw, 14px);">Software Projects</p>
-                </div>
-            </div>
-           
-            
-             <div class="col-6 col-sm-6 col-md-4 col-lg-2">
-                <div class="single-counter-up-one border-top" style="padding: 16px 10px;">
-                    <div class="icon-area">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/about/icons/02.svg" alt="icon">
-                    </div>
-                    <h3 class="title" style="font-size: clamp(18px, 3vw, 24px);">
-                            <span class="counter">25</span>+ <br>EMR Modules
-                    </h3>
-                    <p style="font-size: clamp(12px, 2vw, 14px);">Exposure </p>
-                </div>
-            </div>
-
-             <div class="col-6 col-sm-6 col-md-4 col-lg-2">
-                <div class="single-counter-up-one border-top" style="padding: 16px 10px;">
-                    <div class="icon-area">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/about/icons/03.svg" alt="icon">
-                    </div>
-                    <h3 class="title" style="font-size: clamp(18px, 3vw, 24px);">
-                          Scribed <span class="counter">40</span> Mn <br>Lines
-                    </h3>
-                    <p style="font-size: clamp(12px, 2vw, 14px);">Summarized 8 Mn pages </p>
-                </div>
-            </div>
-        </div>
-    </div>
-</div> 
-
 <!-- Our Clients Section Start -->
- 
+ <!-- Our Clients Section Start -->
 <div class="single-benefits-area-wrapper bg-light" id="clients">
     <div class="rts-brand-area-start pt--20" dir="ltr" >
         <div class="container">
