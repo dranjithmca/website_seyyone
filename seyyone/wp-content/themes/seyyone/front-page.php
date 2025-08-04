@@ -12,7 +12,7 @@ get_header();
 $banner_url = get_field('home_banner_image');
  
 ?>
-
+  
 <!-- Banner Section Start -->
 <div class="about-banner-area-bg" style="   background-color: #e1dcda;">
    <!-- <div class="banner-four-area banner-four-bg rts-section-gap jarallax" style="background-image: url('<?php echo esc_url($banner_url); ?>');">-->
