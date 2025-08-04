@@ -14,14 +14,14 @@ $banner_url = get_field('home_banner_image');
 ?>
   
 <!-- Banner Section Start -->
-<div class="about-banner-area-bg" style="   background-color: #e1dcda;">
+<div class="about-banner-area-bg" style="   background-color: #e1dcda; clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);">
    <!-- <div class="banner-four-area banner-four-bg rts-section-gap jarallax" style="background-image: url('<?php echo esc_url($banner_url); ?>');">-->
      <div class="banner-four-area   rts-section-gap jarallax">
          <div class="container">
             <div class="row">
                 <div class="col-lg-12">
                     <div class="banner-four-wrapper">
-                        <div class="inner-left" style="background-color: floralwhite;padding: 20px;border-radius: 10px;max-width: 98%;">
+                        <div class="inner-left" style="background-color: #e1dcda;padding: 20px;border-radius: 10px;max-width: 98%;">
                             <h1 class="title wow fadeInUp" data-wow-offset="120" data-wow-delay=".2s" style="font-size: 75px;visibility: visible;animation-delay: 0.2s;animation-name: fadeInUp;text-align: center; color: #262626;">
                                 Transforming
                                 <span class="wow move-right" data-wow-offset="120" style="color: #3534ff; display: inline-block;margin-right: 10px;visibility: visible;animation-name: moveright;">Businesses</span>
