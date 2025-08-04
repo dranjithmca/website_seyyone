@@ -214,7 +214,7 @@ $banner_url = get_field('home_banner_image');
              class="img-fluid rounded" 
              style="width: 100%; object-fit: cover;">
     <?php else: ?>
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/seyyone/home/Home - software services.jpg" 
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/seyyone/home/Home_-_software_services_2mb-scaled.jpg" 
              alt="Software Solutions" 
              class="img-fluid rounded" 
              style="width: 100%; object-fit: cover;">
