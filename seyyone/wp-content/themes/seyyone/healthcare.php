@@ -125,7 +125,7 @@ get_header();
                                     <a href="#" onclick="openModal('<?php echo esc_js($service_id); ?>')" style="text-decoration: none; color: inherit;">
                                         <h4 class="title" style="margin-top: 0; margin-bottom: 8px; font-size: 20px; color: #333; min-height: 50px; display: flex; align-items: center;"><?php echo esc_html($title); ?></h4>
                                     </a>
-                                    <p style="color: #666; font-size: 16px; line-height: 1.6; margin-bottom: 0; flex-grow: 1; display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; overflow: hidden; height: 96px;"><?php echo $excerpt ? esc_html($excerpt) : 'Click to learn more about this healthcare service.'; ?></p>
+                                    <p style="color: #666; font-size: 16px; line-height: 1.6; margin-bottom: 0; flex-grow: 1; display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; overflow: hidden; height: 102px;"><?php echo $excerpt ? esc_html($excerpt) : 'Click to learn more about this healthcare service.'; ?></p>
                                 </div>
                             </div>
                         </div>
