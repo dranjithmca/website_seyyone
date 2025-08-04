@@ -247,20 +247,20 @@ $banner_url = get_field('home_banner_image');
             <div class="col-lg-3 col-md-4 col-sm-6 col-12">
                 <div class="single-benefits-area-wrapper bg-light">
                     <div class="single-project-area-5">
-                        <a href="#" class="thumbnail">
+                        <a href="javascript:void(0);" class="thumbnail">
                              <img src="<?php echo get_template_directory_uri(); ?>/assets/images/service/04.webp" alt="case-studies">
                         </a>
                         <div class="inner-content">
                             <div class="inner">
                                 <div class="left-content">
                                     <span>Delivering the highest quality in everything we do</span>
-                                    <a href="#">
+                                    <a href="javascript:void(0);">
                                         <h4 class="">Excellence</h4>
                                     </a>
                                 </div>
                             </div>
                         </div>
-                        <a href="#" class="over_link"></a>
+                        <a href="javascript:void(0);" class="over_link"></a>
                     </div>
                 </div>
             </div>
@@ -268,20 +268,20 @@ $banner_url = get_field('home_banner_image');
             <div class="col-lg-3 col-md-4 col-sm-6 col-12">
                 <div class="single-benefits-area-wrapper bg-light">
                     <div class="single-project-area-5">
-                        <a href="#" class="thumbnail">
+                        <a href="javascript:void(0);" class="thumbnail">
                             <img src="<?php echo get_template_directory_uri(); ?>/assets/images/industry/07.webp" alt="case-studies">
                         </a>
                         <div class="inner-content">
                             <div class="inner">
                                 <div class="left-content">
                                  <span>Maintaining the highest ethical standards</span>
-                                    <a href="#">
+                                    <a href="javascript:void(0);">
                                         <h4 class="">Integrity</h4>
                                     </a>
                                 </div>
                             </div>
                         </div>
-                        <a href="#" class="over_link"></a>
+                        <a href="javascript:void(0);" class="over_link"></a>
                     </div>
                 </div>
             </div>
@@ -289,20 +289,20 @@ $banner_url = get_field('home_banner_image');
             <div class="col-lg-3 col-md-4 col-sm-6 col-12">
                 <div class="single-benefits-area-wrapper bg-light">
                     <div class="single-project-area-5">
-                        <a href="#" class="thumbnail">
+                        <a href="javascript:void(0);" class="thumbnail">
                             <img src="<?php echo get_template_directory_uri(); ?>/assets/images/service/02.webp" alt="case-studies">
                         </a>
                         <div class="inner-content">
                             <div class="inner">
                                 <div class="left-content">
                                  <span>Constantly improving our solutions and processes</span>
-                                    <a href="#">
+                                    <a href="javascript:void(0);">
                                         <h4 class="">Innovation</h4>
                                     </a>
                                 </div>
                             </div>
                         </div>
-                        <a href="#" class="over_link"></a>
+                        <a href="javascript:void(0);" class="over_link"></a>
                     </div>
                 </div>
            </div>
@@ -310,20 +310,20 @@ $banner_url = get_field('home_banner_image');
             <div class="col-lg-3 col-md-4 col-sm-6 col-12">
                 <div class="single-benefits-area-wrapper bg-light">
                     <div class="single-project-area-5">
-                        <a href="#" class="thumbnail">
+                        <a href="javascript:void(0);" class="thumbnail">
                             <img src="<?php echo get_template_directory_uri(); ?>/assets/images/service/03.webp" alt="case-studies">
                         </a>
                         <div class="inner-content">
                             <div class="inner">
                                 <div class="left-content">
                                  <span>Putting our clients' needs at the center of our work</span>
-                                    <a href="#">
+                                    <a href="javascript:void(0);">
                                         <h4 class="">Client Focus</h4>
                                     </a>
                                 </div>
                             </div>
                         </div>
-                        <a href="#" class="over_link"></a>
+                        <a href="javascript:void(0);" class="over_link"></a>
                     </div>
                 </div>
            </div>
@@ -331,7 +331,7 @@ $banner_url = get_field('home_banner_image');
             <div class="col-lg-3 col-md-4 col-sm-6 col-12">
                 <div class="single-benefits-area-wrapper bg-light">
                     <div class="single-project-area-5">
-                        <a href="#" class="thumbnail">
+                        <a href="javascript:void(0);" class="thumbnail">
                             <img src="<?php echo get_template_directory_uri(); ?>/assets/images/case-studies/21.webp" alt="case-studies">
                         </a>
                         <div class="inner-content">
@@ -339,13 +339,13 @@ $banner_url = get_field('home_banner_image');
 
                                                   <div class="left-content">
                                  <span>Working together to achieve exceptional results</span>
-                                    <a href="#">
+                                    <a href="javascript:void(0);">
                                         <h4 class="">Collaboration</h4>
                                     </a>
                                 </div>
                             </div>
                         </div>
-                        <a href="#" class="over_link"></a>
+                        <a href="javascript:void(0);" class="over_link"></a>
                     </div>
                 </div>
            </div>
@@ -353,20 +353,20 @@ $banner_url = get_field('home_banner_image');
            <div class="col-lg-3 col-md-4 col-sm-6 col-12">
                 <div class="single-benefits-area-wrapper bg-light">
                     <div class="single-project-area-5">
-                        <a href="#" class="thumbnail">
+                        <a href="javascript:void(0);" class="thumbnail">
                             <img src="<?php echo get_template_directory_uri(); ?>/assets/images/case-studies/22.webp" alt="case-studies">
                         </a>
                         <div class="inner-content">
                             <div class="inner">
                                 <div class="left-content">
                                  <span>Adhering to all regulatory requirements</span>
-                                    <a href="#">
+                                    <a href="javascript:void(0);">
                                         <h4 class="">Compliance</h4>
                                     </a>
                                 </div>
                             </div>
                         </div>
-                        <a href="#" class="over_link"></a>
+                        <a href="javascript:void(0);" class="over_link"></a>
                     </div>
                 </div>
            </div>
@@ -374,20 +374,20 @@ $banner_url = get_field('home_banner_image');
            <div class="col-lg-3 col-md-4 col-sm-6 col-12">
                 <div class="single-benefits-area-wrapper bg-light">
                     <div class="single-project-area-5">
-                        <a href="#" class="thumbnail">
+                        <a href="javascript:void(0);" class="thumbnail">
                             <img src="<?php echo get_template_directory_uri(); ?>/assets/images/case-studies/23.webp" alt="case-studies">
                         </a>
                         <div class="inner-content">
                             <div class="inner">
                                 <div class="left-content">
                                  <span>Protecting sensitive data with robust measures</span>
-                                    <a href="#">
+                                    <a href="javascript:void(0);">
                                         <h4 class="">Security</h4>
                                     </a>
                                 </div>
                             </div>
                         </div>
-                        <a href="#" class="over_link"></a>
+                        <a href="javascript:void(0);" class="over_link"></a>
                     </div>
                 </div>
            </div>
@@ -395,20 +395,20 @@ $banner_url = get_field('home_banner_image');
            <div class="col-lg-3 col-md-4 col-sm-6 col-12">
                 <div class="single-benefits-area-wrapper bg-light">
                     <div class="single-project-area-5">
-                        <a href="#" class="thumbnail">
+                        <a href="javascript:void(0);" class="thumbnail">
                             <img src="<?php echo get_template_directory_uri(); ?>/assets/images/case-studies/24.webp" alt="case-studies">
                         </a>
                         <div class="inner-content">
                             <div class="inner">
                                 <div class="left-content">
                                  <span>Leveraging deep domain knowledge</span>
-                                    <a href="#">
+                                    <a href="javascript:void(0);">
                                         <h4 class="">Expertise</h4>
                                     </a>
                                 </div>
                             </div>
                         </div>
-                        <a href="#" class="over_link"></a>
+                        <a href="javascript:void(0);" class="over_link"></a>
                     </div>
                 </div>
            </div>
