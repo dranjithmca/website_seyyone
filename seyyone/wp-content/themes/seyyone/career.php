@@ -98,6 +98,7 @@ get_header();
             </div>
         </div>
     </div>
+  
 </div>
 
 <br>
@@ -198,6 +199,7 @@ get_header();
             </div>
         </div>
     </div>
+      <br>
 </div>
 <!-- company values area end -->
 
