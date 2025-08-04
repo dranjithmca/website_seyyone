@@ -120,7 +120,7 @@ get_header();
         </div>
         <div class="row g-5 mt--30">
             <div class="col-lg-4 wow fadeInUp" data-wow-delay=".1s" >
-                <div class="single-values-in-action " style="background-color: #fbfaf5; border-radius: 10px; overflow: hidden;">
+                <div class="single-values-in-action " style="background-color: #f4f0df; border-radius: 10px; overflow: hidden;">
                     <div class="icon">
  
                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/seyyone/career/integrity.png" style="height: 95px; width: 95px;" alt="icon"> 
@@ -134,7 +134,7 @@ get_header();
                 </div>
             </div>
             <div class="col-lg-4 wow fadeInUp" data-wow-delay=".3s">
-                <div class="single-values-in-action" style="background-color: #fbfaf5; border-radius: 10px; overflow: hidden;">
+                <div class="single-values-in-action" style="background-color: #f4f0df; border-radius: 10px; overflow: hidden;">
                     <div class="icon">
                        
                         <img src="<?php echo get_template_directory_uri(); ?>/assets/images/seyyone/career/innovation.png" style="height: 75px; width: 75px;" alt="icon"> 
@@ -148,7 +148,7 @@ get_header();
                 </div>
             </div>
             <div class="col-lg-4 wow fadeInUp" data-wow-delay=".5s">
-                <div class="single-values-in-action" style="background-color: #fbfaf5; border-radius: 10px; overflow: hidden;">
+                <div class="single-values-in-action" style="background-color: #f4f0df; border-radius: 10px; overflow: hidden;">
                     <div class="icon">
                        
                           <img src="<?php echo get_template_directory_uri(); ?>/assets/images/seyyone/career/collaboration.png" style="height: 90px; width: 90px;" alt="icon"> 
@@ -161,7 +161,7 @@ get_header();
                 </div>
             </div>
             <div class="col-lg-4 wow fadeInUp" data-wow-delay=".1s">
-                <div class="single-values-in-action" style="background-color: #fbfaf5; border-radius: 10px; overflow: hidden;">
+                <div class="single-values-in-action" style="background-color: #f4f0df; border-radius: 10px; overflow: hidden;">
                     <div class="icon">
                          <img src="<?php echo get_template_directory_uri(); ?>/assets/images/seyyone/career/excellence.png" style="height: 70px; width: 70px;" alt="icon"> 
                      </div>
@@ -173,7 +173,7 @@ get_header();
                 </div>
             </div>
             <div class="col-lg-4 wow fadeInUp" data-wow-delay=".3s">
-                <div class="single-values-in-action" style="background-color: #fbfaf5; border-radius: 10px; overflow: hidden;">
+                <div class="single-values-in-action" style="background-color: #f4f0df; border-radius: 10px; overflow: hidden;">
                     <div class="icon">
                         <img src="<?php echo get_template_directory_uri(); ?>/assets/images/seyyone/career/customer-focus.png" style="height: 90px; width: 90px;" alt="icon"> 
                        </div>
@@ -185,7 +185,7 @@ get_header();
                 </div>
             </div>
             <div class="col-lg-4 wow fadeInUp" data-wow-delay=".5s">
-                <div class="single-values-in-action" style="background-color: #fbfaf5; border-radius: 10px; overflow: hidden;">
+                <div class="single-values-in-action" style="background-color: #f4f0df; border-radius: 10px; overflow: hidden;">
                     <div class="icon">
                          <img src="<?php echo get_template_directory_uri(); ?>/assets/images/seyyone/career/accountability.jpg" style="height: 80px; width: 80px;" alt="icon"> 
                     </div>
@@ -202,7 +202,7 @@ get_header();
 <!-- company values area end -->
 
 <!-- job opening area start -->
- 
+ <br> <br>
 <div class="job-opening-area" id="job-openings">
     <div class="container">
         <div class="row">
