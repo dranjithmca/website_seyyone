@@ -85,7 +85,7 @@ get_header();
     if($about_image): ?>
         <img src="<?php echo esc_url($about_image['url']); ?>" alt="<?php echo esc_attr($about_image['alt'] ? $about_image['alt'] : 'About Seyyone'); ?>">
     <?php else: ?>
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/seyyone/home/26975.jpg" alt="">
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/seyyone/home/about_seyyone_v1.jpeg" alt="">
     <?php endif; ?>
 </div>
 
