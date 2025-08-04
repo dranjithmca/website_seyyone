@@ -13,7 +13,7 @@
 <?php wp_body_open(); ?>
 
 <!-- Header Section Start -->
-<header class="header-style-one">
+<header class="header-style-one" style="box-shadow: 0px 7px 18px rgba(24, 16, 16, 0.0509803922);">
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
