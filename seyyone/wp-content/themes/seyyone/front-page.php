@@ -14,7 +14,7 @@ $banner_url = get_field('home_banner_image');
 ?>
   
 <!-- Banner Section Start -->
-<div class="about-banner-area-bg" style="   background-color: #e1dcda; clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);">
+<div class="about-banner-area-bg" style="   background-color: #e1dcda; clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);">
    <!-- <div class="banner-four-area banner-four-bg rts-section-gap jarallax" style="background-image: url('<?php echo esc_url($banner_url); ?>');">-->
      <div class="banner-four-area   rts-section-gap jarallax">
          <div class="container">
