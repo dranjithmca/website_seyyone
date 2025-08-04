@@ -24,8 +24,8 @@ get_header();
           
               <div class="col-lg-7 mb_md--30 mb_sm--30">
                       <div class="banner-wrapper-one">
-
-                        <h1 class="title wow fadeInUp" data-wow-delay=".3s" style="font-size: 55px">End-to-End<br><span>KPO Services</span><br>Tailored To Suit Your <span>Healthcare</span> Practice</h1>
+                        <h1 class="title wow fadeInUp" data-wow-delay=".3s" style="font-size: 55px; visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;">End-to-End<br><span>KPO Services</span><br>Tailored To Suit Your <span>Healthcare</span> Practice</h1>
+                        
                         <p class="wow fadeInUp" data-wow-delay=".5s">We provides complete revenue cycle management solutions to the healthcare community, that allow our exclusive clientele to have more face time with their patients and no stress about <br> billing and collections.</p>
                         <a href="#healthcare-services" class="rts-btn btn-primary wow fadeInUp" data-wow-delay=".7s">
                             View Solutions
@@ -137,6 +137,203 @@ get_header();
                         
                        
                         
+                        <?php endif; ?>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Healthcare Services Section -->
+<div class="rts-service-area">
+    <div class="container">
+        <div class="bg-gradient-one-industry">
+            <br><br>
+            <div class="title-area-center-inner-with-sub" id="healthcare-services">
+                <span>Our Services</span>
+            </div>
+             <br><br>
+            <div class="rts-case-studies-area rts-section-gapBottom mt_sm--30">
+                <div class="container">
+                    <div class="row">
+                        <?php
+                        // Get Healthcare Services from WordPress - Ordered by custom order field
+                        $healthcare_services = new WP_Query(array(
+                            'post_type' => 'healthcare_service',
+                            'posts_per_page' => -1,
+                            'post_status' => 'publish',
+                            'meta_key' => '_healthcare_service_order',
+                            'orderby' => 'meta_value_num',
+                            'order' => 'ASC'
+                        ));
+
+                        if ($healthcare_services->have_posts()) :
+                            // Store all posts in an array
+                            $all_posts = array();
+                            while ($healthcare_services->have_posts()) : $healthcare_services->the_post();
+                                $all_posts[] = get_post();
+                            endwhile;
+                            wp_reset_postdata();
+                            
+                            // Calculate how many posts to show in each column
+                            $total_posts = count($all_posts);
+                            $column1_count = min(2, $total_posts);
+                            $column3_count = min(2, max(0, $total_posts - $column1_count));
+                            $column2_count = $total_posts - $column1_count - $column3_count;
+                            
+                            // Column 1 (2 cards)
+                            if ($column1_count > 0) :
+                            ?>
+                            <div class="col-md-4 d-flex flex-column justify-content-center">
+                                <?php 
+                                for ($i = 0; $i < $column1_count; $i++) :
+                                    $post = $all_posts[$i];
+                                    setup_postdata($post);
+                                    $post_id = $post->ID;
+                                    $title = get_the_title($post_id);
+                                    $excerpt = get_the_excerpt($post_id);
+                                    $service_id = get_post_meta($post_id, '_healthcare_service_id', true);
+                                    $delay = $i == 0 ? '' : '.2s';
+                                ?>
+                                <div class="service-card <?php echo ($i < $column1_count - 1) ? 'mb-4' : ''; ?> wow fadeInUp" data-wow-delay="<?php echo $delay; ?>" data-wow-offset="120" id="<?php echo esc_attr($service_id); ?>">
+                                    <div class="single-case-studies-three" style="background-color: #f8f9fa; border-radius: 15px !important; box-shadow: 0 10px 30px rgba(0,0,0,0.08); overflow: hidden; transition: all 0.3s ease; max-width: 90%; margin: 0 auto;">
+                                        <!-- Service Image -->
+                                        <a href="#" onclick="openModal('<?php echo esc_js($service_id); ?>')" class="thumbnail">
+                                            <?php if (has_post_thumbnail($post_id)) : ?>
+                                                <?php echo get_the_post_thumbnail($post_id, 'medium', array(
+                                                    'alt' => 'healthcare-service',
+                                                    'style' => 'width: 100%; height: 200px; object-fit: cover;'
+                                                )); ?>
+                                            <?php else : ?>
+                                                <div style="width: 100%; height: 200px; background: #f8f9fa; display: flex; align-items: center; justify-content: center; color: #6c757d; border-bottom: 2px dashed #dee2e6;">
+                                                    <div style="text-align: center;">
+                                                        <i class="fa fa-heartbeat" style="font-size: 48px; margin-bottom: 10px; display: block; color: #28a745;"></i>
+                                                        <strong>No Image Set</strong><br>
+                                                        <small>Add featured image</small>
+                                                    </div>
+                                                </div>
+                                            <?php endif; ?>
+                                        </a>
+                                        
+                                        <!-- Service Content -->
+                                        <div class="inner-content" style="padding: 20px; text-align: center;">
+                                            <a href="#" onclick="openModal('<?php echo esc_js($service_id); ?>')" style="text-decoration: none; color: inherit;">
+                                                <h4 class="title" style="margin-bottom: 15px; font-size: 20px; color: #333;"><?php echo esc_html($title); ?></h4>
+                                            </a>
+                                            <p style="color: #666; font-size: 15px; line-height: 1.6;"><?php echo $excerpt ? esc_html($excerpt) : 'Click to learn more about this healthcare service.'; ?></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <?php 
+                                endfor;
+                                wp_reset_postdata();
+                                ?>
+                            </div>
+                            <?php endif; ?>
+                            
+                            <!-- Column 2 (3 cards) -->
+                            <?php if ($column2_count > 0) : ?>
+                            <div class="col-md-4">
+                                <?php 
+                                for ($i = 0; $i < $column2_count; $i++) :
+                                    $post = $all_posts[$i + $column1_count];
+                                    setup_postdata($post);
+                                    $post_id = $post->ID;
+                                    $title = get_the_title($post_id);
+                                    $excerpt = get_the_excerpt($post_id);
+                                    $service_id = get_post_meta($post_id, '_healthcare_service_id', true);
+                                    $delay = $i * 0.2 . 's';
+                                ?>
+                                <div class="service-card <?php echo ($i < $column2_count - 1) ? 'mb-4' : ''; ?> wow fadeInUp" data-wow-delay="<?php echo $delay; ?>" data-wow-offset="120" id="<?php echo esc_attr($service_id); ?>">
+                                    <div class="single-case-studies-three" style="background-color: #f8f9fa; border-radius: 15px !important; box-shadow: 0 10px 30px rgba(0,0,0,0.08); overflow: hidden; transition: all 0.3s ease; max-width: 90%; margin: 0 auto;">
+                                        <!-- Service Image -->
+                                        <a href="#" onclick="openModal('<?php echo esc_js($service_id); ?>')" class="thumbnail">
+                                            <?php if (has_post_thumbnail($post_id)) : ?>
+                                                <?php echo get_the_post_thumbnail($post_id, 'medium', array(
+                                                    'alt' => 'healthcare-service',
+                                                    'style' => 'width: 100%; height: 200px; object-fit: cover;'
+                                                )); ?>
+                                            <?php else : ?>
+                                                <div style="width: 100%; height: 200px; background: #f8f9fa; display: flex; align-items: center; justify-content: center; color: #6c757d; border-bottom: 2px dashed #dee2e6;">
+                                                    <div style="text-align: center;">
+                                                        <i class="fa fa-heartbeat" style="font-size: 48px; margin-bottom: 10px; display: block; color: #28a745;"></i>
+                                                        <strong>No Image Set</strong><br>
+                                                        <small>Add featured image</small>
+                                                    </div>
+                                                </div>
+                                            <?php endif; ?>
+                                        </a>
+                                        
+                                        <!-- Service Content -->
+                                        <div class="inner-content" style="padding: 20px; text-align: center;">
+                                            <a href="#" onclick="openModal('<?php echo esc_js($service_id); ?>')" style="text-decoration: none; color: inherit;">
+                                                <h4 class="title" style="margin-bottom: 15px; font-size: 20px; color: #333;"><?php echo esc_html($title); ?></h4>
+                                            </a>
+                                            <p style="color: #666; font-size: 15px; line-height: 1.6;"><?php echo $excerpt ? esc_html($excerpt) : 'Click to learn more about this healthcare service.'; ?></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <?php 
+                                endfor;
+                                wp_reset_postdata();
+                                ?>
+                            </div>
+                            <?php endif; ?>
+                            
+                            <!-- Column 3 (2 cards) -->
+                            <?php if ($column3_count > 0) : ?>
+                            <div class="col-md-4 d-flex flex-column justify-content-center">
+                                <?php 
+                                for ($i = 0; $i < $column3_count; $i++) :
+                                    $post = $all_posts[$i + $column1_count + $column2_count];
+                                    setup_postdata($post);
+                                    $post_id = $post->ID;
+                                    $title = get_the_title($post_id);
+                                    $excerpt = get_the_excerpt($post_id);
+                                    $service_id = get_post_meta($post_id, '_healthcare_service_id', true);
+                                    $delay = $i == 0 ? '' : '.2s';
+                                ?>
+                                <div class="service-card <?php echo ($i < $column3_count - 1) ? 'mb-4' : ''; ?> wow fadeInUp" data-wow-delay="<?php echo $delay; ?>" data-wow-offset="120" id="<?php echo esc_attr($service_id); ?>">
+                                    <div class="single-case-studies-three" style="background-color: #f8f9fa; border-radius: 15px !important; box-shadow: 0 10px 30px rgba(0,0,0,0.08); overflow: hidden; transition: all 0.3s ease; max-width: 90%; margin: 0 auto;">
+                                        <!-- Service Image -->
+                                        <a href="#" onclick="openModal('<?php echo esc_js($service_id); ?>')" class="thumbnail">
+                                            <?php if (has_post_thumbnail($post_id)) : ?>
+                                                <?php echo get_the_post_thumbnail($post_id, 'medium', array(
+                                                    'alt' => 'healthcare-service',
+                                                    'style' => 'width: 100%; height: 200px; object-fit: cover;'
+                                                )); ?>
+                                            <?php else : ?>
+                                                <div style="width: 100%; height: 200px; background: #f8f9fa; display: flex; align-items: center; justify-content: center; color: #6c757d; border-bottom: 2px dashed #dee2e6;">
+                                                    <div style="text-align: center;">
+                                                        <i class="fa fa-heartbeat" style="font-size: 48px; margin-bottom: 10px; display: block; color: #28a745;"></i>
+                                                        <strong>No Image Set</strong><br>
+                                                        <small>Add featured image</small>
+                                                    </div>
+                                                </div>
+                                            <?php endif; ?>
+                                        </a>
+                                        
+                                        <!-- Service Content -->
+                                        <div class="inner-content" style="padding: 20px; text-align: center;">
+                                            <a href="#" onclick="openModal('<?php echo esc_js($service_id); ?>')" style="text-decoration: none; color: inherit;">
+                                                <h4 class="title" style="margin-bottom: 15px; font-size: 20px; color: #333;"><?php echo esc_html($title); ?></h4>
+                                            </a>
+                                            <p style="color: #666; font-size: 15px; line-height: 1.6;"><?php echo $excerpt ? esc_html($excerpt) : 'Click to learn more about this healthcare service.'; ?></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <?php 
+                                endfor;
+                                wp_reset_postdata();
+                                ?>
+                            </div>
+                            <?php endif; ?>
+                            
+                        <?php else : ?>
+                            <div class="col-12 text-center">
+                                <p>No healthcare services found. Please add some services to display here.</p>
+                            </div>
                         <?php endif; ?>
                     </div>
                 </div>
