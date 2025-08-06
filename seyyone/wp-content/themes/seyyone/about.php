@@ -250,7 +250,7 @@ Empowering through Tailored Tech Solutions, 24/7 Support, and Unmatched Quality.
    <?php 
     $why_choose_image = get_field('why_choose_section_image');
     if($why_choose_image): ?>
-        <img src="<?php echo esc_url($why_choose_image['url']); ?>" alt="<?php echo esc_attr($why_choose_image['alt'] ? $why_choose_image['alt'] : 'Why Choose Seyyone'); ?>" style="height: 550px;">
+        <img src="<?php echo esc_url($why_choose_image['url']); ?>" alt="<?php echo esc_attr($why_choose_image['alt'] ? $why_choose_image['alt'] : 'Why Choose Seyyone'); ?>" style="height: 600px;">
     <?php else: ?>
         <img src="<?php echo get_template_directory_uri(); ?>/assets/images/seyyone/home/why_choose_seyyone.jpg" style="height: 550px;" alt="">
     <?php endif; ?>
