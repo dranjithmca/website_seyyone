@@ -91,7 +91,7 @@ $banner_url = get_field('home_banner_image');
 <!-- Banner Section End -->
 
 <!-- Statistics Section Start -->
-<!--<div class="counter-up-wrapper mt-dec-80">
+ <div class="counter-up-wrapper mt-dec-80">
     <div class="container">
         <div class="row g-0">
             <div class="col-6 col-sm-6 col-md-4 col-lg-2">
@@ -168,7 +168,7 @@ $banner_url = get_field('home_banner_image');
             </div>
         </div>
     </div>
-</div> -->
+</div>  
 <!-- Statistics Section End -->
 <br>
 
