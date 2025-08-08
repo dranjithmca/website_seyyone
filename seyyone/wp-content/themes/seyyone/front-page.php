@@ -14,9 +14,57 @@ $banner_url = get_field('home_banner_image');
 ?>
   
 <!-- Banner Section Start -->
-<div class="about-banner-area-bg" style="   background-color: #e1dcda; clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);">
+<div class="about-banner-area-bg" style="background-color: #e1dcda; clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); position: relative;">
    <!-- <div class="banner-four-area banner-four-bg rts-section-gap jarallax" style="background-image: url('<?php echo esc_url($banner_url); ?>');">-->
-     <div class="banner-four-area   rts-section-gap jarallax">
+   <div class="banner-four-area rts-section-gap jarallax">
+      <div class="container">
+         <div class="row">
+            <div class="col-lg-12">
+               <div class="banner-four-wrapper">
+                  <div class="inner-left" style="background-color: #e1dcda;padding: 20px;border-radius: 10px;max-width: 98%;">
+                     <h1 class="title wow fadeInUp" data-wow-offset="120" data-wow-delay=".2s" style="font-size: 75px;visibility: visible;animation-delay: 0.2s;animation-name: fadeInUp;text-align: center; color: #262626;">
+                        Transforming
+                        <span class="wow move-right" data-wow-offset="120" style="color: #3534ff; display: inline-block;margin-right: 10px;visibility: visible;animation-name: moveright;">Businesses</span>
+                        Through
+                        <span class="wow move-right" data-wow-offset="120" style="color: #3534ff; display: inline-block;margin-right: 10px;visibility: visible;animation-name: moveright;">Technology</span>
+                        &amp; Expertise
+                     </h1>
+                     <p class="disc wow fadeInUp" data-wow-offset="120" data-wow-delay=".4s" style="visibility: visible;animation-delay: 0.4s;animation-name: fadeInUp;text-align: center; color: #262626;">
+                        For over 25 years, Seyyone has been delivering innovative solutions in Healthcare KPO and Software Development to clients worldwide. Our
+                        HIPAA-compliant services and cutting-edge technology solutions help businesses achieve operational excellence.
+                     </p>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   
+   <!-- Wave effect at the bottom of the banner -->
+   <div class="position-absolute w-100 z-index-1 bottom-0">
+      <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 40" preserveAspectRatio="none" shape-rendering="auto">
+         <defs>
+            <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"></path>
+         </defs>
+         <g class="moving-waves">
+            <use xlink:href="#gentle-wave" x="48" y="-1" fill="rgba(255,255,255,0.40)"></use>
+            <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.35)"></use>
+            <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.25)"></use>
+            <use xlink:href="#gentle-wave" x="48" y="8" fill="rgba(255,255,255,0.20)"></use>
+            <use xlink:href="#gentle-wave" x="48" y="13" fill="rgba(255,255,255,0.15)"></use>
+            <use xlink:href="#gentle-wave" x="48" y="16" fill="rgba(255,255,255,0.95)"></use>
+         </g>
+      </svg>
+   </div>
+</div>
+<!-- Banner Section End -->
+
+
+
+<!-- Banner Section Start -->
+ <!--
+<div class="about-banner-area-bg" style="   background-color: #e1dcda; clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);">
+      <div class="banner-four-area   rts-section-gap jarallax">
          <div class="container">
             <div class="row">
                 <div class="col-lg-12">
@@ -39,7 +87,7 @@ $banner_url = get_field('home_banner_image');
             </div>
         </div>
     </div>
-</div>
+</div> -->
 <!-- Banner Section End -->
 
 <!-- Statistics Section Start -->
@@ -835,3 +883,90 @@ $banner_url = get_field('home_banner_image');
 
 <?php get_footer(); ?>
 
+
+<style>
+
+/* Wave animation styles */
+.waves {
+  position: relative;
+  width: 100%;
+  height: 15vh;
+  margin-bottom: -7px;
+  min-height: 100px;
+  max-height: 150px;
+}
+
+.moving-waves > use {
+  animation: move-forever 25s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
+}
+
+.moving-waves > use:nth-child(1) {
+  animation-delay: -2s;
+  animation-duration: 7s;
+}
+
+.moving-waves > use:nth-child(2) {
+  animation-delay: -3s;
+  animation-duration: 10s;
+}
+
+.moving-waves > use:nth-child(3) {
+  animation-delay: -4s;
+  animation-duration: 13s;
+}
+
+.moving-waves > use:nth-child(4) {
+  animation-delay: -5s;
+  animation-duration: 20s;
+}
+
+.moving-waves > use:nth-child(5) {
+  animation-delay: -6s;
+  animation-duration: 25s;
+}
+
+.moving-waves > use:nth-child(6) {
+  animation-delay: -7s;
+  animation-duration: 30s;
+}
+
+@keyframes move-forever {
+  0% {
+    transform: translate3d(-90px, 0, 0);
+  }
+  100% {
+    transform: translate3d(85px, 0, 0);
+  }
+}
+
+/* For smaller screens, adjust the wave height */
+@media (max-width: 767px) {
+  .waves {
+    height: 40px;
+    min-height: 40px;
+  }
+}
+
+/* Make sure the banner container has proper positioning */
+.about-banner-area-bg {
+  position: relative;
+  overflow: hidden;
+}
+
+.position-absolute {
+  position: absolute !important;
+}
+
+.w-100 {
+  width: 100% !important;
+}
+
+.z-index-1 {
+  z-index: 1 !important;
+}
+
+.bottom-0 {
+  bottom: 0 !important;
+}
+
+ </style>   
