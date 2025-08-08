@@ -13,7 +13,7 @@
 <?php wp_body_open(); ?>
 
 <!-- Header Section Start -->
-<header class="header-style-one" style="box-shadow: 0px 7px 18px rgba(24, 16, 16, 0.0509803922);">
+<header class="header-style-one" style="box-shadow: 0px 7px 18px rgba(24, 16, 16, 0.0509803922);  background-color: #f0f8ff4d">
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
@@ -120,7 +120,7 @@
     </div>
 </header>
 
-<header class="header-style-one header--sticky">
+<header class="header-style-one header--sticky" style=" background-color: #f0f8ff4d;">
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
