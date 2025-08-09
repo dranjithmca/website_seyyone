@@ -21,7 +21,7 @@
                     <a href="<?php echo home_url(); ?>" class="logo-area">
                         <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo/logo_cms.png" alt="Seyyone logo" style="height: 60px;">
                     </a>
-                    <div class="nav-area">
+                    <div class="nav-area" >
                         <nav>
                             <ul>
                                 <li class="has-dropdown">
@@ -29,7 +29,7 @@
                                         Who We are
                                         <i class="fa-duotone fa-regular fa-chevron-down"></i>
                                     </a>
-                                    <ul class="submenu parent-nav with-border">
+                                    <ul class="submenu parent-nav with-border" style="background-color: #f0f8fff7">
                                         <li><a href="<?php echo home_url('/about'); ?>"><i class="fa-sharp fa-regular fa-chevron-right"></i>About Us</a></li>
                                         <li><a href="<?php echo home_url('/about#life-at-seyyone'); ?>"><i class="fa-sharp fa-regular fa-chevron-right"></i>Life At Seyyone</a></li>
                                         <li><a href="<?php echo home_url('/#clients'); ?>"><i class="fa-sharp fa-regular fa-chevron-right"></i>Clients</a></li>
@@ -42,13 +42,13 @@
 
                                 <li class="has-dropdown position-static with-megamenu">
     <a class="nav-link" href="#">What we do <i class="fa-duotone fa-regular fa-chevron-down"></i></a>
-    <div class="submenu">
+    <div class="submenu" style="background-color: #f0f8fff7" >
         <div class="container">
             <div class="row">
                 <div class="col-lg-6">
-                    <ul class="single-menu parent-nav">
+                    <ul class="single-menu parent-nav" style="background-color: #f0f8fff7" >
                         <li>
-                            <a class="single-service-area-wrapper" href="<?php echo home_url('/healthcare'); ?>">
+                            <a class="single-service-area-wrapper" style="background-color: #f0f8fff7" href="<?php echo home_url('/healthcare'); ?>">
                                 <div class="icon">
                                     <img src="<?php echo get_template_directory_uri(); ?>/assets/images/service/icons/23.svg" alt="Healthcare KPO">
                                 </div>
@@ -61,9 +61,9 @@
                     </ul>
                 </div>
                 <div class="col-lg-6">
-                    <ul class="single-menu parent-nav">
+                    <ul class="single-menu parent-nav" >
                         <li>
-                            <a class="single-service-area-wrapper" href="<?php echo home_url('/software'); ?>">
+                            <a class="single-service-area-wrapper" style="background-color: #f0f8fff7" href="<?php echo home_url('/software'); ?>">
                                 <div class="icon">
                                     <img src="<?php echo get_template_directory_uri(); ?>/assets/images/service/icons/23.svg" alt="Software">
                                 </div>
@@ -83,7 +83,7 @@
 
                                 <li class="has-dropdown">
                                     <a class="nav-link" href="#">Join Us <i class="fa-duotone fa-regular fa-chevron-down"></i></a>
-                                    <ul class="submenu parent-nav with-border">
+                                    <ul class="submenu parent-nav with-border" style="background-color: #f0f8fff7">
                                         <li><a href="<?php echo home_url('/career'); ?>"><i class="fa-sharp fa-regular fa-chevron-right"></i>Career</a></li>
                                         <li><a href="<?php echo home_url('/career#job-openings'); ?>"><i class="fa-sharp fa-regular fa-chevron-right"></i>Open Positions</a></li>
                                     </ul>
@@ -91,7 +91,7 @@
                                 
                                 <li class="has-dropdown">
                                     <a class="nav-link" href="#">Insights<i class="fa-duotone fa-regular fa-chevron-down"></i></a>
-                                    <ul class="submenu parent-nav with-border">
+                                    <ul class="submenu parent-nav with-border" style="background-color: #f0f8fff7">
                                         <li><a href="<?php echo home_url('/blogs'); ?>"><i class="fa-sharp fa-regular fa-chevron-right"></i>Blogs</a></li>
                                         <li><a href="<?php echo home_url('/articles'); ?>"><i class="fa-sharp fa-regular fa-chevron-right"></i>Articles</a></li>
                                       <!--  <li><a href="<?php echo home_url('/infographics'); ?>"><i class="fa-sharp fa-regular fa-chevron-right"></i>Infographics</a></li>-->
@@ -136,7 +136,7 @@
                                         Who We are
                                         <i class="fa-duotone fa-regular fa-chevron-down"></i>
                                     </a>
-                                    <ul class="submenu parent-nav with-border">
+                                    <ul class="submenu parent-nav with-border" style="background-color: #f0f8fff7">
                                         <li><a href="<?php echo home_url('/about#'); ?>"><i class="fa-sharp fa-regular fa-chevron-right"></i>About Us</a></li>
                                         <li><a href="<?php echo home_url('/about#life-at-seyyone'); ?>"><i class="fa-sharp fa-regular fa-chevron-right"></i>Life At Seyyone</a></li>
                                         <li><a href="<?php echo home_url('/#clients'); ?>"><i class="fa-sharp fa-regular fa-chevron-right"></i>Clients</a></li>
@@ -147,13 +147,13 @@
 
                                  <li class="has-dropdown position-static with-megamenu">
     <a class="nav-link" href="#">What we do <i class="fa-duotone fa-regular fa-chevron-down"></i></a>
-    <div class="submenu">
+    <div class="submenu" style="background-color: #f0f8fff7">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6">
                     <ul class="single-menu parent-nav">
                         <li>
-                            <a class="single-service-area-wrapper" href="<?php echo home_url('/healthcare'); ?>">
+                            <a class="single-service-area-wrapper" style="background-color: #f0f8fff7" href="<?php echo home_url('/healthcare'); ?>">
                                 <div class="icon">
                                     <img src="<?php echo get_template_directory_uri(); ?>/assets/images/service/icons/23.svg" alt="Healthcare KPO">
                                 </div>
@@ -168,7 +168,7 @@
                 <div class="col-lg-6">
                     <ul class="single-menu parent-nav">
                         <li>
-                            <a class="single-service-area-wrapper" href="<?php echo home_url('/software'); ?>">
+                            <a class="single-service-area-wrapper" style="background-color: #f0f8fff7" href="<?php echo home_url('/software'); ?>">
                                 <div class="icon">
                                     <img src="<?php echo get_template_directory_uri(); ?>/assets/images/service/icons/23.svg" alt="Software">
                                 </div>
@@ -188,7 +188,7 @@
 
                                 <li class="has-dropdown">
                                     <a class="nav-link" href="#">Join Us <i class="fa-duotone fa-regular fa-chevron-down"></i></a>
-                                    <ul class="submenu parent-nav with-border">
+                                    <ul class="submenu parent-nav with-border" style="background-color: #f0f8fff7">
                                         <li><a href="<?php echo home_url('/career'); ?>"><i class="fa-sharp fa-regular fa-chevron-right"></i>Career</a></li>
                                         <li><a href="<?php echo home_url('/career#job-openings'); ?>"><i class="fa-sharp fa-regular fa-chevron-right"></i>Open Positions</a></li>
                                     </ul>
@@ -196,7 +196,7 @@
                                 
                                 <li class="has-dropdown">
                                     <a class="nav-link" href="#">Insights<i class="fa-duotone fa-regular fa-chevron-down"></i></a>
-                                    <ul class="submenu parent-nav with-border">
+                                    <ul class="submenu parent-nav with-border" style="background-color: #f0f8fff7">
                                         <li><a href="<?php echo home_url('/blogs'); ?>"><i class="fa-sharp fa-regular fa-chevron-right"></i>Blogs</a></li>
                                         <li><a href="<?php echo home_url('/articles'); ?>"><i class="fa-sharp fa-regular fa-chevron-right"></i>Articles</a></li>
                                       <!--  <li><a href="<?php echo home_url('/infographics'); ?>"><i class="fa-sharp fa-regular fa-chevron-right"></i>Infographics</a></li>-->

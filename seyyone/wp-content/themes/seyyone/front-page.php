@@ -91,6 +91,7 @@ $banner_url = get_field('home_banner_image');
 <!-- Banner Section End -->
 
 <!-- Statistics Section Start -->
+ <!--
  <div class="counter-up-wrapper mt-dec-80">
     <div class="container">
         <div class="row g-0">
@@ -168,8 +169,55 @@ $banner_url = get_field('home_banner_image');
             </div>
         </div>
     </div>
-</div>  
+</div>  -->
 <!-- Statistics Section End -->
+
+ <!-- Statistics Section Start -->
+<div class="counter-up-wrapper mt-dec-80">
+    <div class="container">
+        <div class="col-lg-11 z-index-2 border-radius-xl mt-n10 mx-auto py-4 blur shadow-blur">
+            <div class="row">
+                <div class="col-md-3 position-relative">
+                    
+                    <div class="p-4 text-center stat-box">
+                        
+                        <h2 class="title "  ><span class="counter">25</span>+ </h2>
+                        <h4 class="mt-2">Years</h4>
+                        <p class="text-sm mb-0">Industry Experience</p>
+                    </div>
+                    <hr class="vertical dark">
+                </div>
+                
+                <div class="col-md-3 position-relative">
+                    <div class="p-4 text-center stat-box">
+                       <h2 class="title"  ><span class="counter">70</span>+ </h2>
+                        <h4 class="mt-2">Clients</h4>
+                        <p class="text-sm mb-0">Across 8 Countries</p>
+                    </div>
+                    <hr class="vertical dark">
+                </div>
+                <div class="col-md-3 position-relative">
+                    <div class="p-4 text-center stat-box">
+                       <h2 class="title"  ><span class="counter">150</span>+ </h2>
+                        <h4 class="mt-2">Employees</h4>
+                        <p class="text-sm mb-0">Dedicated Team</p>
+                    </div>
+                    <hr class="vertical dark">
+                </div>
+                <div class="col-md-3">
+                    <div class="p-4 text-center stat-box">
+                             <h2 class="title"  ><span class="counter">40</span>+ </h2>
+                        <h4 class="mt-2">Projects</h4>
+                        <p class="text-sm mb-0">Software Solutions</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Statistics Section End -->
+
+
 <br>
 
 <!-- Dual Expertise Section Start -->
@@ -464,8 +512,8 @@ $banner_url = get_field('home_banner_image');
     </div>
 </div>
 <!-- Our Values Section End -->
-<br>
-
+ 
+<!--
 <div class="counter-up-wrapper mt-dec-80">
     <div class="container">
         <div class="row g-0">
@@ -543,7 +591,7 @@ $banner_url = get_field('home_banner_image');
             </div>
         </div>
     </div>
-</div> 
+</div> -->
 
 <!-- Our Clients Section Start -->
  
@@ -968,5 +1016,76 @@ $banner_url = get_field('home_banner_image');
 .bottom-0 {
   bottom: 0 !important;
 }
+
+
+/* Statistics Section Styling */
+.border-radius-xl {
+    border-radius: 1rem;
+}
+
+.shadow-blur {
+    box-shadow: rgba(255, 255, 255, 0.9) 0px 0px 1px 1px inset, rgba(0, 0, 0, 0.05) 0px 20px 27px 0px !important;
+}
+
+.blur {
+    box-shadow: rgba(254, 254, 254, 0.82) 0px 0px 2px inset;
+    backdrop-filter: saturate(200%) blur(30px);
+    background-color: rgba(255, 255, 255, 0.8) !important;
+}
+
+.z-index-2 {
+    z-index: 2 !important;
+}
+
+.mt-n10 {
+    margin-top: -6rem !important;
+}
+
+.text-gradient.text-primary {
+    background-image: linear-gradient(310deg, #3534ff, #7928ca);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: relative;
+    z-index: 1;
+    font-size: 3.5rem;
+    font-weight: 700;
+}
+
+.vertical.dark {
+    height: 100%;
+    right: 0;
+    top: 0;
+    position: absolute;
+    border-right: 1px solid rgba(0, 0, 0, 0.13);
+}
+
+.text-sm {
+    font-size: 1.5rem !important;
+    line-height: 1.4;
+    color: #67748e;
+}
+
+.counter-up-wrapper {
+    position: relative;
+    z-index: 1;
+    padding-top: 3rem;
+    padding-bottom: 1rem;
+}
+
+.counter-up-wrapper h4 {
+    font-size: 2rem;
+    /*font-weight: 600;*/
+    margin-bottom: 0.25rem;
+}
+
+.stat-box {
+    min-height: 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1.5rem !important;
+}
+
 
  </style>   
