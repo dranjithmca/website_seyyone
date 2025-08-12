@@ -21,7 +21,7 @@ $banner_url = get_field('home_banner_image');
          <div class="row">
             <div class="col-lg-12">
                <div class="banner-four-wrapper">
-                  <div class="inner-left" style="background-color: #f0f8ff7a; padding: 20px;border-radius: 10px;max-width: 98%;">
+                  <div class="inner-left" style="background-color: #f0f8ff4d; padding: 20px;border-radius: 10px;max-width: 98%;">
                      <h1 class="title wow fadeInUp" data-wow-offset="120" data-wow-delay=".2s" style="font-size: 75px;visibility: visible;animation-delay: 0.2s;animation-name: fadeInUp;text-align: center; color: #262626;">
                         Transforming
                         <span class="wow move-right" data-wow-offset="120" style="color: blue; display: inline-block;margin-right: 10px;visibility: visible;animation-name: moveright;">Businesses</span>
@@ -324,6 +324,186 @@ $banner_url = get_field('home_banner_image');
     </div>
 </div>
 <!-- Dual Expertise Section End -->
+
+
+
+
+<!-- Dual Expertise Section Start -->
+<div class=" ">
+    <div class="row">
+        <!-- Healthcare KPO Card -->
+        <div class="col-lg-6 mb-4">
+           <div class="service-card bg-light p-5 rounded h-100 wow fadeInLeft" data-wow-delay="0.3s" style="border-radius: 10px !important;">
+
+               <h3 class="mb-3" style="text-align: center;"><span class="blue-underline">Hea</span>lthcare KPO</h3>
+
+                 <div class="container">
+                    <div class="row">
+                        <!-- First Column - 2 Cards -->
+                        <div class="col-md-4 d-flex flex-column justify-content-center">
+                            <!-- Card 1 -->
+                            <div class="service-card mb-4 wow fadeInUp" data-wow-offset="120">
+                                <div class="single-case-studies-three" style="background-color: #f8f9fa; border-radius: 15px !important; box-shadow: 0 10px 30px rgba(0,0,0,0.08); overflow: hidden; transition: all 0.3s ease; max-width: 90%; margin: 0 auto;">
+                                    <div class="inner-content" style="padding: 20px; text-align: center;">
+                                        <h4 class="title" style="margin-bottom: 15px; font-size: 20px; color: #333;">Medical Record Summarization</h4>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Card 2 -->
+                            <div class="service-card wow fadeInUp" data-wow-delay=".2s" data-wow-offset="120">
+                                <div class="single-case-studies-three" style="background-color: #f8f9fa; border-radius: 15px !important; box-shadow: 0 10px 30px rgba(0,0,0,0.08); overflow: hidden; transition: all 0.3s ease; max-width: 90%; margin: 0 auto;">
+                                    <div class="inner-content" style="padding: 20px; text-align: center;">
+                                        <h4 class="title" style="margin-bottom: 15px; font-size: 20px; color: #333;">Peer Review Summary</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Second Column - 3 Cards -->
+                        <div class="col-md-4">
+                            <!-- Card 3 -->
+                            <div class="service-card mb-4 wow fadeInUp" data-wow-offset="120">
+                                <div class="single-case-studies-three" style="background-color: #f8f9fa; border-radius: 15px !important; box-shadow: 0 10px 30px rgba(0,0,0,0.08); overflow: hidden; transition: all 0.3s ease; max-width: 90%; margin: 0 auto;">
+                                    <div class="inner-content" style="padding: 20px; text-align: center;">
+                                        <h4 class="title" style="margin-bottom: 15px; font-size: 20px; color: #333;">APS Summary</h4>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Card 4 -->
+                            <div class="service-card mb-4 wow fadeInUp" data-wow-delay=".2s" data-wow-offset="120">
+                                <div class="single-case-studies-three" style="background-color: #f8f9fa; border-radius: 15px !important; box-shadow: 0 10px 30px rgba(0,0,0,0.08); overflow: hidden; transition: all 0.3s ease; max-width: 90%; margin: 0 auto;">
+                                    <div class="inner-content" style="padding: 20px; text-align: center;">
+                                        <h4 class="title" style="margin-bottom: 15px; font-size: 20px; color: #333;">Medical Transcription</h4>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Card 5 -->
+                            <div class="service-card wow fadeInUp" data-wow-delay=".4s" data-wow-offset="120">
+                                <div class="single-case-studies-three" style="background-color: #f8f9fa; border-radius: 15px !important; box-shadow: 0 10px 30px rgba(0,0,0,0.08); overflow: hidden; transition: all 0.3s ease; max-width: 90%; margin: 0 auto;">
+                                    <div class="inner-content" style="padding: 20px; text-align: center;">
+                                        <h4 class="title" style="margin-bottom: 15px; font-size: 20px; color: #333;">Medical Scribe</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Third Column - 2 Cards -->
+                        <div class="col-md-4 d-flex flex-column justify-content-center">
+                            <!-- Card 6 -->
+                            <div class="service-card mb-4 wow fadeInUp" data-wow-offset="120">
+                                <div class="single-case-studies-three" style="background-color: #f8f9fa; border-radius: 15px !important; box-shadow: 0 10px 30px rgba(0,0,0,0.08); overflow: hidden; transition: all 0.3s ease; max-width: 90%; margin: 0 auto;">
+                                    <div class="inner-content" style="padding: 20px; text-align: center;">
+                                        <h4 class="title" style="margin-bottom: 15px; font-size: 20px; color: #333;">Medical Billing</h4>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Card 7 -->
+                            <div class="service-card wow fadeInUp" data-wow-delay=".2s" data-wow-offset="120">
+                                <div class="single-case-studies-three" style="background-color: #f8f9fa; border-radius: 15px !important; box-shadow: 0 10px 30px rgba(0,0,0,0.08); overflow: hidden; transition: all 0.3s ease; max-width: 90%; margin: 0 auto;">
+                                    <div class="inner-content" style="padding: 20px; text-align: center;">
+                                        <h4 class="title" style="margin-bottom: 15px; font-size: 20px; color: #333;">EHR/EMR – Virtual Assistance</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+               
+            </div>
+        </div>
+        <!-- Software Solutions Card -->
+        <div class="col-lg-6 mb-4">
+            <div class="service-card bg-light p-5 rounded h-100 wow fadeInRight" data-wow-delay="0.3s"  style="border-radius: 10px !important;">
+               
+           
+                <h3 class="mb-3" style="text-align: center;"><span class="blue-underline">Sof</span>tware Solutions</h3>
+
+                <div class="container">
+                    <div class="row">
+                        <!-- First Column - 2 Cards -->
+                        <div class="col-md-4 d-flex flex-column justify-content-center">
+                            <!-- Card 1 -->
+                            <div class="service-card mb-4 wow fadeInUp" data-wow-offset="120">
+                                <div class="single-case-studies-three" style="background-color: #f8f9fa; border-radius: 15px !important; box-shadow: 0 10px 30px rgba(0,0,0,0.08); overflow: hidden; transition: all 0.3s ease; max-width: 90%; margin: 0 auto;">
+                                    <div class="inner-content" style="padding: 20px; text-align: center;">
+                                        <h4 class="title" style="margin-bottom: 15px; font-size: 20px; color: #333;">Software Services</h4>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Card 2 -->
+                            <div class="service-card wow fadeInUp" data-wow-delay=".2s" data-wow-offset="120">
+                                <div class="single-case-studies-three" style="background-color: #f8f9fa; border-radius: 15px !important; box-shadow: 0 10px 30px rgba(0,0,0,0.08); overflow: hidden; transition: all 0.3s ease; max-width: 90%; margin: 0 auto;">
+                                    <div class="inner-content" style="padding: 20px; text-align: center;">
+                                        <h4 class="title" style="margin-bottom: 15px; font-size: 20px; color: #333;">Mobile Solutions</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Second Column - 3 Cards -->
+                        <div class="col-md-4">
+                            <!-- Card 3 -->
+                            <div class="service-card mb-4 wow fadeInUp" data-wow-offset="120">
+                                <div class="single-case-studies-three" style="background-color: #f8f9fa; border-radius: 15px !important; box-shadow: 0 10px 30px rgba(0,0,0,0.08); overflow: hidden; transition: all 0.3s ease; max-width: 90%; margin: 0 auto;">
+                                    <div class="inner-content" style="padding: 20px; text-align: center;">
+                                        <h4 class="title" style="margin-bottom: 15px; font-size: 20px; color: #333;">Cloud Solutions</h4>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Card 4 -->
+                            <div class="service-card mb-4 wow fadeInUp" data-wow-delay=".2s" data-wow-offset="120">
+                                <div class="single-case-studies-three" style="background-color: #f8f9fa; border-radius: 15px !important; box-shadow: 0 10px 30px rgba(0,0,0,0.08); overflow: hidden; transition: all 0.3s ease; max-width: 90%; margin: 0 auto;">
+                                    <div class="inner-content" style="padding: 20px; text-align: center;">
+                                        <h4 class="title" style="margin-bottom: 15px; font-size: 20px; color: #333;">AI/ML Solutions</h4>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Card 5 -->
+                            <div class="service-card wow fadeInUp" data-wow-delay=".4s" data-wow-offset="120">
+                                <div class="single-case-studies-three" style="background-color: #f8f9fa; border-radius: 15px !important; box-shadow: 0 10px 30px rgba(0,0,0,0.08); overflow: hidden; transition: all 0.3s ease; max-width: 90%; margin: 0 auto;">
+                                    <div class="inner-content" style="padding: 20px; text-align: center;">
+                                        <h4 class="title" style="margin-bottom: 15px; font-size: 20px; color: #333;">Analytical and Reporting</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Third Column - 2 Cards -->
+                        <div class="col-md-4 d-flex flex-column justify-content-center">
+                            <!-- Card 6 -->
+                            <div class="service-card mb-4 wow fadeInUp" data-wow-offset="120">
+                                <div class="single-case-studies-three" style="background-color: #f8f9fa; border-radius: 15px !important; box-shadow: 0 10px 30px rgba(0,0,0,0.08); overflow: hidden; transition: all 0.3s ease; max-width: 90%; margin: 0 auto;">
+                                    <div class="inner-content" style="padding: 20px; text-align: center;">
+                                        <h4 class="title" style="margin-bottom: 15px; font-size: 20px; color: #333;">Talent Management</h4>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Card 7 -->
+                            <div class="service-card wow fadeInUp" data-wow-delay=".2s" data-wow-offset="120">
+                                <div class="single-case-studies-three" style="background-color: #f8f9fa; border-radius: 15px !important; box-shadow: 0 10px 30px rgba(0,0,0,0.08); overflow: hidden; transition: all 0.3s ease; max-width: 90%; margin: 0 auto;">
+                                    <div class="inner-content" style="padding: 20px; text-align: center;">
+                                        <h4 class="title" style="margin-bottom: 15px; font-size: 20px; color: #333;">Remote Hardware Infra</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Dual Expertise Section End -->
+
+
 
 <!-- Our Values Section Start -->
 <div class="keybenefits-area bg-light">
