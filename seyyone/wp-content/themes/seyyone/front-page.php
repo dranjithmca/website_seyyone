@@ -342,6 +342,8 @@ $banner_url = get_field('home_banner_image');
                         <!-- First Column - 2 Cards -->
                         <div class="col-md-4 d-flex flex-column justify-content-center">
                             <!-- Card 1 -->
+
+                            
                             <div class="service-card mb-4 wow fadeInUp" data-wow-offset="120">
                                 <div class="single-case-studies-three" style="background-color: #f8f9fa; border-radius: 15px !important; box-shadow: 0 10px 30px rgba(0,0,0,0.08); overflow: hidden; transition: all 0.3s ease; max-width: 90%; margin: 0 auto;">
                                     <div class="inner-content" style="padding: 20px; text-align: center;">
@@ -427,22 +429,29 @@ $banner_url = get_field('home_banner_image');
                         <!-- First Column - 2 Cards -->
                         <div class="col-md-4 d-flex flex-column justify-content-center">
                             <!-- Card 1 -->
-                            <div class="service-card mb-4 wow fadeInUp" data-wow-offset="120">
-                                <div class="single-case-studies-three" style="background-color: #f8f9fa; border-radius: 15px !important; box-shadow: 0 10px 30px rgba(0,0,0,0.08); overflow: hidden; transition: all 0.3s ease; max-width: 90%; margin: 0 auto;">
-                                    <div class="inner-content" style="padding: 20px; text-align: center;">
-                                        <h4 class="title" style="margin-bottom: 15px; font-size: 20px; color: #333;">Software Services</h4>
-                                    </div>
-                                </div>
-                            </div>
-                            
+                          <div class="service-card mb-4 wow fadeInUp" data-wow-offset="120">
+    <div class="single-case-studies-three" style="background-color: transparent; background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/seyyone/home/software/Cloud.jpg'); background-position: center; background-size: cover; border-radius: 15px !important; box-shadow: 0 10px 30px rgba(0,0,0,0.08); overflow: hidden; transition: all 0.3s ease; max-width: 90%; margin: 0 auto; position: relative;">
+        <!-- Reduced blur overlay -->
+        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(255,255,255,0.6); backdrop-filter: blur(1.5px); -webkit-backdrop-filter: blur(1.5px);"></div>
+        
+        <div class="inner-content" style="padding: 20px; text-align: center; position: relative; z-index: 1;">
+            <h4 class="title" style="margin-bottom: 15px; font-size: 20px; color: #333; text-shadow: 0 0 2px rgba(255,255,255,0.8);">Software Services</h4>
+        </div>
+    </div>
+</div>
+
                             <!-- Card 2 -->
-                            <div class="service-card wow fadeInUp" data-wow-delay=".2s" data-wow-offset="120">
-                                <div class="single-case-studies-three" style="background-color: #f8f9fa; border-radius: 15px !important; box-shadow: 0 10px 30px rgba(0,0,0,0.08); overflow: hidden; transition: all 0.3s ease; max-width: 90%; margin: 0 auto;">
-                                    <div class="inner-content" style="padding: 20px; text-align: center;">
-                                        <h4 class="title" style="margin-bottom: 15px; font-size: 20px; color: #333;">Mobile Solutions</h4>
-                                    </div>
-                                </div>
-                            </div>
+                             <div class="service-card mb-4 wow fadeInUp" data-wow-offset="120">
+    <div class="single-case-studies-three" style="background-color: transparent; background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/industry/07.webp'); background-position: center; background-size: cover; border-radius: 15px !important; box-shadow: 0 10px 30px rgba(0,0,0,0.08); overflow: hidden; transition: all 0.3s ease; max-width: 90%; margin: 0 auto; position: relative;">
+        <!-- Reduced blur overlay -->
+        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(255,255,255,0.6); backdrop-filter: blur(1.5px); -webkit-backdrop-filter: blur(1.5px);"></div>
+        
+        <div class="inner-content" style="padding: 20px; text-align: center; position: relative; z-index: 1;">
+            <h4 class="title" style="margin-bottom: 15px; font-size: 20px; color: #333; text-shadow: 0 0 2px rgba(255,255,255,0.8);">Mobile Solutions</h4>
+        </div>
+    </div>
+</div>
+
                         </div>
                         
                         <!-- Second Column - 3 Cards -->
