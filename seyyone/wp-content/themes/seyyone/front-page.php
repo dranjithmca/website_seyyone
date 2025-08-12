@@ -21,7 +21,7 @@ $banner_url = get_field('home_banner_image');
          <div class="row">
             <div class="col-lg-12">
                <div class="banner-four-wrapper">
-                  <div class="inner-left" style="background-color: #f0f8ff4d; padding: 20px;border-radius: 10px;max-width: 98%;">
+                  <div class="inner-left" style="background-color: #f0f8ff7a; padding: 20px;border-radius: 10px;max-width: 98%;">
                      <h1 class="title wow fadeInUp" data-wow-offset="120" data-wow-delay=".2s" style="font-size: 75px;visibility: visible;animation-delay: 0.2s;animation-name: fadeInUp;text-align: center; color: #262626;">
                         Transforming
                         <span class="wow move-right" data-wow-offset="120" style="color: blue; display: inline-block;margin-right: 10px;visibility: visible;animation-name: moveright;">Businesses</span>
@@ -29,7 +29,7 @@ $banner_url = get_field('home_banner_image');
                         <span class="wow move-right" data-wow-offset="120" style="color: blue; display: inline-block;margin-right: 10px;visibility: visible;animation-name: moveright;">Technology</span>
                         &amp; Expertise
                      </h1>
-                     <p class="disc wow fadeInUp" data-wow-offset="120" data-wow-delay=".4s" style="visibility: visible;animation-delay: 0.4s;animation-name: fadeInUp;text-align: center; color: #262626;">
+                     <p class="disc wow fadeInUp" data-wow-offset="120" data-wow-delay=".4s" style="visibility: visible;animation-delay: 0.4s;animation-name: fadeInUp;text-align: center; color: #262626; font-size: 24px;">
                         For over 25 years, Seyyone has been delivering innovative solutions in Healthcare KPO and Software Development to clients worldwide. Our
                         HIPAA-compliant services and cutting-edge technology solutions help businesses achieve operational excellence.
                      </p>
@@ -173,6 +173,7 @@ $banner_url = get_field('home_banner_image');
 <!-- Statistics Section End -->
 
  <!-- Statistics Section Start -->
+  <!--
 <div class="counter-up-wrapper mt-dec-80">
     <div class="container">
         <div class="col-lg-11 z-index-2 border-radius-xl mt-n10 mx-auto py-4 blur shadow-blur">
@@ -214,7 +215,7 @@ $banner_url = get_field('home_banner_image');
             </div>
         </div>
     </div>
-</div>
+</div>-->
 <!-- Statistics Section End -->
 
 
@@ -228,7 +229,7 @@ $banner_url = get_field('home_banner_image');
            <div class="service-card bg-light p-5 rounded h-100 wow fadeInLeft" data-wow-delay="0.3s" style="border-radius: 10px !important;">
 
                 <h3 class="mb-3"><span class="blue-underline">Hea</span>lthcare KPO</h3>
-                <p class="mb-4">
+                <p class="mb-4" >
                     Our HIPAA-compliant healthcare knowledge process outsourcing services help medical facilities streamline operations, reduce costs, and improve patient
                     care. With over 25 years of experience, we deliver accurate and timely solutions.
                 </p>
