@@ -11,7 +11,7 @@ get_header();
 ?>
 
 <!-- rts service banner area start -->
-<div class="rts-service-banner-area ptb--80 position-relative">
+<div class="rts-service-banner-area ptb--80 position-relative" style="background-image: linear-gradient(to right, #e9ecefbd, #e6f3f3);">
     <div class="container">
         <div class="row d-flex align-items-center">
             <div class="col-lg-7 mb_md--30 mb_sm--30">
