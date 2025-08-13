@@ -222,9 +222,10 @@ $banner_url = get_field('home_banner_image');
 <br>
 
 <!-- Dual Expertise Section Start -->
+ <!--
 <div class="container">
     <div class="row">
-        <!-- Healthcare KPO Card -->
+ 
         <div class="col-lg-6 mb-4">
            <div class="service-card bg-light p-5 rounded h-100 wow fadeInLeft" data-wow-delay="0.3s" style="border-radius: 10px !important;">
 
@@ -275,7 +276,7 @@ $banner_url = get_field('home_banner_image');
                 </div>
             </div>
         </div>
-        <!-- Software Solutions Card -->
+         
         <div class="col-lg-6 mb-4">
             <div class="service-card bg-light p-5 rounded h-100 wow fadeInRight" data-wow-delay="0.3s"  style="border-radius: 10px !important;">
                
@@ -322,7 +323,7 @@ $banner_url = get_field('home_banner_image');
             </div>
         </div>
     </div>
-</div>
+</div> -->
 <!-- Dual Expertise Section End -->
 
 
@@ -335,7 +336,13 @@ $banner_url = get_field('home_banner_image');
         <div class="col-lg-6 mb-4">
            <div class="service-card bg-light p-5 rounded h-100 wow fadeInLeft" data-wow-delay="0.3s" style="border-radius: 10px !important;">
 
-               <h3 class="mb-3" style="text-align: center;"><span class="blue-underline">Hea</span>lthcare KPO</h3>
+             <h3 class="mb-3  fadeIn" style="text-align: center;"><span class="blue-underline">Healthcare KPO</span></h3>
+<p class="mb-4" style="
+    font-size: large;
+    padding-top: 7px;
+    ">
+                    Our HIPAA-compliant healthcare knowledge process outsourcing services help medical facilities streamline operations, reduce costs, and improve patient care. With over 25 years of experience, we deliver accurate and timely solutions.
+                </p>
 
                  <div class="container">
                     <div class="row">
