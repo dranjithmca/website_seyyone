@@ -435,7 +435,14 @@ $banner_url = get_field('home_banner_image');
             <div class="service-card bg-light p-5 rounded h-100 wow fadeInRight" data-wow-delay="0.3s"  style="border-radius: 10px !important;">
                
            
-                <h3 class="mb-3" style="text-align: center;"><span class="blue-underline">Sof</span>tware Solutions</h3>
+              <h3 class="mb-3  fadeIn" style="text-align: center;"><span class="blue-underline">Software Solutions</span></h3>
+<p class="mb-4" style="
+    font-size: large;
+    padding-top: 7px;
+    ">
+                    Our software development team creates custom solutions tailored to your specific business needs. We specialize in healthcare software, web
+                    applications, mobile apps, and enterprise solutions that drive efficiency and growth.
+                </p>
 
                 <div class="container">
                     <div class="row">
