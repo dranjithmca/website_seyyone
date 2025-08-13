@@ -345,20 +345,22 @@ $banner_url = get_field('home_banner_image');
 
                             
                             <div class="service-card mb-4 wow fadeInUp" data-wow-offset="120">
-                                <div class="single-case-studies-three" style="background-color: #f8f9fa; border-radius: 15px !important; box-shadow: 0 10px 30px rgba(0,0,0,0.08); overflow: hidden; transition: all 0.3s ease; max-width: 90%; margin: 0 auto;">
-                                    <div class="inner-content" style="padding: 20px; text-align: center;">
-                                        <h4 class="title" style="margin-bottom: 15px; font-size: 20px; color: #333;">Medical Record Summarization</h4>
+                                   <div class="single-case-studies-three" style="background-color: #f8f9fa;border-radius: 15px !important;box-shadow: 0 10px 30px rgba(0,0,0,0.08);overflow: hidden;transition: all 0.3s ease;max-width: 90%;margin: 0 auto;min-height: 103px;align-content: center;">
+                                    <div class="inner-content" style="padding: 17px; text-align: center;">
+                                        <h4 class="title" style="font-size: 20px;color: #333;margin-bottom: 0px !important;">Medical Record Summarization</h4>
                                     </div>
                                 </div>
+                                 
                             </div>
                             
                             <!-- Card 2 -->
                             <div class="service-card wow fadeInUp" data-wow-delay=".2s" data-wow-offset="120">
-                                <div class="single-case-studies-three" style="background-color: #f8f9fa; border-radius: 15px !important; box-shadow: 0 10px 30px rgba(0,0,0,0.08); overflow: hidden; transition: all 0.3s ease; max-width: 90%; margin: 0 auto;">
-                                    <div class="inner-content" style="padding: 20px; text-align: center;">
-                                        <h4 class="title" style="margin-bottom: 15px; font-size: 20px; color: #333;">Peer Review Summary</h4>
+                                  <div class="single-case-studies-three" style="background-color: #f8f9fa;border-radius: 15px !important;box-shadow: 0 10px 30px rgba(0,0,0,0.08);overflow: hidden;transition: all 0.3s ease;max-width: 90%;margin: 0 auto;min-height: 103px;align-content: center;">
+                                    <div class="inner-content" style="padding: 17px; text-align: center;">
+                                        <h4 class="title" style="font-size: 20px;color: #333;margin-bottom: 0px !important;">Peer Review Summary</h4>
                                     </div>
                                 </div>
+                                 
                             </div>
                         </div>
                         
@@ -366,27 +368,30 @@ $banner_url = get_field('home_banner_image');
                         <div class="col-md-4">
                             <!-- Card 3 -->
                             <div class="service-card mb-4 wow fadeInUp" data-wow-offset="120">
-                                <div class="single-case-studies-three" style="background-color: #f8f9fa; border-radius: 15px !important; box-shadow: 0 10px 30px rgba(0,0,0,0.08); overflow: hidden; transition: all 0.3s ease; max-width: 90%; margin: 0 auto;">
-                                    <div class="inner-content" style="padding: 20px; text-align: center;">
-                                        <h4 class="title" style="margin-bottom: 15px; font-size: 20px; color: #333;">APS Summary</h4>
+                                <div class="single-case-studies-three" style="background-color: #f8f9fa;border-radius: 15px !important;box-shadow: 0 10px 30px rgba(0,0,0,0.08);overflow: hidden;transition: all 0.3s ease;max-width: 90%;margin: 0 auto;min-height: 103px;align-content: center;">
+                                    <div class="inner-content" style="padding: 17px; text-align: center;">
+                                        <h4 class="title" style="font-size: 20px;color: #333;margin-bottom: 0px !important;">APS Summary</h4>
                                     </div>
                                 </div>
+                                 
+                                 
                             </div>
                             
                             <!-- Card 4 -->
                             <div class="service-card mb-4 wow fadeInUp" data-wow-delay=".2s" data-wow-offset="120">
-                                <div class="single-case-studies-three" style="background-color: #f8f9fa; border-radius: 15px !important; box-shadow: 0 10px 30px rgba(0,0,0,0.08); overflow: hidden; transition: all 0.3s ease; max-width: 90%; margin: 0 auto;">
-                                    <div class="inner-content" style="padding: 20px; text-align: center;">
-                                        <h4 class="title" style="margin-bottom: 15px; font-size: 20px; color: #333;">Medical Transcription</h4>
+                                <div class="single-case-studies-three" style="background-color: #f8f9fa;border-radius: 15px !important;box-shadow: 0 10px 30px rgba(0,0,0,0.08);overflow: hidden;transition: all 0.3s ease;max-width: 90%;margin: 0 auto;min-height: 103px;align-content: center;">
+                                    <div class="inner-content" style="padding: 17px; text-align: center;">
+                                        <h4 class="title" style="font-size: 20px;color: #333;margin-bottom: 0px !important;">Medical Transcription</h4>
                                     </div>
                                 </div>
+                                 
                             </div>
                             
                             <!-- Card 5 -->
                             <div class="service-card wow fadeInUp" data-wow-delay=".4s" data-wow-offset="120">
-                                <div class="single-case-studies-three" style="background-color: #f8f9fa; border-radius: 15px !important; box-shadow: 0 10px 30px rgba(0,0,0,0.08); overflow: hidden; transition: all 0.3s ease; max-width: 90%; margin: 0 auto;">
-                                    <div class="inner-content" style="padding: 20px; text-align: center;">
-                                        <h4 class="title" style="margin-bottom: 15px; font-size: 20px; color: #333;">Medical Scribe</h4>
+                                <div class="single-case-studies-three" style="background-color: #f8f9fa;border-radius: 15px !important;box-shadow: 0 10px 30px rgba(0,0,0,0.08);overflow: hidden;transition: all 0.3s ease;max-width: 90%;margin: 0 auto;min-height: 103px;align-content: center;">
+                                    <div class="inner-content" style="padding: 17px; text-align: center;">
+                                        <h4 class="title" style="font-size: 20px;color: #333;margin-bottom: 0px !important;">Medical Scribe</h4>
                                     </div>
                                 </div>
                             </div>
@@ -396,18 +401,19 @@ $banner_url = get_field('home_banner_image');
                         <div class="col-md-4 d-flex flex-column justify-content-center">
                             <!-- Card 6 -->
                             <div class="service-card mb-4 wow fadeInUp" data-wow-offset="120">
-                                <div class="single-case-studies-three" style="background-color: #f8f9fa; border-radius: 15px !important; box-shadow: 0 10px 30px rgba(0,0,0,0.08); overflow: hidden; transition: all 0.3s ease; max-width: 90%; margin: 0 auto;">
-                                    <div class="inner-content" style="padding: 20px; text-align: center;">
-                                        <h4 class="title" style="margin-bottom: 15px; font-size: 20px; color: #333;">Medical Billing</h4>
+                                <div class="single-case-studies-three" style="background-color: #f8f9fa;border-radius: 15px !important;box-shadow: 0 10px 30px rgba(0,0,0,0.08);overflow: hidden;transition: all 0.3s ease;max-width: 90%;margin: 0 auto;min-height: 103px;align-content: center;">
+                                    <div class="inner-content" style="padding: 17px; text-align: center;">
+                                        <h4 class="title" style="font-size: 20px;color: #333;margin-bottom: 0px !important;">Medical Billing</h4>
                                     </div>
                                 </div>
                             </div>
                             
                             <!-- Card 7 -->
                             <div class="service-card wow fadeInUp" data-wow-delay=".2s" data-wow-offset="120">
-                                <div class="single-case-studies-three" style="background-color: #f8f9fa; border-radius: 15px !important; box-shadow: 0 10px 30px rgba(0,0,0,0.08); overflow: hidden; transition: all 0.3s ease; max-width: 90%; margin: 0 auto;">
-                                    <div class="inner-content" style="padding: 20px; text-align: center;">
-                                        <h4 class="title" style="margin-bottom: 15px; font-size: 20px; color: #333;">EHR/EMR – Virtual Assistance</h4>
+                                 
+                                 <div class="single-case-studies-three" style="background-color: #f8f9fa;border-radius: 15px !important;box-shadow: 0 10px 30px rgba(0,0,0,0.08);overflow: hidden;transition: all 0.3s ease;max-width: 90%;margin: 0 auto;min-height: 103px;align-content: center;">
+                                    <div class="inner-content" style="padding: 17px; text-align: center;">
+                                        <h4 class="title" style="font-size: 20px;color: #333;margin-bottom: 0px !important;">EHR/EMR</h4>
                                     </div>
                                 </div>
                             </div>
