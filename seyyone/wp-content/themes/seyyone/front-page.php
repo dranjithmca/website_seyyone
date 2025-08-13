@@ -22,7 +22,7 @@ $banner_url = get_field('home_banner_image');
             <div class="col-lg-12">
                <div class="banner-four-wrapper">
                   <div class="inner-left" style="background-color: #f0f8ff4d; padding: 20px;border-radius: 10px;max-width: 98%;">
-                     <h1 class="title wow fadeInUp" data-wow-offset="120" data-wow-delay=".2s" style="font-size: 75px;visibility: visible;animation-delay: 0.2s;animation-name: fadeInUp;text-align: center; color: #262626;">
+                     <h1 class="title wow fadeInUp" data-wow-offset="120" data-wow-delay=".2s" style="visibility: visible;animation-delay: 0.2s;animation-name: fadeInUp;text-align: center; color: #262626;">
                         Transforming
                         <span class="wow move-right" data-wow-offset="120" style="color: blue; display: inline-block;margin-right: 10px;visibility: visible;animation-name: moveright;">Businesses</span>
                         Through
