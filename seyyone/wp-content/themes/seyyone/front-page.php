@@ -21,7 +21,7 @@ $banner_url = get_field('home_banner_image');
          <div class="row">
             <div class="col-lg-12">
                <div class="banner-four-wrapper">
-                  <div class="inner-left" style="background-color: #f0f8ff4d; padding: 20px;border-radius: 10px;max-width: 98%;">
+                  <div class="inner-left" style="background-color: #f0f8ff4d;  border-radius: 10px;max-width: 98%;">
                      <h1 class="title wow fadeInUp" data-wow-offset="120" data-wow-delay=".2s" style="visibility: visible;animation-delay: 0.2s;animation-name: fadeInUp;text-align: center; color: #262626;">
                         Transforming
                         <span class="wow move-right" data-wow-offset="120" style="color: blue; display: inline-block;margin-right: 10px;visibility: visible;animation-name: moveright;">Businesses</span>
@@ -29,10 +29,7 @@ $banner_url = get_field('home_banner_image');
                         <span class="wow move-right" data-wow-offset="120" style="color: blue; display: inline-block;margin-right: 10px;visibility: visible;animation-name: moveright;">Technology</span>
                         &amp; Expertise
                      </h1>
-                     <p class="disc wow fadeInUp" data-wow-offset="120" data-wow-delay=".4s" style="visibility: visible;animation-delay: 0.4s;animation-name: fadeInUp;text-align: center; color: #262626; font-size: 24px;">
-                        For over 25 years, Seyyone has been delivering innovative solutions in Healthcare KPO and Software Development to clients worldwide. Our
-                        HIPAA-compliant services and cutting-edge technology solutions help businesses achieve operational excellence.
-                     </p>
+                     
                   </div>
                </div>
             </div>
@@ -59,7 +56,19 @@ $banner_url = get_field('home_banner_image');
 </div>
 <!-- Banner Section End -->
 
-
+ <div class="banner-why-choose-us" >
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="" style="width: 100%; padding-right: 30px; padding-left: 30px;  padding-top: 40px; text-align: center; margin: 0 auto;">
+                    <h5 class="title">
+                        <i>"For over 25 years, Seyyone has been delivering innovative solutions in Healthcare KPO and Software Development to clients worldwide. Our HIPAA-compliant services and cutting-edge technology solutions help businesses achieve operational excellence."</i>
+                    </h5>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 <!-- Banner Section Start -->
  <!--
@@ -327,6 +336,7 @@ $banner_url = get_field('home_banner_image');
 <!-- Dual Expertise Section End -->
 
 
+ 
 
 
 <!-- Dual Expertise Section Start -->
