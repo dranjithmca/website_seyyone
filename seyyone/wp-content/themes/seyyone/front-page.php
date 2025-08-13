@@ -21,7 +21,7 @@ $banner_url = get_field('home_banner_image');
          <div class="row">
             <div class="col-lg-12">
                <div class="banner-four-wrapper">
-                  <div class="inner-left" style="background-color: #f0f8ff4d;  border-radius: 10px;max-width: 98%;">
+                  <div class="inner-left" style="background-color: #f0f8ff4d;  border-radius: 10px;max-width: 98%; padding:20px;">
                      <h1 class="title wow fadeInUp" data-wow-offset="120" data-wow-delay=".2s" style="visibility: visible;animation-delay: 0.2s;animation-name: fadeInUp;text-align: center; color: #262626;">
                         Transforming
                         <span class="wow move-right" data-wow-offset="120" style="color: blue; display: inline-block;margin-right: 10px;visibility: visible;animation-name: moveright;">Businesses</span>
@@ -63,7 +63,7 @@ $banner_url = get_field('home_banner_image');
                 <div class="" style="width: 100%; padding-right: 30px; padding-left: 30px;  padding-top: 40px; text-align: center; margin: 0 auto;">
                     <h5 class="title">
                         <i>"For over 25 years, Seyyone has been delivering innovative solutions in Healthcare KPO and Software Development to clients worldwide. Our HIPAA-compliant services and cutting-edge technology solutions help businesses achieve operational excellence."</i>
-                    </h5>
+                    </h>
                 </div>
             </div>
         </div>
@@ -347,11 +347,11 @@ $banner_url = get_field('home_banner_image');
            <div class="service-card bg-light p-5 rounded h-100 wow fadeInLeft" data-wow-delay="0.3s" style="border-radius: 10px !important;">
 
              <h3 class="mb-3  fadeIn" style="text-align: center;"><span class="blue-underline">Healthcare KPO</span></h3>
-<p class="mb-4" style="
-    font-size: large;
-    padding-top: 7px;
-    ">
-                    Our HIPAA-compliant healthcare knowledge process outsourcing services help medical facilities streamline operations, reduce costs, and improve patient care. With over 25 years of experience, we deliver accurate and timely solutions.
+                <p class="mb-4" style="
+                    font-size: large;
+                    padding-top: 7px;
+                    ">
+                                    Our HIPAA-compliant healthcare knowledge process outsourcing services help medical facilities streamline operations, reduce costs, and improve patient care. With over 25 years of experience, we deliver accurate and timely solutions.
                 </p>
 
                  <div class="container">
@@ -363,7 +363,7 @@ $banner_url = get_field('home_banner_image');
                             
                             <div class="service-card mb-4 wow fadeInUp" data-wow-offset="120">
                                    <div class="single-case-studies-three" style="background-color: #f8f9fa;border-radius: 15px !important;box-shadow: 0 10px 30px rgba(0,0,0,0.08);overflow: hidden;transition: all 0.3s ease;max-width: 90%;margin: 0 auto;min-height: 103px;align-content: center;">
-                                    <div class="inner-content" style="padding: 17px; text-align: center;">
+                                    <div class="inner-content" style="padding: 17px; text-align: center; ">
                                         <h4 class="title" style="font-size: 20px;color: #333;margin-bottom: 0px !important;">Medical Record Summarization</h4>
                                     </div>
                                 </div>
@@ -446,10 +446,10 @@ $banner_url = get_field('home_banner_image');
                
            
               <h3 class="mb-3  fadeIn" style="text-align: center;"><span class="blue-underline">Software Solutions</span></h3>
-<p class="mb-4" style="
-    font-size: large;
-    padding-top: 7px;
-    ">
+                <p class="mb-4" style="
+                    font-size: large;
+                    padding-top: 7px;
+                    ">
                     Our software development team creates custom solutions tailored to your specific business needs. We specialize in healthcare software, web
                     applications, mobile apps, and enterprise solutions that drive efficiency and growth.
                 </p>
@@ -460,27 +460,27 @@ $banner_url = get_field('home_banner_image');
                         <div class="col-md-4 d-flex flex-column justify-content-center">
                             <!-- Card 1 -->
                           <div class="service-card mb-4 wow fadeInUp" data-wow-offset="120">
-    <div class="single-case-studies-three" style="background-color: transparent; background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/seyyone/home/software/Cloud.jpg'); background-position: center; background-size: cover; border-radius: 15px !important; box-shadow: 0 10px 30px rgba(0,0,0,0.08); overflow: hidden; transition: all 0.3s ease; max-width: 90%; margin: 0 auto; position: relative;">
-        <!-- Reduced blur overlay -->
-        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(255,255,255,0.6); backdrop-filter: blur(1.5px); -webkit-backdrop-filter: blur(1.5px);"></div>
-        
-        <div class="inner-content" style="padding: 20px; text-align: center; position: relative; z-index: 1;">
-            <h4 class="title" style="margin-bottom: 15px; font-size: 20px; color: #333; text-shadow: 0 0 2px rgba(255,255,255,0.8);">Software Services</h4>
-        </div>
-    </div>
-</div>
+                                <div class="single-case-studies-three" style="background-color: transparent; background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/seyyone/home/software/Cloud.jpg'); background-position: center; background-size: cover; border-radius: 15px !important; box-shadow: 0 10px 30px rgba(0,0,0,0.08); overflow: hidden; transition: all 0.3s ease; max-width: 90%; margin: 0 auto; position: relative;">
+                                    <!-- Reduced blur overlay -->
+                                    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(255,255,255,0.6); backdrop-filter: blur(1.5px); -webkit-backdrop-filter: blur(1.5px);"></div>
+                                    
+                                    <div class="inner-content" style="padding: 20px; text-align: center; position: relative; z-index: 1;">
+                                        <h4 class="title" style="margin-bottom: 15px; font-size: 20px; color: #333; text-shadow: 0 0 2px rgba(255,255,255,0.8);">Software Services</h4>
+                                    </div>
+                                </div>
+                            </div>
 
                             <!-- Card 2 -->
                              <div class="service-card mb-4 wow fadeInUp" data-wow-offset="120">
-    <div class="single-case-studies-three" style="background-color: transparent; background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/industry/07.webp'); background-position: center; background-size: cover; border-radius: 15px !important; box-shadow: 0 10px 30px rgba(0,0,0,0.08); overflow: hidden; transition: all 0.3s ease; max-width: 90%; margin: 0 auto; position: relative;">
-        <!-- Reduced blur overlay -->
-        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(255,255,255,0.6); backdrop-filter: blur(1.5px); -webkit-backdrop-filter: blur(1.5px);"></div>
-        
-        <div class="inner-content" style="padding: 20px; text-align: center; position: relative; z-index: 1;">
-            <h4 class="title" style="margin-bottom: 15px; font-size: 20px; color: #333; text-shadow: 0 0 2px rgba(255,255,255,0.8);">Mobile Solutions</h4>
-        </div>
-    </div>
-</div>
+                                <div class="single-case-studies-three" style="background-color: transparent; background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/seyyone/home/software/Mobile.jpg'); background-position: center; background-size: cover; border-radius: 15px !important; box-shadow: 0 10px 30px rgba(0,0,0,0.08); overflow: hidden; transition: all 0.3s ease; max-width: 90%; margin: 0 auto; position: relative;">
+                                    <!-- Reduced blur overlay -->
+                                    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(255,255,255,0.6); backdrop-filter: blur(1.5px); -webkit-backdrop-filter: blur(1.5px);"></div>
+                                    
+                                    <div class="inner-content" style="padding: 20px; text-align: center; position: relative; z-index: 1;">
+                                        <h4 class="title" style="margin-bottom: 15px; font-size: 20px; color: #333; text-shadow: 0 0 2px rgba(255,255,255,0.8);">Mobile Solutions</h4>
+                                    </div>
+                                </div>
+                            </div>
 
                         </div>
                         
