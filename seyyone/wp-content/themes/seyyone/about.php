@@ -24,10 +24,11 @@ get_header();
                     </p>
                 </div>
             </div>
+                   <div class="col-lg-5">
+                 <div class="thumbnail-bannr-service-right jarallax">
+    <div id="jarallax-container-0" class="jarallax-container" style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; overflow: hidden; z-index: -100; clip-path: polygon(0px 0px, 100% 0px, 100% 100%, 0px 100%);">
+   
             
-            <div class="col-lg-5">
-                <div class="thumbnail-bannr-service-right jarallax">
-                  <div id="jarallax-container-0" class="jarallax-container">
     <?php 
     $hero_image = get_field('about_hero_image');
     if($hero_image): ?>
