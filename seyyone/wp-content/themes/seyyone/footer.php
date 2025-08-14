@@ -87,7 +87,7 @@
 <!-- Copyright Section End -->
 
 <!-- Mobile Menu Sidebar Start -->
-<div id="side-bar" class="side-bar header-two" dir="ltr">
+<div id="side-bar" class="side-bar header-two" dir="ltr" style="background-color: #f0f8fff7;>
     <button class="close-icon-menu" aria-label="Close Menu"><i class="far fa-times"></i></button>
     <div class="mobile-menu-main">
         <nav class="nav-main mainmenu-nav mt--30">

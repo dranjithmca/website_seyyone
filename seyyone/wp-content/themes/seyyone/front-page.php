@@ -62,7 +62,9 @@ $banner_url = get_field('home_banner_image');
             <div class="col-lg-12">
                 <div class="" style="width: 100%; padding-right: 30px; padding-left: 30px;  padding-top: 40px; text-align: center; margin: 0 auto;">
                     <h5 class="title">
-                        <i>"For over 25 years, Seyyone has been delivering innovative solutions in Healthcare KPO and Software Development to clients worldwide. Our HIPAA-compliant services and cutting-edge technology solutions help businesses achieve operational excellence."</i>
+                        <i>"For over 
+                             <span   style="color: blue; "><strong>25 years</strong></span>,
+                             Seyyone has been delivering innovative solutions in Healthcare KPO and Software Development to clients worldwide. Our HIPAA-compliant services and cutting-edge technology solutions help businesses achieve operational excellence."</i>
                     </h>
                 </div>
             </div>
