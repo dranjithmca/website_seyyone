@@ -99,7 +99,9 @@
                         <li><a href="<?php echo home_url('/about#life-at-seyyone'); ?>"><i class="fa-sharp fa-regular fa-chevron-right"></i> Life At Seyyone</a></li>
                         <li><a href="<?php echo home_url('/#clients'); ?>"><i class="fa-sharp fa-regular fa-chevron-right"></i> Clients</a></li>
                    
-                        <li><a href="<?php echo home_url('/#testimonial'); ?>"><i class="fa-sharp fa-regular fa-chevron-right"></i> Testimonial</a></li>
+                        <li><a href="<?php echo home_url('/#testimonials'); ?>"><i class="fa-sharp fa-regular fa-chevron-right"></i> Testimonial</a></li>
+                    
+                    
                     </ul>
                 </li>
                 <li class="has-droupdown">
@@ -121,7 +123,7 @@
                     <ul class="submenu mm-collapse">
                         <li><a href="<?php echo home_url('/blogs'); ?>"><i class="fa-sharp fa-regular fa-chevron-right"></i> Blogs</a></li>
                         <li><a href="<?php echo home_url('/articles'); ?>"><i class="fa-sharp fa-regular fa-chevron-right"></i> Articles</a></li>
-                        <li><a href="<?php echo home_url('/infographics'); ?>"><i class="fa-sharp fa-regular fa-chevron-right"></i> Infographics</a></li>
+                       
                         <li><a href="<?php echo home_url('/case-studies'); ?>"><i class="fa-sharp fa-regular fa-chevron-right"></i> Case Study</a></li>
                     </ul>
                 </li>
