@@ -475,7 +475,7 @@ $banner_url = get_field('home_banner_image');
                         <div class="col-md-4 d-flex flex-column justify-content-center">
                             <!-- Card 1 -->
                           <div class="service-card mb-4 wow fadeInUp" data-wow-offset="120">
-                                <div class="single-case-studies-three" style="background-color: transparent; background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/seyyone/home/software/Cloud.jpg'); background-position: center; background-size: cover; border-radius: 15px !important; box-shadow: 0 10px 30px rgba(0,0,0,0.08); overflow: hidden; transition: all 0.3s ease; max-width: 90%; margin: 0 auto; min-height: 103px; align-content: center; position: relative;">
+                                <div class="single-case-studies-three" style="background-color: transparent; background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/seyyone/home/sw_hc_card_imgs/app-develop-sm.jpg'); background-position: center; background-size: cover; border-radius: 15px !important; box-shadow: 0 10px 30px rgba(0,0,0,0.08); overflow: hidden; transition: all 0.3s ease; max-width: 90%; margin: 0 auto; min-height: 103px; align-content: center; position: relative;">
                                     <!-- Reduced blur overlay -->
                                     <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(255,255,255,0.6); backdrop-filter: blur(1.5px); -webkit-backdrop-filter: blur(1.5px);"></div>
                                     <div class="inner-content" style="padding: 17px; text-align: center; position: relative; z-index: 1;">
@@ -487,7 +487,7 @@ $banner_url = get_field('home_banner_image');
                             <!-- Card 2 -->
                              <div class="service-card mb-4 wow fadeInUp" data-wow-offset="120">
 
-                                <div class="single-case-studies-three" style="background-color: transparent; background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/industry/07.webp'); background-position: center; background-size: cover; border-radius: 15px !important; box-shadow: 0 10px 30px rgba(0,0,0,0.08); overflow: hidden; transition: all 0.3s ease; max-width: 90%; margin: 0 auto; min-height: 103px; align-content: center; position: relative;">
+                                <div class="single-case-studies-three" style="background-color: transparent; background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/seyyone/home/sw_hc_card_imgs/mobile-sm.jpg'); background-position: center; background-size: cover; border-radius: 15px !important; box-shadow: 0 10px 30px rgba(0,0,0,0.08); overflow: hidden; transition: all 0.3s ease; max-width: 90%; margin: 0 auto; min-height: 103px; align-content: center; position: relative;">
                                     <!-- Blur overlay -->
                                         <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(255,255,255,0.6); backdrop-filter: blur(1.5px); -webkit-backdrop-filter: blur(1.5px);">
                                             
@@ -504,9 +504,11 @@ $banner_url = get_field('home_banner_image');
                         <div class="col-md-4">
                             <!-- Card 3 -->
                             <div class="service-card mb-4 wow fadeInUp" data-wow-offset="120">
-                                  <div class="single-case-studies-three" style="background-color: #f8f9fa;border-radius: 15px !important;box-shadow: 0 10px 30px rgba(0,0,0,0.08);overflow: hidden;transition: all 0.3s ease;max-width: 90%;margin: 0 auto;min-height: 103px;align-content: center;">
-                                    <div class="inner-content" style="padding: 17px; text-align: center;">
-                                        <h4 class="title" style="font-size: 20px;color: #333;margin-bottom: 0px !important;">Cloud Solutions</h4>
+                                 <div class="single-case-studies-three" style="background-color: transparent; background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/seyyone/home/sw_hc_card_imgs/cloud-sm2.jpg'); background-position: center; background-size: cover; border-radius: 15px !important; box-shadow: 0 10px 30px rgba(0,0,0,0.08); overflow: hidden; transition: all 0.3s ease; max-width: 90%; margin: 0 auto; min-height: 103px; align-content: center; position: relative;">
+                                    <!-- Reduced blur overlay -->
+                                    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(255,255,255,0.6); backdrop-filter: blur(1.5px); -webkit-backdrop-filter: blur(1.5px);"></div>
+                                    <div class="inner-content" style="padding: 17px; text-align: center; position: relative; z-index: 1;">
+                                        <h4 class="title" style="font-size: 20px; color: #333; margin-bottom: 0px !important; text-shadow: 0 0 2px rgba(255,255,255,0.8);">Cloud Solutions</h4>
                                     </div>
                                 </div>
                                 
@@ -514,21 +516,26 @@ $banner_url = get_field('home_banner_image');
                             
                             <!-- Card 4 -->
                             <div class="service-card mb-4 wow fadeInUp" data-wow-delay=".2s" data-wow-offset="120">
-                                 <div class="single-case-studies-three" style="background-color: #f8f9fa;border-radius: 15px !important;box-shadow: 0 10px 30px rgba(0,0,0,0.08);overflow: hidden;transition: all 0.3s ease;max-width: 90%;margin: 0 auto;min-height: 103px;align-content: center;">
-                                    <div class="inner-content" style="padding: 17px; text-align: center;">
-                                        <h4 class="title" style="font-size: 20px;color: #333;margin-bottom: 0px !important;">AI/ML Solutions</h4>
+                                 
+                                 <div class="single-case-studies-three" style="background-color: transparent; background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/seyyone/home/sw_hc_card_imgs/ai-sm.jpg'); background-position: center; background-size: cover; border-radius: 15px !important; box-shadow: 0 10px 30px rgba(0,0,0,0.08); overflow: hidden; transition: all 0.3s ease; max-width: 90%; margin: 0 auto; min-height: 103px; align-content: center; position: relative;">
+                                    <!-- Reduced blur overlay -->
+                                    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(255,255,255,0.6); backdrop-filter: blur(1.5px); -webkit-backdrop-filter: blur(1.5px);"></div>
+                                    <div class="inner-content" style="padding: 17px; text-align: center; position: relative; z-index: 1;">
+                                        <h4 class="title" style="font-size: 20px; color: #333; margin-bottom: 0px !important; text-shadow: 0 0 2px rgba(255,255,255,0.8);">AI/ML Solutions</h4>
                                     </div>
-                                </div>
+                                </div>  
                                 
                             </div>
                             
                             <!-- Card 5 -->
                             <div class="service-card wow fadeInUp" data-wow-delay=".4s" data-wow-offset="120">
-                                 <div class="single-case-studies-three" style="background-color: #f8f9fa;border-radius: 15px !important;box-shadow: 0 10px 30px rgba(0,0,0,0.08);overflow: hidden;transition: all 0.3s ease;max-width: 90%;margin: 0 auto;min-height: 103px;align-content: center;">
-                                    <div class="inner-content" style="padding: 17px; text-align: center;">
-                                        <h4 class="title" style="font-size: 20px;color: #333;margin-bottom: 0px !important;">Analytical and Reporting</h4>
+                                 <div class="single-case-studies-three" style="background-color: transparent; background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/seyyone/home/sw_hc_card_imgs/analytics-sm.jpg'); background-position: center; background-size: cover; border-radius: 15px !important; box-shadow: 0 10px 30px rgba(0,0,0,0.08); overflow: hidden; transition: all 0.3s ease; max-width: 90%; margin: 0 auto; min-height: 103px; align-content: center; position: relative;">
+                                    <!-- Reduced blur overlay -->
+                                    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(255,255,255,0.6); backdrop-filter: blur(1.5px); -webkit-backdrop-filter: blur(1.5px);"></div>
+                                    <div class="inner-content" style="padding: 17px; text-align: center; position: relative; z-index: 1;">
+                                        <h4 class="title" style="font-size: 20px; color: #333; margin-bottom: 0px !important; text-shadow: 0 0 2px rgba(255,255,255,0.8);">Analytical and Reporting</h4>
                                     </div>
-                                </div>
+                                </div> 
                                
                             </div>
                         </div>
@@ -537,21 +544,25 @@ $banner_url = get_field('home_banner_image');
                         <div class="col-md-4 d-flex flex-column justify-content-center">
                             <!-- Card 6 -->
                             <div class="service-card mb-4 wow fadeInUp" data-wow-offset="120">
-                                  <div class="single-case-studies-three" style="background-color: #f8f9fa;border-radius: 15px !important;box-shadow: 0 10px 30px rgba(0,0,0,0.08);overflow: hidden;transition: all 0.3s ease;max-width: 90%;margin: 0 auto;min-height: 103px;align-content: center;">
-                                    <div class="inner-content" style="padding: 17px; text-align: center;">
-                                        <h4 class="title" style="font-size: 20px;color: #333;margin-bottom: 0px !important;">Talent Management</h4>
+                                <div class="single-case-studies-three" style="background-color: transparent; background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/seyyone/home/sw_hc_card_imgs/talent-sm.jpg'); background-position: center; background-size: cover; border-radius: 15px !important; box-shadow: 0 10px 30px rgba(0,0,0,0.08); overflow: hidden; transition: all 0.3s ease; max-width: 90%; margin: 0 auto; min-height: 103px; align-content: center; position: relative;">
+                                    <!-- Reduced blur overlay -->
+                                    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(255,255,255,0.6); backdrop-filter: blur(1.5px); -webkit-backdrop-filter: blur(1.5px);"></div>
+                                    <div class="inner-content" style="padding: 17px; text-align: center; position: relative; z-index: 1;">
+                                        <h4 class="title" style="font-size: 20px; color: #333; margin-bottom: 0px !important; text-shadow: 0 0 2px rgba(255,255,255,0.8);">Talent Management</h4>
                                     </div>
-                                </div>
+                                </div> 
                                 
                             </div>
                             
                             <!-- Card 7 -->
                             <div class="service-card wow fadeInUp" data-wow-delay=".2s" data-wow-offset="120">
-                                <div class="single-case-studies-three" style="background-color: #f8f9fa;border-radius: 15px !important;box-shadow: 0 10px 30px rgba(0,0,0,0.08);overflow: hidden;transition: all 0.3s ease;max-width: 90%;margin: 0 auto;min-height: 103px;align-content: center;">
-                                    <div class="inner-content" style="padding: 17px; text-align: center;">
-                                        <h4 class="title" style="font-size: 20px;color: #333;margin-bottom: 0px !important;">Remote Hardware Infra</h4>
+                                <div class="single-case-studies-three" style="background-color: transparent; background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/seyyone/home/sw_hc_card_imgs/remote-sm.jpg'); background-position: center; background-size: cover; border-radius: 15px !important; box-shadow: 0 10px 30px rgba(0,0,0,0.08); overflow: hidden; transition: all 0.3s ease; max-width: 90%; margin: 0 auto; min-height: 103px; align-content: center; position: relative;">
+                                    <!-- Reduced blur overlay -->
+                                    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(255,255,255,0.6); backdrop-filter: blur(1.5px); -webkit-backdrop-filter: blur(1.5px);"></div>
+                                    <div class="inner-content" style="padding: 17px; text-align: center; position: relative; z-index: 1;">
+                                        <h4 class="title" style="font-size: 20px; color: #333; margin-bottom: 0px !important; text-shadow: 0 0 2px rgba(255,255,255,0.8);">Remote Hardware Infra</h4>
                                     </div>
-                                </div>
+                                </div> 
                                  
                             </div>
                         </div>
