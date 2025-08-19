@@ -346,10 +346,10 @@ $banner_url = get_field('home_banner_image');
     <div class="row">
         <!-- Healthcare KPO Card -->
         <div class="col-lg-6 mb-4">
-           <div class="service-card bg-light p-5 rounded h-100 wow fadeInLeft" data-wow-delay="0.3s" style="border-radius: 10px !important;">
+           <div class="service-card   p-5 rounded h-100 wow fadeInLeft" data-wow-delay="0.3s" style="border-radius: 10px !important; background-color: #505e6b;">
 
-             <h3 class="mb-3  fadeIn" style="text-align: center;"><span class="blue-underline">Healthcare KPO</span></h3>
-                <p class="mb-4" style="
+             <h3 class="mb-3  fadeIn seyyone_font_white" style="text-align: center;"><span class="white-underline">Healthcare KPO</span></h3>
+                <p class="mb-4 seyyone_font_white" style="
                     font-size: large;
                     padding-top: 7px;
                     ">
@@ -360,29 +360,30 @@ $banner_url = get_field('home_banner_image');
                     <div class="row">
                         <!-- First Column - 2 Cards -->
                         <div class="col-md-4 d-flex flex-column justify-content-center">
-                            <!-- Card 1 --> 
-
-                           
+                            <!-- Card 1 -->
                             <div class="service-card mb-4 wow fadeInUp" data-wow-offset="120">
-                                  <div class="single-case-studies-three" style="background-color: transparent; background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/seyyone/home/sw_hc_card_imgs/Medical Record Summarization.png'); background-position: center; background-size: cover; border-radius: 15px !important; box-shadow: 0 10px 30px rgba(0,0,0,0.08); overflow: hidden; transition: all 0.3s ease; max-width: 90%; margin: 0 auto; min-height: 103px; align-content: center; position: relative;">
+                                <div class="single-case-studies-three" style="background-color: transparent;background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/seyyone/home/sw_hc_card_imgs/Medical Record Summarization.png');background-position: center;background-size: cover;border-radius: 15px !important;box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.2);overflow: hidden;transition: all 0.3s ease;max-width: 90%;margin: 0 auto;min-height: 125px;align-content: center;position: relative;">
+
                                     <!-- Reduced blur overlay -->
-                                        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(255,255,255,0.6); backdrop-filter: blur(1.5px); -webkit-backdrop-filter: blur(1.5px);"></div>
-                                            <div class="inner-content" style="padding: 17px; text-align: center; position: relative; z-index: 1;">
-                                            <h4 class="title" style="font-size: 20px; color: #333; margin-bottom: 0px !important; text-shadow: 0 0 2px rgba(255,255,255,0.8);">Medical Record Summarization</h4>
-                                        </div>
-                                  </div>
-                             </div>
+                                    <div style="position: absolute;top: 0;left: 0;width: 100%;height: 35%;background-color: rgba(255,255,255,0.6);backdrop-filter: blur(1.5px);-webkit-backdrop-filter: blur(1.5px);margin-top: 85px;"></div>
+
+                                    <div class="inner-content" style="padding: 35px 0px 0px 0px;text-align: center;position: relative;">
+                                        <h4 class="title" style="font-size: 18px;color: #333;margin-bottom: 0px !important;font-weight: 600;margin-top: 50px;">Medical Record Summarization</h4>
+                                    </div>
+                                </div>
+                            </div>
                             
                             <!-- Card 2 -->
                             <div class="service-card wow fadeInUp" data-wow-delay=".2s" data-wow-offset="120">
-                                 <div class="single-case-studies-three" style="background-color: transparent; background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/seyyone/home/sw_hc_card_imgs/APS Summary.png'); background-position: center; background-size: cover; border-radius: 15px !important; box-shadow: 0 10px 30px rgba(0,0,0,0.08); overflow: hidden; transition: all 0.3s ease; max-width: 90%; margin: 0 auto; min-height: 103px; align-content: center; position: relative;">
+                                <div class="single-case-studies-three" style="background-color: transparent;background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/seyyone/home/sw_hc_card_imgs/APS Summary.png');background-position: center;background-size: cover;border-radius: 15px !important;box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.2);overflow: hidden;transition: all 0.3s ease;max-width: 90%;margin: 0 auto;min-height: 125px;align-content: center;position: relative;">
+
                                     <!-- Reduced blur overlay -->
-                                        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(255,255,255,0.6); backdrop-filter: blur(1.5px); -webkit-backdrop-filter: blur(1.5px);"></div>
-                                            <div class="inner-content" style="padding: 17px; text-align: center; position: relative; z-index: 1;">
-                                            <h4 class="title" style="font-size: 20px; color: #333; margin-bottom: 0px !important; text-shadow: 0 0 2px rgba(255,255,255,0.8);">APS Summary</h4>
-                                        </div>
-                                  </div>
-                                 
+                                    <div style="position: absolute;top: 0;left: 0;width: 100%;height: 35%;background-color: rgba(255,255,255,0.6);backdrop-filter: blur(1.5px);-webkit-backdrop-filter: blur(1.5px);margin-top: 85px;"></div>
+
+                                    <div class="inner-content" style="padding: 35px 0px 0px 0px;text-align: center;position: relative;">
+                                        <h4 class="title" style="font-size: 18px;color: #333;margin-bottom: 0px !important;font-weight: 600;margin-top: 50px;">APS Summary</h4>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         
@@ -390,38 +391,41 @@ $banner_url = get_field('home_banner_image');
                         <div class="col-md-4">
                             <!-- Card 3 -->
                             <div class="service-card mb-4 wow fadeInUp" data-wow-offset="120">
-                                <div class="single-case-studies-three" style="background-color: transparent; background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/seyyone/home/sw_hc_card_imgs/Peer Review Summaries.png'); background-position: center; background-size: cover; border-radius: 15px !important; box-shadow: 0 10px 30px rgba(0,0,0,0.08); overflow: hidden; transition: all 0.3s ease; max-width: 90%; margin: 0 auto; min-height: 103px; align-content: center; position: relative;">
+                                <div class="single-case-studies-three" style="background-color: transparent;background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/seyyone/home/sw_hc_card_imgs/Peer Review Summaries.png');background-position: center;background-size: cover;border-radius: 15px !important;box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.2);overflow: hidden;transition: all 0.3s ease;max-width: 90%;margin: 0 auto;min-height: 125px;align-content: center;position: relative;">
+
                                     <!-- Reduced blur overlay -->
-                                        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(255,255,255,0.6); backdrop-filter: blur(1.5px); -webkit-backdrop-filter: blur(1.5px);"></div>
-                                            <div class="inner-content" style="padding: 17px; text-align: center; position: relative; z-index: 1;">
-                                            <h4 class="title" style="font-size: 20px; color: #333; margin-bottom: 0px !important; text-shadow: 0 0 2px rgba(255,255,255,0.8);">Peer Review Summary</h4>
-                                        </div>
-                                  </div>
-                                 
-                                 
+                                    <div style="position: absolute;top: 0;left: 0;width: 100%;height: 35%;background-color: rgba(255,255,255,0.6);backdrop-filter: blur(1.5px);-webkit-backdrop-filter: blur(1.5px);margin-top: 85px;"></div>
+
+                                    <div class="inner-content" style="padding: 35px 0px 0px 0px;text-align: center;position: relative;">
+                                        <h4 class="title" style="font-size: 18px;color: #333;margin-bottom: 0px !important;font-weight: 600;margin-top: 50px;">Peer Review Summary</h4>
+                                    </div>
+                                </div>
                             </div>
                             
                             <!-- Card 4 -->
                             <div class="service-card mb-4 wow fadeInUp" data-wow-delay=".2s" data-wow-offset="120">
-                                <div class="single-case-studies-three" style="background-color: transparent; background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/seyyone/home/sw_hc_card_imgs/Medical Transcription.png'); background-position: center; background-size: cover; border-radius: 15px !important; box-shadow: 0 10px 30px rgba(0,0,0,0.08); overflow: hidden; transition: all 0.3s ease; max-width: 90%; margin: 0 auto; min-height: 103px; align-content: center; position: relative;">
+                                <div class="single-case-studies-three" style="background-color: transparent;background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/seyyone/home/sw_hc_card_imgs/Medical Transcription.png');background-position: center;background-size: cover;border-radius: 15px !important;box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.2);overflow: hidden;transition: all 0.3s ease;max-width: 90%;margin: 0 auto;min-height: 125px;align-content: center;position: relative;">
+
                                     <!-- Reduced blur overlay -->
-                                        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(255,255,255,0.6); backdrop-filter: blur(1.5px); -webkit-backdrop-filter: blur(1.5px);"></div>
-                                            <div class="inner-content" style="padding: 17px; text-align: center; position: relative; z-index: 1;">
-                                            <h4 class="title" style="font-size: 20px; color: #333; margin-bottom: 0px !important; text-shadow: 0 0 2px rgba(255,255,255,0.8);">Medical Transcription</h4>
-                                        </div>
-                                  </div>
-                                 
+                                    <div style="position: absolute;top: 0;left: 0;width: 100%;height: 35%;background-color: rgba(255,255,255,0.6);backdrop-filter: blur(1.5px);-webkit-backdrop-filter: blur(1.5px);margin-top: 85px;"></div>
+
+                                    <div class="inner-content" style="padding: 35px 0px 0px 0px;text-align: center;position: relative;">
+                                        <h4 class="title" style="font-size: 18px;color: #333;margin-bottom: 0px !important;font-weight: 600;margin-top: 50px;">Medical Transcription</h4>
+                                    </div>
+                                </div>
                             </div>
                             
                             <!-- Card 5 -->
                             <div class="service-card wow fadeInUp" data-wow-delay=".4s" data-wow-offset="120">
-                                   <div class="single-case-studies-three" style="background-color: transparent; background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/seyyone/home/sw_hc_card_imgs/Remote Medical Scribe.png'); background-position: center; background-size: cover; border-radius: 15px !important; box-shadow: 0 10px 30px rgba(0,0,0,0.08); overflow: hidden; transition: all 0.3s ease; max-width: 90%; margin: 0 auto; min-height: 103px; align-content: center; position: relative;">
+                                <div class="single-case-studies-three" style="background-color: transparent;background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/seyyone/home/sw_hc_card_imgs/Remote Medical Scribe.png');background-position: center;background-size: cover;border-radius: 15px !important;box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.2);overflow: hidden;transition: all 0.3s ease;max-width: 90%;margin: 0 auto;min-height: 125px;align-content: center;position: relative;">
+
                                     <!-- Reduced blur overlay -->
-                                        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(255,255,255,0.6); backdrop-filter: blur(1.5px); -webkit-backdrop-filter: blur(1.5px);"></div>
-                                            <div class="inner-content" style="padding: 17px; text-align: center; position: relative; z-index: 1;">
-                                            <h4 class="title" style="font-size: 20px; color: #333; margin-bottom: 0px !important; text-shadow: 0 0 2px rgba(255,255,255,0.8);">Medical Scribe</h4>
-                                        </div>
-                                  </div>
+                                    <div style="position: absolute;top: 0;left: 0;width: 100%;height: 35%;background-color: rgba(255,255,255,0.6);backdrop-filter: blur(1.5px);-webkit-backdrop-filter: blur(1.5px);margin-top: 85px;"></div>
+
+                                    <div class="inner-content" style="padding: 35px 0px 0px 0px;text-align: center;position: relative;">
+                                        <h4 class="title" style="font-size: 18px;color: #333;margin-bottom: 0px !important;font-weight: 600;margin-top: 50px;">Medical Scribe</h4>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         
@@ -429,25 +433,28 @@ $banner_url = get_field('home_banner_image');
                         <div class="col-md-4 d-flex flex-column justify-content-center">
                             <!-- Card 6 -->
                             <div class="service-card mb-4 wow fadeInUp" data-wow-offset="120">
-                                <div class="single-case-studies-three" style="background-color: transparent; background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/seyyone/home/sw_hc_card_imgs/Medical Billing.png'); background-position: center; background-size: cover; border-radius: 15px !important; box-shadow: 0 10px 30px rgba(0,0,0,0.08); overflow: hidden; transition: all 0.3s ease; max-width: 90%; margin: 0 auto; min-height: 103px; align-content: center; position: relative;">
+                                <div class="single-case-studies-three" style="background-color: transparent;background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/seyyone/home/sw_hc_card_imgs/Medical Billing.png');background-position: center;background-size: cover;border-radius: 15px !important;box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.2);overflow: hidden;transition: all 0.3s ease;max-width: 90%;margin: 0 auto;min-height: 125px;align-content: center;position: relative;">
+
                                     <!-- Reduced blur overlay -->
-                                        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(255,255,255,0.6); backdrop-filter: blur(1.5px); -webkit-backdrop-filter: blur(1.5px);"></div>
-                                            <div class="inner-content" style="padding: 17px; text-align: center; position: relative; z-index: 1;">
-                                            <h4 class="title" style="font-size: 20px; color: #333; margin-bottom: 0px !important; text-shadow: 0 0 2px rgba(255,255,255,0.8);">Medical Billing</h4>
-                                        </div>
-                                  </div>
+                                    <div style="position: absolute;top: 0;left: 0;width: 100%;height: 35%;background-color: rgba(255,255,255,0.6);backdrop-filter: blur(1.5px);-webkit-backdrop-filter: blur(1.5px);margin-top: 85px;"></div>
+
+                                    <div class="inner-content" style="padding: 35px 0px 0px 0px;text-align: center;position: relative;">
+                                        <h4 class="title" style="font-size: 18px;color: #333;margin-bottom: 0px !important;font-weight: 600;margin-top: 50px;">Medical Billing</h4>
+                                    </div>
+                                </div>
                             </div>
                             
                             <!-- Card 7 -->
                             <div class="service-card wow fadeInUp" data-wow-delay=".2s" data-wow-offset="120">
-                                 
-                                <div class="single-case-studies-three" style="background-color: transparent; background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/seyyone/home/sw_hc_card_imgs/EMR EHR Virtual Assistance.png'); background-position: center; background-size: cover; border-radius: 15px !important; box-shadow: 0 10px 30px rgba(0,0,0,0.08); overflow: hidden; transition: all 0.3s ease; max-width: 90%; margin: 0 auto; min-height: 103px; align-content: center; position: relative;">
+                                <div class="single-case-studies-three" style="background-color: transparent;background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/seyyone/home/sw_hc_card_imgs/EMR EHR Virtual Assistance.png');background-position: center;background-size: cover;border-radius: 15px !important;box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.2);overflow: hidden;transition: all 0.3s ease;max-width: 90%;margin: 0 auto;min-height: 125px;align-content: center;position: relative;">
+
                                     <!-- Reduced blur overlay -->
-                                        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(255,255,255,0.6); backdrop-filter: blur(1.5px); -webkit-backdrop-filter: blur(1.5px);"></div>
-                                            <div class="inner-content" style="padding: 17px; text-align: center; position: relative; z-index: 1;">
-                                            <h4 class="title" style="font-size: 20px; color: #333; margin-bottom: 0px !important; text-shadow: 0 0 2px rgba(255,255,255,0.8);">EHR/EMR</h4>
-                                        </div>
-                                  </div>
+                                    <div style="position: absolute;top: 0;left: 0;width: 100%;height: 35%;background-color: rgba(255,255,255,0.6);backdrop-filter: blur(1.5px);-webkit-backdrop-filter: blur(1.5px);margin-top: 85px;"></div>
+
+                                    <div class="inner-content" style="padding: 35px 0px 0px 0px;text-align: center;position: relative;">
+                                        <h4 class="title" style="font-size: 18px;color: #333;margin-bottom: 0px !important;font-weight: 600;margin-top: 50px;">EHR/EMR</h4>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -457,86 +464,89 @@ $banner_url = get_field('home_banner_image');
         </div>
         <!-- Software Solutions Card -->
         <div class="col-lg-6 mb-4">
-            <div class="service-card bg-light p-5 rounded h-100 wow fadeInRight" data-wow-delay="0.3s"  style="border-radius: 10px !important;">
+            <div class="service-card   p-5 rounded h-100 wow fadeInRight" data-wow-delay="0.3s"  style="border-radius: 10px !important; background-color: #505e6b;">
                
            
-              <h3 class="mb-3  fadeIn" style="text-align: center;"><span class="blue-underline">Software Solutions</span></h3>
-                <p class="mb-4" style="
+              <h3 class="mb-3  fadeIn seyyone_font_white" style="text-align: center;"><span class="white-underline">Software Solutions</span></h3>
+                <p class="mb-4 seyyone_font_white" style="
                     font-size: large;
                     padding-top: 7px;
+                     
                     ">
                     Our software development team creates custom solutions tailored to your specific business needs. We specialize in healthcare software, web
                     applications, mobile apps, and enterprise solutions that drive efficiency and growth.
                 </p>
 
-                <div class="container">
+                <div class="container"  >
                     <div class="row">
                         <!-- First Column - 2 Cards -->
                         <div class="col-md-4 d-flex flex-column justify-content-center">
                             <!-- Card 1 -->
-                          <div class="service-card mb-4 wow fadeInUp" data-wow-offset="120">
-                                <div class="single-case-studies-three" style="background-color: transparent; background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/seyyone/home/sw_hc_card_imgs/app-develop-sm.jpg'); background-position: center; background-size: cover; border-radius: 15px !important; box-shadow: 0 10px 30px rgba(0,0,0,0.08); overflow: hidden; transition: all 0.3s ease; max-width: 90%; margin: 0 auto; min-height: 103px; align-content: center; position: relative;">
+                            <div class="service-card mb-4 wow fadeInUp" data-wow-offset="120">
+                                <div class="single-case-studies-three" style="background-color: transparent;background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/seyyone/home/sw_hc_card_imgs/app-develop-sm.jpg');background-position: center;background-size: cover;border-radius: 15px !important;box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.2);overflow: hidden;transition: all 0.3s ease;max-width: 100%;margin: 0 auto;min-height: 125px;align-content: center;position: relative;">
+
                                     <!-- Reduced blur overlay -->
-                                    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(255,255,255,0.6); backdrop-filter: blur(1.5px); -webkit-backdrop-filter: blur(1.5px);"></div>
-                                    <div class="inner-content" style="padding: 17px; text-align: center; position: relative; z-index: 1;">
-                                        <h4 class="title" style="font-size: 20px; color: #333; margin-bottom: 0px !important; text-shadow: 0 0 2px rgba(255,255,255,0.8);">Software Services</h4>
+                                    <div style="position: absolute;top: 0;left: 0;width: 100%;height: 35%;background-color: rgba(255,255,255,0.6);backdrop-filter: blur(1.5px);-webkit-backdrop-filter: blur(1.5px);margin-top: 85px;"></div>
+
+                                    <div class="inner-content" style="padding: 35px 0px 0px 0px;text-align: center;position: relative;">
+                                        <h4 class="title" style="font-size: 18px;color: #333;margin-bottom: 0px !important;font-weight: 600;margin-top: 50px;">Software Services</h4>
                                     </div>
                                 </div>
                             </div>
 
                             <!-- Card 2 -->
-                             <div class="service-card mb-4 wow fadeInUp" data-wow-offset="120">
+                            <div class="service-card mb-4 wow fadeInUp" data-wow-offset="120">
+                                <div class="single-case-studies-three" style="background-color: transparent;background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/seyyone/home/sw_hc_card_imgs/mobile-sm.jpg');background-position: center;background-size: cover;border-radius: 15px !important;box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.2);overflow: hidden;transition: all 0.3s ease;max-width: 90%;margin: 0 auto;min-height: 125px;align-content: center;position: relative;">
 
-                                <div class="single-case-studies-three" style="background-color: transparent; background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/seyyone/home/sw_hc_card_imgs/mobile-sm.jpg'); background-position: center; background-size: cover; border-radius: 15px !important; box-shadow: 0 10px 30px rgba(0,0,0,0.08); overflow: hidden; transition: all 0.3s ease; max-width: 90%; margin: 0 auto; min-height: 103px; align-content: center; position: relative;">
-                                    <!-- Blur overlay -->
-                                        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(255,255,255,0.6); backdrop-filter: blur(1.5px); -webkit-backdrop-filter: blur(1.5px);">
-                                            
-                                        </div>
-                                        <div class="inner-content" style="padding: 17px; text-align: center; position: relative; z-index: 1;">
-                                            <h4 class="title" style="font-size: 20px; color: #333; margin-bottom: 0px !important; text-shadow: 0 0 2px rgba(255,255,255,0.8);">Mobile Solutions</h4>
-                                        </div>
+                                    <!-- Reduced blur overlay -->
+                                    <div style="position: absolute;top: 0;left: 0;width: 100%;height: 35%;background-color: rgba(255,255,255,0.6);backdrop-filter: blur(1.5px);-webkit-backdrop-filter: blur(1.5px);margin-top: 85px;"></div>
+
+                                    <div class="inner-content" style="padding: 35px 0px 0px 0px;text-align: center;position: relative;">
+                                        <h4 class="title" style="font-size: 18px;color: #333;margin-bottom: 0px !important;font-weight: 600;margin-top: 50px;">Mobile Solutions</h4>
                                     </div>
                                 </div>
-
                             </div>
+                        </div>
 
                         <!-- Second Column - 3 Cards -->
                         <div class="col-md-4">
                             <!-- Card 3 -->
                             <div class="service-card mb-4 wow fadeInUp" data-wow-offset="120">
-                                 <div class="single-case-studies-three" style="background-color: transparent; background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/seyyone/home/sw_hc_card_imgs/cloud-sm2.jpg'); background-position: center; background-size: cover; border-radius: 15px !important; box-shadow: 0 10px 30px rgba(0,0,0,0.08); overflow: hidden; transition: all 0.3s ease; max-width: 90%; margin: 0 auto; min-height: 103px; align-content: center; position: relative;">
+                                <div class="single-case-studies-three" style="background-color: transparent;background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/seyyone/home/sw_hc_card_imgs/cloud-sm2.jpg');background-position: center;background-size: cover;border-radius: 15px !important;box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.2);overflow: hidden;transition: all 0.3s ease;max-width: 90%;margin: 0 auto;min-height: 125px;align-content: center;position: relative;">
+
                                     <!-- Reduced blur overlay -->
-                                    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(255,255,255,0.6); backdrop-filter: blur(1.5px); -webkit-backdrop-filter: blur(1.5px);"></div>
-                                    <div class="inner-content" style="padding: 17px; text-align: center; position: relative; z-index: 1;">
-                                        <h4 class="title" style="font-size: 20px; color: #333; margin-bottom: 0px !important; text-shadow: 0 0 2px rgba(255,255,255,0.8);">Cloud Solutions</h4>
+                                    <div style="position: absolute;top: 0;left: 0;width: 100%;height: 35%;background-color: rgba(255,255,255,0.6);backdrop-filter: blur(1.5px);-webkit-backdrop-filter: blur(1.5px);margin-top: 85px;"></div>
+
+                                    <div class="inner-content" style="padding: 35px 0px 0px 0px;text-align: center;position: relative;">
+                                        <h4 class="title" style="font-size: 18px;color: #333;margin-bottom: 0px !important;font-weight: 600;margin-top: 50px;">Cloud Solutions</h4>
                                     </div>
                                 </div>
-                                
                             </div>
                             
                             <!-- Card 4 -->
                             <div class="service-card mb-4 wow fadeInUp" data-wow-delay=".2s" data-wow-offset="120">
-                                 
-                                 <div class="single-case-studies-three" style="background-color: transparent; background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/seyyone/home/sw_hc_card_imgs/ai-sm.jpg'); background-position: center; background-size: cover; border-radius: 15px !important; box-shadow: 0 10px 30px rgba(0,0,0,0.08); overflow: hidden; transition: all 0.3s ease; max-width: 90%; margin: 0 auto; min-height: 103px; align-content: center; position: relative;">
+                                <div class="single-case-studies-three" style="background-color: transparent;background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/seyyone/home/sw_hc_card_imgs/ai-sm.jpg');background-position: center;background-size: cover;border-radius: 15px !important;box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.2);overflow: hidden;transition: all 0.3s ease;max-width: 90%;margin: 0 auto;min-height: 125px;align-content: center;position: relative;">
+
                                     <!-- Reduced blur overlay -->
-                                    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(255,255,255,0.6); backdrop-filter: blur(1.5px); -webkit-backdrop-filter: blur(1.5px);"></div>
-                                    <div class="inner-content" style="padding: 17px; text-align: center; position: relative; z-index: 1;">
-                                        <h4 class="title" style="font-size: 20px; color: #333; margin-bottom: 0px !important; text-shadow: 0 0 2px rgba(255,255,255,0.8);">AI/ML Solutions</h4>
+                                    <div style="position: absolute;top: 0;left: 0;width: 100%;height: 35%;background-color: rgba(255,255,255,0.6);backdrop-filter: blur(1.5px);-webkit-backdrop-filter: blur(1.5px);margin-top: 85px;"></div>
+
+                                    <div class="inner-content" style="padding: 35px 0px 0px 0px;text-align: center;position: relative;">
+                                        <h4 class="title" style="font-size: 18px;color: #333;margin-bottom: 0px !important;font-weight: 600;margin-top: 50px;">AI/ML Solutions</h4>
                                     </div>
-                                </div>  
-                                
+                                </div>
                             </div>
                             
                             <!-- Card 5 -->
                             <div class="service-card wow fadeInUp" data-wow-delay=".4s" data-wow-offset="120">
-                                 <div class="single-case-studies-three" style="background-color: transparent; background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/seyyone/home/sw_hc_card_imgs/analytics-sm.jpg'); background-position: center; background-size: cover; border-radius: 15px !important; box-shadow: 0 10px 30px rgba(0,0,0,0.08); overflow: hidden; transition: all 0.3s ease; max-width: 90%; margin: 0 auto; min-height: 103px; align-content: center; position: relative;">
+                                <div class="single-case-studies-three" style="background-color: transparent;background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/seyyone/home/sw_hc_card_imgs/analytics-sm.jpg');background-position: center;background-size: cover;border-radius: 15px !important;box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.2);overflow: hidden;transition: all 0.3s ease;max-width: 90%;margin: 0 auto;min-height: 125px;align-content: center;position: relative;">
+
                                     <!-- Reduced blur overlay -->
-                                    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(255,255,255,0.6); backdrop-filter: blur(1.5px); -webkit-backdrop-filter: blur(1.5px);"></div>
-                                    <div class="inner-content" style="padding: 17px; text-align: center; position: relative; z-index: 1;">
-                                        <h4 class="title" style="font-size: 20px; color: #333; margin-bottom: 0px !important; text-shadow: 0 0 2px rgba(255,255,255,0.8);">Analytical and Reporting</h4>
+                                    <div style="position: absolute;top: 0;left: 0;width: 100%;height: 35%;background-color: rgba(255,255,255,0.6);backdrop-filter: blur(1.5px);-webkit-backdrop-filter: blur(1.5px);margin-top: 85px;"></div>
+
+                                    <div class="inner-content" style="padding: 35px 0px 0px 0px;text-align: center;position: relative;">
+                                        <h4 class="title" style="font-size: 18px;color: #333;margin-bottom: 0px !important;font-weight: 600;margin-top: 50px;">Analytical and Reporting</h4>
                                     </div>
-                                </div> 
-                               
+                                </div>
                             </div>
                         </div>
                         
@@ -544,32 +554,35 @@ $banner_url = get_field('home_banner_image');
                         <div class="col-md-4 d-flex flex-column justify-content-center">
                             <!-- Card 6 -->
                             <div class="service-card mb-4 wow fadeInUp" data-wow-offset="120">
-                                <div class="single-case-studies-three" style="background-color: transparent; background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/seyyone/home/sw_hc_card_imgs/talent-sm.jpg'); background-position: center; background-size: cover; border-radius: 15px !important; box-shadow: 0 10px 30px rgba(0,0,0,0.08); overflow: hidden; transition: all 0.3s ease; max-width: 90%; margin: 0 auto; min-height: 103px; align-content: center; position: relative;">
+                                <div class="single-case-studies-three" style="background-color: transparent;background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/seyyone/home/sw_hc_card_imgs/talent-sm.jpg');background-position: center;background-size: cover;border-radius: 15px !important;box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.2);overflow: hidden;transition: all 0.3s ease;max-width: 90%;margin: 0 auto;min-height: 125px;align-content: center;position: relative;">
+
                                     <!-- Reduced blur overlay -->
-                                    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(255,255,255,0.6); backdrop-filter: blur(1.5px); -webkit-backdrop-filter: blur(1.5px);"></div>
-                                    <div class="inner-content" style="padding: 17px; text-align: center; position: relative; z-index: 1;">
-                                        <h4 class="title" style="font-size: 20px; color: #333; margin-bottom: 0px !important; text-shadow: 0 0 2px rgba(255,255,255,0.8);">Talent Management</h4>
+                                    <div style="position: absolute;top: 0;left: 0;width: 100%;height: 35%;background-color: rgba(255,255,255,0.6);backdrop-filter: blur(1.5px);-webkit-backdrop-filter: blur(1.5px);margin-top: 85px;"></div>
+
+                                    <div class="inner-content" style="padding: 35px 0px 0px 0px;text-align: center;position: relative;">
+                                        <h4 class="title" style="font-size: 18px;color: #333;margin-bottom: 0px !important;font-weight: 600;margin-top: 50px;">Talent Management</h4>
                                     </div>
-                                </div> 
-                                
+                                </div>
                             </div>
                             
                             <!-- Card 7 -->
                             <div class="service-card wow fadeInUp" data-wow-delay=".2s" data-wow-offset="120">
-                                <div class="single-case-studies-three" style="background-color: transparent; background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/seyyone/home/sw_hc_card_imgs/remote-sm.jpg'); background-position: center; background-size: cover; border-radius: 15px !important; box-shadow: 0 10px 30px rgba(0,0,0,0.08); overflow: hidden; transition: all 0.3s ease; max-width: 90%; margin: 0 auto; min-height: 103px; align-content: center; position: relative;">
+                                <div class="single-case-studies-three" style="background-color: transparent;background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/seyyone/home/sw_hc_card_imgs/remote-sm.jpg');background-position: center;background-size: cover;border-radius: 15px !important;box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.2);overflow: hidden;transition: all 0.3s ease;max-width: 90%;margin: 0 auto;min-height: 125px;align-content: center;position: relative;">
+
                                     <!-- Reduced blur overlay -->
-                                    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(255,255,255,0.6); backdrop-filter: blur(1.5px); -webkit-backdrop-filter: blur(1.5px);"></div>
-                                    <div class="inner-content" style="padding: 17px; text-align: center; position: relative; z-index: 1;">
-                                        <h4 class="title" style="font-size: 20px; color: #333; margin-bottom: 0px !important; text-shadow: 0 0 2px rgba(255,255,255,0.8);">Remote Hardware Infra</h4>
+                                    <div style="position: absolute;top: 0;left: 0;width: 100%;height: 35%;background-color: rgba(255,255,255,0.6);backdrop-filter: blur(1.5px);-webkit-backdrop-filter: blur(1.5px);margin-top: 85px;"></div>
+
+                                    <div class="inner-content" style="padding: 35px 0px 0px 0px;text-align: center;position: relative;">
+                                        <h4 class="title" style="font-size: 18px;color: #333;margin-bottom: 0px !important;font-weight: 600;margin-top: 50px;">Remote Hardware Infra</h4>
                                     </div>
-                                </div> 
-                                 
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+        
     </div>
 </div>
 <!-- Dual Expertise Section End -->
