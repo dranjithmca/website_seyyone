@@ -362,7 +362,7 @@ $banner_url = get_field('home_banner_image');
                         <div class="col-md-4 d-flex flex-column justify-content-center">
                             <!-- Card 1 -->
                             <div class="service-card mb-4 wow fadeInUp" data-wow-offset="120">
-                                <div class="single-case-studies-three" style="background-color: transparent;background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/seyyone/home/sw_hc_card_imgs/Medical Record Summarization.png');background-position: center;background-size: cover;border-radius: 15px !important;box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.2);overflow: hidden;transition: all 0.3s ease;max-width: 90%;margin: 0 auto;min-height: 125px;align-content: center;position: relative;">
+                                <div class="single-case-studies-three" style="background-color: transparent;background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/seyyone/home/sw_hc_card_imgs/Medical Record Summarization.png');background-position: center;background-size: cover;border-radius: 15px !important;box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.2);overflow: hidden;transition: all 0.3s ease;max-width: 100%;margin: 0 auto;min-height: 125px;align-content: center;position: relative;">
 
                                     <!-- Reduced blur overlay -->
                                     <div style="position: absolute;top: 0;left: 0;width: 100%;height: 35%;background-color: rgba(255,255,255,0.6);backdrop-filter: blur(1.5px);-webkit-backdrop-filter: blur(1.5px);margin-top: 85px;"></div>
@@ -375,7 +375,7 @@ $banner_url = get_field('home_banner_image');
                             
                             <!-- Card 2 -->
                             <div class="service-card wow fadeInUp" data-wow-delay=".2s" data-wow-offset="120">
-                                <div class="single-case-studies-three" style="background-color: transparent;background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/seyyone/home/sw_hc_card_imgs/APS Summary.png');background-position: center;background-size: cover;border-radius: 15px !important;box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.2);overflow: hidden;transition: all 0.3s ease;max-width: 90%;margin: 0 auto;min-height: 125px;align-content: center;position: relative;">
+                                <div class="single-case-studies-three" style="background-color: transparent;background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/seyyone/home/sw_hc_card_imgs/APS Summary.png');background-position: center;background-size: cover;border-radius: 15px !important;box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.2);overflow: hidden;transition: all 0.3s ease;max-width: 100%;margin: 0 auto;min-height: 125px;align-content: center;position: relative;">
 
                                     <!-- Reduced blur overlay -->
                                     <div style="position: absolute;top: 0;left: 0;width: 100%;height: 35%;background-color: rgba(255,255,255,0.6);backdrop-filter: blur(1.5px);-webkit-backdrop-filter: blur(1.5px);margin-top: 85px;"></div>
@@ -391,7 +391,7 @@ $banner_url = get_field('home_banner_image');
                         <div class="col-md-4">
                             <!-- Card 3 -->
                             <div class="service-card mb-4 wow fadeInUp" data-wow-offset="120">
-                                <div class="single-case-studies-three" style="background-color: transparent;background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/seyyone/home/sw_hc_card_imgs/Peer Review Summaries.png');background-position: center;background-size: cover;border-radius: 15px !important;box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.2);overflow: hidden;transition: all 0.3s ease;max-width: 90%;margin: 0 auto;min-height: 125px;align-content: center;position: relative;">
+                                <div class="single-case-studies-three" style="background-color: transparent;background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/seyyone/home/sw_hc_card_imgs/Peer Review Summaries.png');background-position: center;background-size: cover;border-radius: 15px !important;box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.2);overflow: hidden;transition: all 0.3s ease;max-width: 100%;margin: 0 auto;min-height: 125px;align-content: center;position: relative;">
 
                                     <!-- Reduced blur overlay -->
                                     <div style="position: absolute;top: 0;left: 0;width: 100%;height: 35%;background-color: rgba(255,255,255,0.6);backdrop-filter: blur(1.5px);-webkit-backdrop-filter: blur(1.5px);margin-top: 85px;"></div>
@@ -404,7 +404,7 @@ $banner_url = get_field('home_banner_image');
                             
                             <!-- Card 4 -->
                             <div class="service-card mb-4 wow fadeInUp" data-wow-delay=".2s" data-wow-offset="120">
-                                <div class="single-case-studies-three" style="background-color: transparent;background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/seyyone/home/sw_hc_card_imgs/Medical Transcription.png');background-position: center;background-size: cover;border-radius: 15px !important;box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.2);overflow: hidden;transition: all 0.3s ease;max-width: 90%;margin: 0 auto;min-height: 125px;align-content: center;position: relative;">
+                                <div class="single-case-studies-three" style="background-color: transparent;background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/seyyone/home/sw_hc_card_imgs/Medical Transcription.png');background-position: center;background-size: cover;border-radius: 15px !important;box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.2);overflow: hidden;transition: all 0.3s ease;max-width: 100%;margin: 0 auto;min-height: 125px;align-content: center;position: relative;">
 
                                     <!-- Reduced blur overlay -->
                                     <div style="position: absolute;top: 0;left: 0;width: 100%;height: 35%;background-color: rgba(255,255,255,0.6);backdrop-filter: blur(1.5px);-webkit-backdrop-filter: blur(1.5px);margin-top: 85px;"></div>
@@ -417,7 +417,7 @@ $banner_url = get_field('home_banner_image');
                             
                             <!-- Card 5 -->
                             <div class="service-card wow fadeInUp" data-wow-delay=".4s" data-wow-offset="120">
-                                <div class="single-case-studies-three" style="background-color: transparent;background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/seyyone/home/sw_hc_card_imgs/Remote Medical Scribe.png');background-position: center;background-size: cover;border-radius: 15px !important;box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.2);overflow: hidden;transition: all 0.3s ease;max-width: 90%;margin: 0 auto;min-height: 125px;align-content: center;position: relative;">
+                                <div class="single-case-studies-three" style="background-color: transparent;background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/seyyone/home/sw_hc_card_imgs/Remote Medical Scribe.png');background-position: center;background-size: cover;border-radius: 15px !important;box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.2);overflow: hidden;transition: all 0.3s ease;max-width: 100%;margin: 0 auto;min-height: 125px;align-content: center;position: relative;">
 
                                     <!-- Reduced blur overlay -->
                                     <div style="position: absolute;top: 0;left: 0;width: 100%;height: 35%;background-color: rgba(255,255,255,0.6);backdrop-filter: blur(1.5px);-webkit-backdrop-filter: blur(1.5px);margin-top: 85px;"></div>
@@ -433,7 +433,7 @@ $banner_url = get_field('home_banner_image');
                         <div class="col-md-4 d-flex flex-column justify-content-center">
                             <!-- Card 6 -->
                             <div class="service-card mb-4 wow fadeInUp" data-wow-offset="120">
-                                <div class="single-case-studies-three" style="background-color: transparent;background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/seyyone/home/sw_hc_card_imgs/Medical Billing.png');background-position: center;background-size: cover;border-radius: 15px !important;box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.2);overflow: hidden;transition: all 0.3s ease;max-width: 90%;margin: 0 auto;min-height: 125px;align-content: center;position: relative;">
+                                <div class="single-case-studies-three" style="background-color: transparent;background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/seyyone/home/sw_hc_card_imgs/Medical Billing.png');background-position: center;background-size: cover;border-radius: 15px !important;box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.2);overflow: hidden;transition: all 0.3s ease;max-width: 100%;margin: 0 auto;min-height: 125px;align-content: center;position: relative;">
 
                                     <!-- Reduced blur overlay -->
                                     <div style="position: absolute;top: 0;left: 0;width: 100%;height: 35%;background-color: rgba(255,255,255,0.6);backdrop-filter: blur(1.5px);-webkit-backdrop-filter: blur(1.5px);margin-top: 85px;"></div>
@@ -446,7 +446,7 @@ $banner_url = get_field('home_banner_image');
                             
                             <!-- Card 7 -->
                             <div class="service-card wow fadeInUp" data-wow-delay=".2s" data-wow-offset="120">
-                                <div class="single-case-studies-three" style="background-color: transparent;background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/seyyone/home/sw_hc_card_imgs/EMR EHR Virtual Assistance.png');background-position: center;background-size: cover;border-radius: 15px !important;box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.2);overflow: hidden;transition: all 0.3s ease;max-width: 90%;margin: 0 auto;min-height: 125px;align-content: center;position: relative;">
+                                <div class="single-case-studies-three" style="background-color: transparent;background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/seyyone/home/sw_hc_card_imgs/EMR EHR Virtual Assistance.png');background-position: center;background-size: cover;border-radius: 15px !important;box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.2);overflow: hidden;transition: all 0.3s ease;max-width: 100%;margin: 0 auto;min-height: 125px;align-content: center;position: relative;">
 
                                     <!-- Reduced blur overlay -->
                                     <div style="position: absolute;top: 0;left: 0;width: 100%;height: 35%;background-color: rgba(255,255,255,0.6);backdrop-filter: blur(1.5px);-webkit-backdrop-filter: blur(1.5px);margin-top: 85px;"></div>
@@ -496,7 +496,7 @@ $banner_url = get_field('home_banner_image');
 
                             <!-- Card 2 -->
                             <div class="service-card mb-4 wow fadeInUp" data-wow-offset="120">
-                                <div class="single-case-studies-three" style="background-color: transparent;background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/seyyone/home/sw_hc_card_imgs/mobile-sm.jpg');background-position: center;background-size: cover;border-radius: 15px !important;box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.2);overflow: hidden;transition: all 0.3s ease;max-width: 90%;margin: 0 auto;min-height: 125px;align-content: center;position: relative;">
+                                <div class="single-case-studies-three" style="background-color: transparent;background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/seyyone/home/sw_hc_card_imgs/mobile-sm.jpg');background-position: center;background-size: cover;border-radius: 15px !important;box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.2);overflow: hidden;transition: all 0.3s ease;max-width: 100%;margin: 0 auto;min-height: 125px;align-content: center;position: relative;">
 
                                     <!-- Reduced blur overlay -->
                                     <div style="position: absolute;top: 0;left: 0;width: 100%;height: 35%;background-color: rgba(255,255,255,0.6);backdrop-filter: blur(1.5px);-webkit-backdrop-filter: blur(1.5px);margin-top: 85px;"></div>
@@ -512,7 +512,7 @@ $banner_url = get_field('home_banner_image');
                         <div class="col-md-4">
                             <!-- Card 3 -->
                             <div class="service-card mb-4 wow fadeInUp" data-wow-offset="120">
-                                <div class="single-case-studies-three" style="background-color: transparent;background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/seyyone/home/sw_hc_card_imgs/cloud-sm2.jpg');background-position: center;background-size: cover;border-radius: 15px !important;box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.2);overflow: hidden;transition: all 0.3s ease;max-width: 90%;margin: 0 auto;min-height: 125px;align-content: center;position: relative;">
+                                <div class="single-case-studies-three" style="background-color: transparent;background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/seyyone/home/sw_hc_card_imgs/cloud-sm2.jpg');background-position: center;background-size: cover;border-radius: 15px !important;box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.2);overflow: hidden;transition: all 0.3s ease;max-width: 100%;margin: 0 auto;min-height: 125px;align-content: center;position: relative;">
 
                                     <!-- Reduced blur overlay -->
                                     <div style="position: absolute;top: 0;left: 0;width: 100%;height: 35%;background-color: rgba(255,255,255,0.6);backdrop-filter: blur(1.5px);-webkit-backdrop-filter: blur(1.5px);margin-top: 85px;"></div>
@@ -525,7 +525,7 @@ $banner_url = get_field('home_banner_image');
                             
                             <!-- Card 4 -->
                             <div class="service-card mb-4 wow fadeInUp" data-wow-delay=".2s" data-wow-offset="120">
-                                <div class="single-case-studies-three" style="background-color: transparent;background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/seyyone/home/sw_hc_card_imgs/ai-sm.jpg');background-position: center;background-size: cover;border-radius: 15px !important;box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.2);overflow: hidden;transition: all 0.3s ease;max-width: 90%;margin: 0 auto;min-height: 125px;align-content: center;position: relative;">
+                                <div class="single-case-studies-three" style="background-color: transparent;background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/seyyone/home/sw_hc_card_imgs/ai-sm.jpg');background-position: center;background-size: cover;border-radius: 15px !important;box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.2);overflow: hidden;transition: all 0.3s ease;max-width: 100%;margin: 0 auto;min-height: 125px;align-content: center;position: relative;">
 
                                     <!-- Reduced blur overlay -->
                                     <div style="position: absolute;top: 0;left: 0;width: 100%;height: 35%;background-color: rgba(255,255,255,0.6);backdrop-filter: blur(1.5px);-webkit-backdrop-filter: blur(1.5px);margin-top: 85px;"></div>
@@ -538,7 +538,7 @@ $banner_url = get_field('home_banner_image');
                             
                             <!-- Card 5 -->
                             <div class="service-card wow fadeInUp" data-wow-delay=".4s" data-wow-offset="120">
-                                <div class="single-case-studies-three" style="background-color: transparent;background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/seyyone/home/sw_hc_card_imgs/analytics-sm.jpg');background-position: center;background-size: cover;border-radius: 15px !important;box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.2);overflow: hidden;transition: all 0.3s ease;max-width: 90%;margin: 0 auto;min-height: 125px;align-content: center;position: relative;">
+                                <div class="single-case-studies-three" style="background-color: transparent;background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/seyyone/home/sw_hc_card_imgs/analytics-sm.jpg');background-position: center;background-size: cover;border-radius: 15px !important;box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.2);overflow: hidden;transition: all 0.3s ease;max-width: 100%;margin: 0 auto;min-height: 125px;align-content: center;position: relative;">
 
                                     <!-- Reduced blur overlay -->
                                     <div style="position: absolute;top: 0;left: 0;width: 100%;height: 35%;background-color: rgba(255,255,255,0.6);backdrop-filter: blur(1.5px);-webkit-backdrop-filter: blur(1.5px);margin-top: 85px;"></div>
@@ -554,7 +554,7 @@ $banner_url = get_field('home_banner_image');
                         <div class="col-md-4 d-flex flex-column justify-content-center">
                             <!-- Card 6 -->
                             <div class="service-card mb-4 wow fadeInUp" data-wow-offset="120">
-                                <div class="single-case-studies-three" style="background-color: transparent;background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/seyyone/home/sw_hc_card_imgs/talent-sm.jpg');background-position: center;background-size: cover;border-radius: 15px !important;box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.2);overflow: hidden;transition: all 0.3s ease;max-width: 90%;margin: 0 auto;min-height: 125px;align-content: center;position: relative;">
+                                <div class="single-case-studies-three" style="background-color: transparent;background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/seyyone/home/sw_hc_card_imgs/talent-sm.jpg');background-position: center;background-size: cover;border-radius: 15px !important;box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.2);overflow: hidden;transition: all 0.3s ease;max-width: 100%;margin: 0 auto;min-height: 125px;align-content: center;position: relative;">
 
                                     <!-- Reduced blur overlay -->
                                     <div style="position: absolute;top: 0;left: 0;width: 100%;height: 35%;background-color: rgba(255,255,255,0.6);backdrop-filter: blur(1.5px);-webkit-backdrop-filter: blur(1.5px);margin-top: 85px;"></div>
@@ -567,7 +567,7 @@ $banner_url = get_field('home_banner_image');
                             
                             <!-- Card 7 -->
                             <div class="service-card wow fadeInUp" data-wow-delay=".2s" data-wow-offset="120">
-                                <div class="single-case-studies-three" style="background-color: transparent;background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/seyyone/home/sw_hc_card_imgs/remote-sm.jpg');background-position: center;background-size: cover;border-radius: 15px !important;box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.2);overflow: hidden;transition: all 0.3s ease;max-width: 90%;margin: 0 auto;min-height: 125px;align-content: center;position: relative;">
+                                <div class="single-case-studies-three" style="background-color: transparent;background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/seyyone/home/sw_hc_card_imgs/remote-sm.jpg');background-position: center;background-size: cover;border-radius: 15px !important;box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.2);overflow: hidden;transition: all 0.3s ease;max-width: 100%;margin: 0 auto;min-height: 125px;align-content: center;position: relative;">
 
                                     <!-- Reduced blur overlay -->
                                     <div style="position: absolute;top: 0;left: 0;width: 100%;height: 35%;background-color: rgba(255,255,255,0.6);backdrop-filter: blur(1.5px);-webkit-backdrop-filter: blur(1.5px);margin-top: 85px;"></div>
