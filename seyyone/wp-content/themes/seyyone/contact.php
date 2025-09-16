@@ -160,7 +160,7 @@ ${message}
 
   const endpoint = userType === "Client"
     ? "https://formspree.io/f/manjgerv"
-    : "https://formspree.io/f/mdkzqdrv";
+    : "https://formspree.io/f/mjkeqbpa"; // Jobseeker endpoint
 
   try {
     const response = await fetch(endpoint, {
