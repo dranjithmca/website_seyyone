@@ -159,7 +159,7 @@ ${message}
  
 
   const endpoint = userType === "Client"
-    ? "https://formspree.io/f/mdkzqdrv"
+    ? "https://formspree.io/f/manjgerv"
     : "https://formspree.io/f/mdkzqdrv";
 
   try {
