@@ -159,7 +159,7 @@ ${message}
  
 
   const endpoint = userType === "Client"
-    ? "https://formspree.io/f/manjgerv"
+    ? "https://formspree.io/f/mqadvkwb" // Client endpoint
     : "https://formspree.io/f/mjkeqbpa"; // Jobseeker endpoint
 
   try {
