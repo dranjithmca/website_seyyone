@@ -127,11 +127,15 @@ if ( ! class_exists( 'Astra_Sites' ) ) :
 				return;
 			}
 
+			// 🎯 FIX: Global hook to prevent Elementor placeholder image imports
+			add_filter( 'pre_http_request', array( $this, 'block_elementor_placeholder_requests' ), 10, 3 );
+
 			$this->set_api_url();
 			$this->includes();
 			add_action( 'plugin_action_links_' . ASTRA_SITES_BASE, array( $this, 'action_links' ) );
 			add_action( 'init', array( $this, 'load_textdomain' ) );
 			add_action( 'admin_enqueue_scripts', array( $this, 'admin_enqueue' ), 99 );
+			add_action( 'admin_enqueue_scripts', array( $this, 'enqueue_menu_url_updater' ), 10 );
 			add_action( 'elementor/editor/footer', array( $this, 'insert_templates' ) );
 			add_action( 'admin_footer', array( $this, 'insert_image_templates' ) );
 			add_action( 'customize_controls_print_footer_scripts', array( $this, 'insert_image_templates' ) );
@@ -143,8 +147,10 @@ if ( ! class_exists( 'Astra_Sites' ) ) :
 			add_action( 'astra_notice_before_markup', array( $this, 'notice_assets' ) );
 			add_action( 'load-index.php', array( $this, 'admin_dashboard_notices' ) );
 			add_action( 'admin_notices', array( $this, 'check_filesystem_access_notice' ) );
-			add_filter( 'ai_builder_textdomain', array( $this, 'updat_ai_builder_textdomain' ), 10, 1 );
+			add_filter( 'ai_builder_textdomain', array( $this, 'get_astra_sites_textdomain' ), 10, 1 );
 			add_filter( 'ai_builder_languages_directory', array( $this, 'change_languages_directory' ), 10, 1 );
+			add_filter( 'one_onboarding_textdomain', array( $this, 'get_astra_sites_textdomain' ) );
+			add_filter( 'one_onboarding_languages_directory', array( $this, 'change_languages_directory' ) );
 
 			// AJAX.
 			$this->ajax = array(
@@ -178,10 +184,9 @@ if ( ! class_exists( 'Astra_Sites' ) ) :
 			add_action( 'astra_sites_after_theme_activation', array( $this, 'theme_activation_utm_event' ) );
 			add_action( 'astra_sites_after_plugin_activation', array( $this, 'plugin_activation_utm_event' ), 10, 2 );
 			add_filter( 'plugins_api_args', array( $this, 'raise_memory_for_plugins_install' ), 1, 1 );
-			add_filter( 'bsf_core_stats', array( $this, 'add_astra_sites_analytics_data' ), 10, 1 );
 			add_filter( 'wp_import_insert_term', array( $this, 'store_original_term_id' ), 10, 2 );
-			add_action( 'astra_sites_after_plugin_activation', array( $this, 'maybe_woopayments_included' ), 10, 2 );
-			add_action( 'wp_ajax_astra_sites_set_woopayments_analytics', array( $this, 'set_woopayments_analytics' ) );
+			add_filter( 'getting_started_is_setup_wizard_showing', array( $this, 'maybe_setup_wizard_showing' ) );
+			add_filter( 'getting_started_logo_url', array( $this, 'starter_templates_logo_url' ) );
 		}
 
 		/**
@@ -218,13 +223,13 @@ if ( ! class_exists( 'Astra_Sites' ) ) :
 		}
 
 		/**
-		 * Set ai builder textdomain.
+		 * Set textdomain as 'astra-sites'.
 		 * 
 		 * @param string $textdomain Textdomain.
 		 * @return string
-		 * @since  4.3.8
+		 * @since  4.4.37
 		 */
-		public function updat_ai_builder_textdomain( $textdomain ) {
+		public function get_astra_sites_textdomain( $textdomain ) {
 			return 'astra-sites';
 		}
 
@@ -306,7 +311,10 @@ if ( ! class_exists( 'Astra_Sites' ) ) :
 			}
 			if ( class_exists( 'BSF_UTM_Analytics' ) && is_callable( array( 'BSF_UTM_Analytics', 'update_referer' ) ) ) {
 				// If the plugin is found and the update_referer function is callable, update the referer with the corresponding product slug.
-				BSF_UTM_Analytics::update_referer( 'astra-sites', 'astra' );
+				$page_builder = Astra_Sites_Page::get_instance()->get_setting( 'page_builder' );
+				// Set the referer to 'zipwp' for AI Builder and 'astra-sites' otherwise.
+				$referer = 'ai-builder' === $page_builder ? 'zipwp' : 'astra-sites';
+				BSF_UTM_Analytics::update_referer( $referer, 'astra' );
 			}
 		}
 
@@ -321,9 +329,23 @@ if ( ! class_exists( 'Astra_Sites' ) ) :
 			if ( ! isset( $data['plugin_slug'] ) || '' === $data['plugin_slug'] ) {
 				return;
 			}
-			if ( class_exists( 'BSF_UTM_Analytics' ) && is_callable( array( 'BSF_UTM_Analytics', 'update_referer' ) ) ) {
-				// If the plugin is found and the update_referer function is callable, update the referer with the corresponding product slug.
-				BSF_UTM_Analytics::update_referer( 'astra-sites', $data['plugin_slug'] );
+
+			// Update the referer only if the plugin was not active before template import.
+			if ( ! isset( $data['was_plugin_active'] ) || ! $data['was_plugin_active'] ) {
+				if ( class_exists( 'BSF_UTM_Analytics' ) && is_callable( array( 'BSF_UTM_Analytics', 'is_valid_bsf_product_slug' ) ) ) {
+					// Bail early if the product slug is invalid to avoid warnings from BSF_UTM_Analytics::update_referer().
+					if ( ! BSF_UTM_Analytics::is_valid_bsf_product_slug( $data['plugin_slug'] ) ) {
+						return;
+					}
+				}
+
+				if ( class_exists( 'BSF_UTM_Analytics' ) && is_callable( array( 'BSF_UTM_Analytics', 'update_referer' ) ) ) {
+					// If the plugin is found and the update_referer function is callable, update the referer with the corresponding product slug.
+					$page_builder = Astra_Sites_Page::get_instance()->get_setting( 'page_builder' );
+					// Set the referer to 'zipwp' for AI Builder and 'astra-sites' otherwise.
+					$referer = 'ai-builder' === $page_builder ? 'zipwp' : 'astra-sites';
+					BSF_UTM_Analytics::update_referer( $referer, $data['plugin_slug'] );
+				}
 			}
 		}
 
@@ -370,106 +392,6 @@ if ( ! class_exists( 'Astra_Sites' ) ) :
 		}
 
 		/**
-		 * Check if WooCommerce Payments plugin is included and update settings accordingly.
-		 * 
-		 * @param string $plugin_init The plugin initialization path.
-		 * @param array  $data Additional data (optional).
-		 *
-		 * @since 4.4.23
-		 * @return void
-		 */
-		public function maybe_woopayments_included( $plugin_init, $data = array() ) {
-			if ( 'woocommerce-payments/woocommerce-payments.php' === $plugin_init ) {
-				// Prevent showing the banner if plugin was already active.
-				if ( ! isset( $data['was_plugin_active'] ) || ! $data['was_plugin_active'] ) {
-					Astra_Sites_Page::get_instance()->update_settings(
-						array(
-							'woopayments_ref' => true,
-						)
-					);
-				}
-
-				Astra_Sites_Page::get_instance()->update_settings(
-					array(
-						'woopayments_included' => true,
-					)
-				);
-			}
-		}
-
-		/**
-		 * Set WooPayments analytics.
-		 *
-		 * @since 4.4.23
-		 * @return void
-		 */
-		public function set_woopayments_analytics() {
-			// Verify nonce.
-			if ( ! isset( $_POST['nonce'] ) || ! wp_verify_nonce( sanitize_text_field( wp_unslash( $_POST['nonce'] ) ), 'woopayments_nonce' ) ) {
-				wp_send_json_error( array( 'message' => __( 'Invalid nonce', 'astra-sites' ) ) );
-				exit;
-			}
-
-			$source = isset( $_POST['source'] ) ? sanitize_text_field( wp_unslash( $_POST['source'] ) ) : '';
-			if ( ! in_array( $source, array( 'banner', 'onboarding' ), true ) ) {
-				wp_send_json_error( array( 'message' => __( 'Invalid source', 'astra-sites' ) ) );
-				exit;
-			}
-
-			$key = "woopayments_{$source}_clicked";
-			Astra_Sites_Page::get_instance()->update_settings( array( $key => true ) );
-
-			wp_send_json_success( array( 'message' => 'WooPayments analytics updated!' ) );
-			exit;
-		}
-
-		/**
-		 * Check if WooPayments is configured and connected to Stripe.
-		 *
-		 * @since 4.4.24
-		 * @return bool True if WooPayments is active and connected to Stripe, false otherwise.
-		 */
-		public static function is_woo_payments_configured() {
-			// Check if WCPay account is connected to Stripe.
-			if ( class_exists( 'WC_Payments' ) && method_exists( 'WC_Payments', 'get_account_service' ) ) {
-				$account_service = WC_Payments::get_account_service();
-				if ( method_exists( $account_service, 'is_stripe_connected' ) ) {
-					return $account_service->is_stripe_connected();
-				}
-			}
-
-			return false;
-		}
-
-		/**
-		 * Add astra sites analytics data.
-		 *
-		 * @param array $stats stats array.
-		 * @return array
-		 */
-		public function add_astra_sites_analytics_data( $stats ) {
-			$stats['plugin_data']['astra_sites'] = array(
-				'version'        => defined( 'ASTRA_PRO_SITES_NAME' ) ? 'premium' : 'free',
-				'site_language'  => get_locale(),
-				'plugin_version' => defined( 'ASTRA_SITES_VER' ) ? ASTRA_SITES_VER : 'unknown',
-				'page_builder'   => Astra_Sites_Page::get_instance()->get_setting( 'page_builder' ),
-				'boolean_values' => array(
-					'import_complete'                => 'yes' === get_option( 'astra_sites_import_complete' ),
-					'woopayments_included'           => Astra_Sites_Page::get_instance()->get_setting( 'woopayments_included' ),
-					'was_woopayments_referred'       => Astra_Sites_Page::get_instance()->get_setting( 'woopayments_ref' ),
-					'woopayments_banner_clicked'     => Astra_Sites_Page::get_instance()->get_setting( 'woopayments_banner_clicked' ),
-					'woopayments_onboarding_clicked' => Astra_Sites_Page::get_instance()->get_setting( 'woopayments_onboarding_clicked' ),
-					'woopayments_configured'         => self::is_woo_payments_configured(),
-				),
-				'numeric_values' => array(
-					'woopayments_banner_dismissed_count' => Astra_Sites_Page::get_instance()->get_setting( 'woopayments_banner_dismissed_count' ),
-				),
-			);
-
-			return $stats;
-		}
-
-		/**
 		 * Enable ZipAI Copilot.
 		 *
 		 * @since 3.5.0
@@ -507,7 +429,7 @@ if ( ! class_exists( 'Astra_Sites' ) ) :
 			$icon = ASTRA_SITES_URI . 'inc/assets/images/vector-ai.svg';
 			?>
 			<style type="text/css">
-				.wp-submenu a[href="themes.php?page=starter-templates"]::after {
+				.wp-submenu a[href*="themes.php?page=starter-templates"]::after {
 					content: url("<?php echo esc_url( $icon ); ?>");
 					position: absolute;
 					margin-left: 5px;
@@ -1650,14 +1572,10 @@ if ( ! class_exists( 'Astra_Sites' ) ) :
 		 * @return  array
 		 */
 		public function action_links( $links ) {
-
-			$arguments = array(
-				'page' => 'starter-templates',
-			);
-
 			$astra_site_pro = 'https://wpastra.com/essential-toolkit-pricing/';
 
-			$url = add_query_arg( $arguments, admin_url( 'themes.php' ) );
+			// Get the starter templates URL.
+			$url = esc_url( self::get_starter_templates_url() );
 
 			$action_links = array(
 				'settings' => '<a href="' . esc_url( $url ) . '" aria-label="' . esc_attr__( 'Get Started', 'astra-sites' ) . '">' . esc_html__( 'Get Started', 'astra-sites' ) . '</a>',
@@ -1684,6 +1602,17 @@ if ( ! class_exists( 'Astra_Sites' ) ) :
 		 */
 		public static function get_api_domain() {
 			return defined( 'STARTER_TEMPLATES_REMOTE_URL' ) ? STARTER_TEMPLATES_REMOTE_URL : apply_filters( 'astra_sites_api_domain', 'https://websitedemos.net/' );
+		}
+
+		/**
+		 * Get the Metrics API URL.
+		 *
+		 * @since  4.4.37
+		 *
+		 * @return string
+		 */
+		public static function get_metrics_api_domain() {
+			return trailingslashit( defined( 'BSF_METRICS_REMOTE_URL' ) ? BSF_METRICS_REMOTE_URL : apply_filters( 'nps_survey_api_domain', 'https://metrics.brainstormforce.com/' ) );
 		}
 
 		/**
@@ -1939,7 +1868,7 @@ if ( ! class_exists( 'Astra_Sites' ) ) :
 					'process_failed_primary'        => sprintf( __( '%1$sWe could not complete the import process due to failed AJAX request and this is the message:%2$s', 'astra-sites' ), '<p>', '</p>' ),
 					/* translators: %s URL to document. */
 					'process_failed_secondary'      => sprintf( __( '%1$sPlease report this <a href="%2$s" target="_blank">here</a>.%3$s', 'astra-sites' ), '<p>', esc_url( 'https://wpastra.com/starter-templates-support/?url=#DEMO_URL#&subject=#SUBJECT#' ), '</p>' ),
-					'st_page_url' => admin_url( 'themes.php?page=starter-templates' ),
+					'st_page_url' => esc_url( self::get_starter_templates_url() ),
 					'staging_connected' => apply_filters( 'astra_sites_staging_connected', '' ),
 					'isRTLEnabled' => is_rtl(),
 					/* translators: %s Anchor link to support URL. */
@@ -1952,11 +1881,18 @@ if ( ! class_exists( 'Astra_Sites' ) ) :
 					'zip_token_exists' => Astra_Sites_ZipWP_Helper::get_token() !== '' ? true : false,
 					'zip_plans' => ( $plans && isset( $plans['data'] ) ) ? $plans['data'] : array(),
 					'dashboard_url' => admin_url(),
+					'finish_setup_url' => admin_url( 'admin.php?page=getting-started' ),
 					'placeholder_images' => Helper::get_image_placeholders(),
 					'get_more_credits_url' => $credit_purchase_url,
 					'dismiss_ai_notice' => Astra_Sites_Page::get_instance()->get_setting( 'dismiss_ai_promotion' ),
 					'showClassicTemplates' => apply_filters( 'astra_sites_show_classic_templates', true ),
-					'bgSyncInProgress' => 'in-process' === get_site_option( 'astra-sites-batch-status', '' ),
+					'showAiBuilder'        => self::should_show_ai_builder(),
+					'bgSyncInProgress'     => self::is_sync_in_progress(),
+					'userDetails'          => array(
+						'first_name' => get_user_meta( get_current_user_ID(), 'first_name', true ),
+						'last_name'  => get_user_meta( get_current_user_ID(), 'last_name', true ),
+						'email'     => wp_get_current_user()->user_email,
+					),
 				)
 			);
 
@@ -2341,7 +2277,7 @@ if ( ! class_exists( 'Astra_Sites' ) ) :
 
 			$last_viewed_block_data = array();
 			// Retrieve the value of the 'blockID' parameter using filter_input().
-			$id = filter_input( INPUT_GET, 'blockID', FILTER_SANITIZE_STRING );
+			$id = filter_input( INPUT_GET, 'blockID', FILTER_SANITIZE_FULL_SPECIAL_CHARS );
 			if ( ! empty( $id ) ) {
 				$last_viewed_block_data = get_option( 'astra_sites_import_elementor_data_' . $id ) !== false ? get_option( 'astra_sites_import_elementor_data_' . $id ) : array();
 			}
@@ -2479,6 +2415,10 @@ if ( ! class_exists( 'Astra_Sites' ) ) :
 			require_once ASTRA_SITES_DIR . 'inc/classes/class-astra-sites-wp-cli.php';
 			require_once ASTRA_SITES_DIR . 'inc/classes/class-astra-sites-file-system.php';
 			require_once ASTRA_SITES_DIR . 'inc/classes/class-astra-sites-nps-notice.php';
+			require_once ASTRA_SITES_DIR . 'inc/classes/class-astra-sites-analytics.php'; 
+
+			// Astra Onboarding Integration.
+			require_once ASTRA_SITES_DIR . 'inc/classes/class-astra-sites-astra-onboarding.php';
 
 			// libraries 'inc/lib/class-astra-sites-'.
 			require_once ASTRA_SITES_DIR . 'inc/lib/onboarding/class-onboarding.php';
@@ -2736,7 +2676,7 @@ if ( ! class_exists( 'Astra_Sites' ) ) :
 								<h1 class="text-heading">' . __( 'Build Your Dream Site in Minutes With AI', 'astra-sites' ) . '</h1>
 								<p>' . __( 'Say goodbye to the days of spending weeks designing and building your website.<br/> You can now create professional-grade websites in minutes.', 'astra-sites' ) . '</p>
 								<div class="button-section">
-									<a href="' . home_url() . '/wp-admin/themes.php?page=starter-templates" class="text-button">' . __( 'Let’s Get Started', 'astra-sites' ) . '</a>
+									<a href="' . esc_url( self::get_starter_templates_url() ) . '" class="text-button">' . __( 'Let’s Get Started', 'astra-sites' ) . '</a>
 									<a href="javascript:void(0);" class="scratch-link astra-notice-close">' . __( 'I want to build this website from scratch', 'astra-sites' ) . '</a>
 								</div>
 							</div>
@@ -2810,6 +2750,262 @@ if ( ! class_exists( 'Astra_Sites' ) ) :
 			$parts['port']   = isset( $parts['port'] ) ? ':' . $parts['port'] : '';
 
 			return $parts['scheme'] . '://' . $parts['host'] . $parts['port'] . $parts['path'] . $query;
+		}
+
+		/**
+		 * Block HTTP requests for Elementor placeholder images during import
+		 *
+		 * @since 1.0.14
+		 * @param false|array|WP_Error $preempt A preemptive return value of an HTTP request.
+		 * @param array                $args    HTTP request arguments.
+		 * @param string               $url     The request URL.
+		 * @return false|array|WP_Error
+		 */
+		public function block_elementor_placeholder_requests( $preempt, $args, $url ) {
+			
+			// Only block during import processes.
+			if ( ! $this->is_import_process_active() ) {
+				return $preempt;
+			}
+
+			// Check if this is a request for an Elementor placeholder image.
+			if ( $this->is_elementor_placeholder_url( $url ) ) {
+				astra_sites_error_log( 'Blocking Elementor placeholder image request during import: ' . $url );
+				
+				// Return a WP_Error to prevent the download and import.
+				return new WP_Error( 
+					'blocked_placeholder', 
+					'Elementor placeholder image blocked from import',
+					array( 'url' => $url )
+				);
+			}
+
+			// Allow other requests to proceed normally.
+			return $preempt;
+		}
+
+		/**
+		 * Check if import process is currently active
+		 *
+		 * @since 1.0.14
+		 * @return bool True if import is active.
+		 */
+		private function is_import_process_active() {
+			
+			// Check if visible import is complete but batch processing is not yet complete.
+			$import_complete = get_option( 'astra_sites_import_complete', 'no' );
+			$batch_process_started = get_option( 'astra_sites_batch_process_started', 'no' );
+			$batch_process_complete = get_option( 'astra_sites_batch_process_complete', 'no' );
+
+			// Hook should be active when:
+			// 1. Import is complete (visible import finished)
+			// 2. Batch process has started
+			// 3. Batch process is not yet complete.
+			if ( 'yes' === $import_complete && 'yes' === $batch_process_started && 'yes' !== $batch_process_complete ) {
+				return true;
+			}
+
+			return false;
+		}
+
+		/**
+		 * Check if URL is an Elementor placeholder image
+		 *
+		 * @since 1.0.14
+		 * @param string $url Image URL to check.
+		 * @return bool True if it's a placeholder image.
+		 */
+		private function is_elementor_placeholder_url( $url ) {
+			
+			if ( empty( $url ) ) {
+				return false;
+			}
+
+			// Check for Elementor placeholder patterns.
+			$placeholder_patterns = array(
+				'/elementor/assets/images/placeholder.png',
+				'/elementor/assets/images/placeholder.jpg',
+				'/elementor/assets/images/placeholder.jpeg',
+				'/elementor/assets/images/placeholder.gif',
+				'/elementor/assets/images/placeholder.svg',
+			);
+
+			foreach ( $placeholder_patterns as $pattern ) {
+				if ( strpos( $url, $pattern ) !== false ) {
+					return true;
+				}
+			}
+
+			// Check for generic placeholder in Elementor context.
+			if ( strpos( $url, 'placeholder' ) !== false && strpos( $url, 'elementor' ) !== false ) {
+				return true;
+			}
+
+			return false;
+		}
+
+		/**
+		 * Maybe Setup Wizard Showing
+		 *
+		 * @param  bool $showing Whether the wizard is showing.
+		 * @since 4.4.28
+		 *
+		 * @return bool
+		 */
+		public function maybe_setup_wizard_showing( $showing = false ) {
+			if ( $showing && 'yes' === get_option( 'astra_sites_import_complete', false ) ) {
+				return true;
+			}
+
+			return $showing;
+		}
+
+		/**
+		 * Get the logo URL for Finish Setup page.
+		 *
+		 * @since 4.4.31
+		 *
+		 * @return string
+		 */
+		public function starter_templates_logo_url() {
+			return ASTRA_SITES_URI . 'inc/lib/onboarding/assets/images/logo.svg';
+		}
+
+		/**
+		 * Check if sync is in progress.
+		 *
+		 * @since 4.4.33
+		 *
+		 * @return bool
+		 */
+		public static function is_sync_in_progress() {
+			// Early return if sync is explicitly marked in-progress.
+			if ( 'in-process' === get_site_option( 'astra-sites-batch-status', '' ) ) {
+				return true;
+			}
+
+			// If either batch or manual sync is completed, no sync in progress.
+			if (
+				'yes' === get_site_option( 'astra-sites-batch-is-complete', 'no' ) ||
+				'yes' === get_site_option( 'astra-sites-manual-sync-complete', 'no' )
+			) {
+				return false;
+			}
+
+			// If current page is set, assume sync is in progress.
+			return (bool) get_site_option( 'astra-sites-current-page' );
+		}
+
+		/**
+		 * Check if AI Builder step should be shown.
+		 *
+		 * @since 4.4.36
+		 * @return bool True if AI Builder step should be shown, false otherwise.
+		 */
+		public static function should_show_ai_builder() {
+			/**
+			 * Filter to show/hide AI Builder step.
+			 *
+			 * @since 4.4.36
+			 * @param bool $show_ai_builder Whether to show the AI Builder step. Default true.
+			 * @return bool
+			 */
+			return apply_filters( 'astra_sites_show_ai_builder', true );
+		}
+
+		/**
+		 * Determine the appropriate current index (ci) parameter based on page builder flags.
+		 *
+		 * Mirrors the step-skipping logic used in the site-type/index.js (JavaScript).
+		 *
+		 * @since 4.4.36
+		 * @return int The calculated ci value for the stepper.
+		 */
+		public static function get_onboarding_page_index() {
+			// Show AI Builder step if enabled.
+			if ( self::should_show_ai_builder() ) {
+				return 0; // Site Type Step.
+			}
+
+			// Check if builders are disabled.
+			$is_beaver_builder_disabled = get_option( 'st-beaver-builder-flag' ) || ! Intelligent_Starter_Templates_Loader::is_legacy_beaver_builder_enabled();
+			$is_elementor_disabled      = get_option( 'st-elementor-builder-flag' );
+
+			// Skip to templates if both builders are also disabled.
+			if ( $is_beaver_builder_disabled && $is_elementor_disabled ) {
+				return 2; // Skip to template list.
+			}
+
+			// Skip to the page builder selection.
+			return 1;
+		}
+
+		/**
+		 * Get starter templates URL with appropriate current index (ci) parameter
+		 *
+		 * @since 4.4.36
+		 * @return string The URL with appropriate ci parameter
+		 */
+		public static function get_starter_templates_url() {
+			$base_url = admin_url( 'themes.php?page=starter-templates' );
+			$ci       = self::get_onboarding_page_index();
+			if ( 0 === $ci ) {
+				return $base_url;
+			}
+
+			return add_query_arg( 'ci', $ci, $base_url );
+		}
+
+		/**
+		 * Enqueue admin menu URL updater script.
+		 *
+		 * @since 4.4.36
+		 *
+		 * @param string $hook Current hook name.
+		 * @return void
+		 */
+		public function enqueue_menu_url_updater( $hook = '' ) {
+			// Bail if not in admin area.
+			if ( ! is_admin() ) {
+				return;
+			}
+
+			// Bail if user lacks admin privileges.
+			if ( ! current_user_can( 'manage_options' ) ) {
+				return;
+			}
+
+			// Bail if in customizer preview mode.
+			if ( is_customize_preview() ) {
+				return;
+			}
+
+			// Bail if handling AJAX request.
+			if ( wp_doing_ajax() ) {
+				return;
+			}
+
+			$dynamic_url = self::get_starter_templates_url();
+
+			// Bail if ci parameter is not present.
+			if ( strpos( $dynamic_url, 'ci=' ) === false ) {
+				return;
+			}
+
+			$script = <<<JS
+				// Safely update starter templates menu link after page load.
+				window.addEventListener( 'load', function() {
+					// Locate the starter templates menu item.
+					const menuItem = document.querySelector( '.wp-submenu a[href*="themes.php?page=starter-templates"]' );
+
+					// Verify element exists before modifying.
+					if ( menuItem ) {
+						menuItem.href = "$dynamic_url";
+					}
+				} );
+JS;
+
+			wp_add_inline_script( 'common', $script );
 		}
 	}
 

@@ -68,6 +68,13 @@ class Importer extends AjaxBase {
 	public function update_required_options() {
 		update_option( 'astra_sites_import_complete', 'yes', false );
 
+		// Mark setup wizard as shown.
+		$option_name = class_exists( '\GS\Classes\GS_Helper' )
+			? \GS\Classes\GS_Helper::get_setup_wizard_showing_option_name()
+			: 'getting_started_is_setup_wizard_showing';
+
+		update_option( $option_name, true );
+
 		if ( 'ai' === get_option( 'astra_sites_current_import_template_type' ) ) {
 			update_option( 'astra_sites_batch_process_complete', 'yes' );
 			delete_option( 'ai_import_logger' );

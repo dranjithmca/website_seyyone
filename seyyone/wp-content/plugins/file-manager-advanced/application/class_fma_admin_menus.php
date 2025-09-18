@@ -14,7 +14,167 @@ class class_fma_admin_menus {
 	 public function __construct() {
              include('class_fma_lang.php');
 			$this->langs = new class_fma_adv_lang();
+
+            add_action( 'fma__settings_tab_notifications_content', array( $this, 'notification_callback' ) );
+            // Free: Show AI Integration (Code Pilot) tab content as a PRO teaser
+            add_action( 'fma__settings_tab_ai_content', array( $this, 'ai_integration_callback' ) );
 	  }
+
+    /**
+     * Notification Callback
+     * @since 6.7.3
+     */
+      public function notification_callback() {
+          if ( ! class_exists( 'AFMP\\Modules\\EmailNotification\\EmailNotification' ) ) {
+              echo '<div afmp-href="https://advancedfilemanager.com/pricing/?utm_source=plugin&utm_medium=email_notification&utm_campaign=plugin" class="fma__wrap">';
+              echo '<h2 class="fma__heading">Email notification Settings <span class="fma__heading-pro-tag">PRO</span></h2>';
+
+              echo '<table class="form-table" role="presentation"><tbody><tr><th scope="row"><label for="enable">Enable</label></th><td>            <input type="checkbox" id="enable" name="afmp__email_notification_settings[enable]" value="yes">
+            <label for="enable">Enable email notification</label>
+            </td></tr><tr><th scope="row"><label for="email">Email Address</label></th><td>            <input type="text" id="email" name="afmp__email_notification_settings[email]" value="" class="regular-text">
+            <p class="description">Email address to send notification.</p>
+            </td></tr><tr><th scope="row"><label for="events">Events</label></th><td>                <label>
+                    <input type="checkbox" name="afmp__email_notification_settings[events][]" value="rm">
+                    Delete File                </label><br>
+                                <label>
+                    <input type="checkbox" name="afmp__email_notification_settings[events][]" value="mkfile">
+                    Create File                </label><br>
+                                <label>
+                    <input type="checkbox" name="afmp__email_notification_settings[events][]" value="mkdir">
+                    Create Folder                </label><br>
+                </td></tr><tr><th scope="row"><label for="subject">Email Subject</label></th><td>            <input type="text" id="subject" name="afmp__email_notification_settings[subject]" class="regular-text">
+            <p class="description">Subject of the email notification.</p>
+            </td></tr><tr><th scope="row"><label for="message">Email Message</label></th><td>            <textarea id="message" name="afmp__email_notification_settings[message]" rows="5" class="large-text">The file action {event} was performed on {file_name} ({ext}) at {date_time} from IP {ip_address} on {site_name} by {username}.
+Thank you for using Advanced File Manager.</textarea>
+            <p class="description">Message body of the email notification. You can use placeholders like {file_name}, {action} etc.</p>
+            <p class="description">Available placeholders:</p><ul class="afmp-email-placeholders"><li><code>{username}</code> - This will fetch the user’s name who did the action</li><li><code>{ip_address}</code> - This will fetch the user’s IP Address</li><li><code>{event}</code> - This will fetch which file the user has created or deleted</li><li><code>{file_name}</code> - This will fetch the file name on which that action was done</li><li><code>{ext}</code> - This will fetch the file extension on which that action was done</li><li><code>{date_time}</code> - This will fetch the date the user acted on the file</li><li><code>{site_name}</code> - This will fetch the site name on which the action was performed</li></ul></td></tr></tbody></table>';
+              echo '</div>';
+          }
+
+          if ( ! class_exists( 'AFMP\\Modules\\SlackNotification\\SlackNotification' ) ) {
+              echo '<div afmp-href="https://advancedfilemanager.com/pricing/?utm_source=plugin&utm_medium=slack_notification&utm_campaign=plugin" class="fma__wrap">';
+              echo '<h2 class="fma__heading">Slack Notification <span class="fma__heading-pro-tag">PRO</span></h2>';
+
+              echo '<table class="form-table" role="presentation"><tbody><tr><th scope="row"><label for="afmp_slack_enable">Enable Slack Notification</label></th><td><input type="checkbox" id="afmp_slack_enable" name="afmp__slack_notification_settings[enable]" value="yes"><label for="afmp_slack_enable">Enable Slack Notification</label></td></tr><tr><th scope="row"><label for="afmp_slack_webhook_url">Slack Webhook URL</label></th><td><input type="text" id="afmp_slack_webhook_url" name="afmp__slack_notification_settings[webhook_url]" class="large-text"><p class="description">Enter your Slack Webhook URL to receive notifications.</p><a href="#">Click here to get your webhook URL</a></td></tr><tr><th scope="row"><label for="afmp_slack_event_notification">Event Notification</label></th><td><label><input type="checkbox" name="afmp__slack_notification_settings[events][]" value="rm">Delete File</label><br><label><input type="checkbox" name="afmp__slack_notification_settings[events][]" value="mkfile">Create File</label><br><label><input type="checkbox" name="afmp__slack_notification_settings[events][]" value="mkdir">Create Folder</label><br></td></tr><tr><th scope="row"><label for="slack_notification_message">Slack Notification Message</label></th><td><textarea id="slack_notification_message" name="afmp__slack_notification_settings[message]" rows="5" class="large-text">A quick update from the Advance File Manager plugin on your site {site_name}.
+A file was {event} by {username} on {date_time}. The file name is {file_name} with the extension {ext}, and the action was performed from the following IP Address: {ip_address}.</textarea><p class="description">Customize the message to be sent to Slack. You can use placeholders like {file_name}, {action}, etc.</p><p class="description">Available placeholders:</p><ul class="afmp-slack-placeholders"><li><code>{username}</code> - This will fetch the user’s name who did the action</li><li><code>{ip_address}</code> - This will fetch the user’s IP Address</li><li><code>{event}</code> - This will fetch which file the user has created or deleted</li><li><code>{file_name}</code> - This will fetch the file name on which that action was done</li><li><code>{ext}</code> - This will fetch the file extension on which that action was done</li><li><code>{date_time}</code> - This will fetch the date the user acted on the file</li><li><code>{site_name}</code> - This will fetch the site name on which the action was performed</li></ul></td></tr></tbody></table>';
+              echo '</div>';
+          }
+
+      }
+      
+      /**
+     * AI Integration (Code Pilot) Callback
+     * Mirrors notification_callback pattern for the free version
+     * @since 5.4.1
+     */
+      public function ai_integration_callback() {
+          if ( ! class_exists( 'AFMP\\Modules\\AFMP_AI_Integration' ) ) {
+              // Defaults to avoid undefined variable notices in free view
+              $enabled = '0';
+              $api_key = '';
+                            ?>
+                            <style type="text/css">
+                                .ai__heading {
+                                        color: #000;
+                                        font-size: 18px;
+                                        font-weight: 600;
+                                        line-height: normal;
+                                }
+                                .ai__heading-pro-tag {
+                                        display: inline-block;
+                                        padding: 2px 8px;
+                                        background: linear-gradient(270deg, #011D33 0%, #3F6972 100%);
+                                        border-radius: 4px;
+                                        color: #fff;
+                                        font-size: 12px;
+                                        margin-left: 25px;
+                                }
+                                .ai__wrap {
+                                        opacity: 0.5;
+                                        position: relative;
+                                }
+                                .ai__wrap::before {
+                                        content: "";
+                                        display: block;
+                                        width: 100%;
+                                        height: 100%;
+                                        position: absolute;
+                                        top: 0;
+                                        left: 0;
+                                        z-index: 1;
+                                        background: transparent;
+                                }
+                            </style>
+                            <h2 class="ai__heading">AI Integration (Code Pilot) <span class="ai__heading-pro-tag">PRO</span></h2>
+                            <div class="ai__wrap fma__wrap" afmp-href="https://advancedfilemanager.com/pricing/?utm_source=plugin&utm_medium=ai_integration&utm_campaign=plugin">
+                            <div class="afmp-ai-settings">
+                                <form method="post" action="<?php echo esc_url( admin_url( 'admin-post.php' ) ); ?>">
+                    <?php wp_nonce_field( 'afmp_save_ai_settings', 'afmp_ai_nonce' ); ?>
+                    <input type="hidden" name="action" value="afmp_save_ai_settings" />
+                    <table class="form-table">
+                        <tr>
+                            <th scope="row">
+                                <label for="afmp_ai_enabled"><?php _e( 'Enable AI Integration', 'afm-pro' ); ?></label>
+                            </th>
+                            <td>
+                                <input type="checkbox" name="afmp_ai_enabled" id="afmp_ai_enabled" value="1" <?php checked( $enabled, '1' ); ?> />
+                                <p class="description"><?php _e( 'Enable Code Pilot AI assistant in the code editor.', 'afm-pro' ); ?></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">
+                                <label for="afmp_gpt_api_key"><?php _e( 'GPT API Key', 'afm-pro' ); ?></label>
+                            </th>
+                            <td>
+                                <input type="password" name="afmp_gpt_api_key" id="afmp_gpt_api_key" value="<?php echo esc_attr( $api_key ); ?>" class="regular-text" autocomplete="off" />
+                                <p class="description"><?php _e( 'Enter your OpenAI GPT API key. This key is stored only for your user account.', 'afm-pro' ); ?></p>
+                            </td>
+                        </tr>
+                    </table>
+                    <?php submit_button( __( 'Save Changes', 'afm-pro' ) ); ?>
+                </form>
+                
+                <div style="margin-top: 30px; padding: 20px; background: #f9f9f9; border-left: 4px solid #0073aa; border-radius: 4px;">
+                    <h3 style="margin-top: 0; color: #0073aa;">How to Use Code Pilot</h3>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                        <div>
+                            <h4 style="color: #333; margin-bottom: 10px;">🤖 Chat Assistant</h4>
+                            <ol style="margin: 0; padding-left: 20px;">
+                                <li>Open any file in the File Manager editor</li>
+                                <li>Click the <strong>Code Pilot</strong> button (bottom right)</li>
+                                <li>Type your questions or requests in the chat</li>
+                                <li>AI will respond with code suggestions</li>
+                                <li>Click <strong>Apply</strong> to insert code into your file</li>
+                            </ol>
+                        </div>
+                        <div>
+                            <h4 style="color: #333; margin-bottom: 10px;">⚡ Inline Suggestions</h4>
+                            <ol style="margin: 0; padding-left: 20px;">
+                                <li>Start typing code in the editor</li>
+                                <li>AI will show ghost text suggestions</li>
+                                <li>Press <strong>Tab</strong> to accept suggestions</li>
+                                <li>Press <strong>Esc</strong> to dismiss suggestions</li>
+                                <li>AI learns from your codebase for better suggestions</li>
+                            </ol>
+                        </div>
+                    </div>
+                    
+                    <div style="margin-top: 20px; padding: 15px; background: #fff; border-radius: 4px; border: 1px solid #ddd;">
+                        <h4 style="margin-top: 0; color: #333;">💡 Example Requests</h4>
+                        <ul style="margin: 0; padding-left: 20px;">
+                            <li>"Add proper comments to this code"</li>
+                            <li>"Fix the syntax error in this function"</li>
+                            <li>"Optimize this database query"</li>
+                            <li>"Add error handling to this code"</li>
+                            <li>"Convert this to use WordPress hooks"</li>
+                        </ul>
+                    </div>
+                </div>
+                            </div>
+              </div>
+              <?php
+          }
+      }
 
 	/**
 	 * Loading Menus
@@ -36,10 +196,23 @@ class class_fma_admin_menus {
             $fmaPer,
             'file_manager_advanced_ui',
             array($this, 'file_manager_advanced_ui'),
-            plugins_url( 'assets/icon/fma.png', __FILE__ ),
+            plugins_url( 'assets/icon/fma-new.png', __FILE__ ),
             4
         );
         add_submenu_page( 'file_manager_advanced_ui', 'Settings', 'Settings', $subPer, 'file_manager_advanced_controls', array(&$this, 'file_manager_advanced_controls'));
+		
+        if ( ! class_exists( 'AFMP\Modules\AFMP_AI_Integration' ) ) {
+            add_submenu_page(
+                'file_manager_advanced_ui',
+                'AI - Code Pilot',
+                'AI - Code Pilot <span class="update-plugins count-1" style="background: #d63638; color: #fff; font-size: 10px; padding: 2px 6px; border-radius: 10px; margin-left: 5px;">NEW</span>',
+                'manage_options',
+                'ai-code-pilot',
+                array( $this, 'ai_code_pilot_callback' ),
+                2
+            );
+        }
+
         if(!class_exists('file_manager_advanced_shortcode')) {
 		    add_submenu_page( 'file_manager_advanced_ui', 'Shortcodes', 'Shortcodes', $subPer, 'file_manager_advanced_shortcodes', array(&$this, 'file_manager_advanced_shortcodes'));
 	    }
@@ -53,7 +226,7 @@ class class_fma_admin_menus {
         }
 
         if ( ! class_exists( 'AFMP\\Modules\\FileLogs' ) ) {
-            add_submenu_page( 'file_manager_advanced_ui', 'File Logs', 'File Logs', 'manage_options', 'afmp-file-logs', array( $this, 'afmp__file_logs' ), 2 );
+            add_submenu_page( 'file_manager_advanced_ui', 'File Logs', 'File Logs', 'manage_options', 'afmp-file-logs', array( $this, 'afmp__file_logs' ), 3 );
         }
         
         if ( ! class_exists( 'AFMP\\Modules\\GoogleDrive' ) ) {
@@ -63,7 +236,29 @@ class class_fma_admin_menus {
         if ( ! class_exists( 'AFMP\Modules\Onedrive' ) ) {
             add_submenu_page( 'file_manager_advanced_ui', 'OneDrive Settings', 'OneDrive', 'manage_options', 'afmp-onedrive', array( $this, 'onedrive_menu'  ) );
         }
+        
+        if ( ! class_exists( 'AFMP\\Modules\\AmazonS3' ) ) {
+            add_submenu_page( 'file_manager_advanced_ui', 'Amazon S3 (AWS) Settings', 'Amazon S3 (AWS)', 'manage_options', 'afmp-aws', array( $this, 'aws_menu'  ) );
+        }
+
+        if ( ! class_exists( 'AFMP\\Modules\\GitHub' ) ) {
+            add_submenu_page( 'file_manager_advanced_ui', 'GitHub Settings', 'GitHub', 'manage_options', 'afmp-github', array( $this, 'github_menu'  ) );
+        }
 	}
+
+    /**
+     * AI Code Pilot callback - redirect to settings
+     */
+    public function ai_code_pilot_callback() {
+        $target_url = admin_url( 'admin.php?page=file_manager_advanced_controls&tab=ai' );
+        ?>
+        <script>
+            window.location.href = '<?php echo $target_url; ?>';
+        </script>
+        <p>Redirecting to AI Integration Settings... <a href="<?php echo $target_url; ?>">Click here</a></p>
+        <?php
+        exit;
+    }
 
 	/**
 	 * Dropbox menu
@@ -374,6 +569,287 @@ class class_fma_admin_menus {
         echo '</div>';
     }
 
+    /**
+	 * GitHub menu
+	 * @since 6.7.2
+	 */
+    public function github_menu() {
+
+        echo '<style type="text/css">
+            .github__heading {
+                color: #000;
+                font-size: 18px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: normal;
+            }
+
+            .github__heading-pro-tag {
+                display: inline-block;
+                padding: 2px 8px;
+                background: linear-gradient(270deg, #011D33 0%, #3F6972 100%);
+                border-radius: 4px;
+                color: #fff;
+                font-size: 12px;
+                margin-left: 25px;
+            }
+
+            .github__wrap {
+                opacity: 0.5;
+                position:relative;
+            }
+
+            .github__wrap::before {
+                content: "";
+                display: block;
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: 1;
+                background: transparent;
+            }
+        </style>
+        <h2 class="github__heading">GitHub Settings <span class="github__heading-pro-tag">PRO</span></h2>
+
+        <div class="github__wrap">
+            <table class="form-table">
+                <tr>
+                    <th>
+                        <label for="fma__enable">Enable</label>
+                    </th>
+                    <td>
+                        <input type="checkbox" id="fma__enable">
+                    </td>
+                </tr>
+                
+                <tr>
+                    <th>
+                        <label for="afm__email">GitHub Email</label>
+                    </th>
+                    <td>
+                        <input type="text" id="afm__email" class="regular-text">
+                        <p class="desc">
+                            <strong>Enter your email which you use for your GitHub account</strong>
+                        </p>
+                    </td>
+                </tr>
+                
+                <tr>
+                    <th>
+                        <label for="afm__username">GitHub Username <span class="required">*</span></label>
+                    </th>
+                    <td>
+                        <input type="text" id="afm__username" class="regular-text">
+                        <p class="desc">
+                            <strong>Enter your GitHub username</strong>
+                        </p>
+                    </td>
+                </tr>
+
+                <tr>
+                    <th>
+                        <label for="afm__pat">GitHub PAT <span class="required">*</span></label>
+                    </th>
+                    <td>
+                        <input type="text" id="afm__pat" class="regular-text">
+                        <p class="desc">
+                            <strong>Enter GitHub Personal Access Token (PAT) for your account <a href="#">Click here to get Github PAT</a></strong>
+                        </p>
+                    </td>
+                </tr>
+
+                <tr>
+                    <th>
+                        <label for="afm__access_dir">GitHub Access Directory</label>
+                    </th>
+                    <td>
+                        <input type="text" id="afm__access_dir" class="regular-text">
+
+                        <p class="desc">
+                            <strong>This field is not a required as a default directory is set, but this can be changed</strong>
+                        </p>
+                    </td>
+                </tr>
+
+                <tr>
+                    <th>
+                        <label for="afm__master_dir">GitHub Master Access Directory</label>
+                    </th>
+                    <td>
+                        <input type="text" id="afm__master_dir" class="regular-text">
+
+                        <p class="desc">
+                            <strong>This field is not a required, and if left empty all configuration will apply to the whole repository</strong>
+                        </p>
+                    </td>
+                </tr>
+            </table>';
+        submit_button();
+        echo '</div>';
+    }
+
+	/**
+	 * Amazon S3 (AWS) menu
+	 * @since 5.3.8
+	 */
+    public function aws_menu() {
+
+        echo '<style type="text/css">
+            .aws__heading {
+                color: #000;
+                font-size: 18px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: normal;
+            }
+            
+            .aws__heading-pro-tag {
+                display: inline-block;
+                padding: 2px 8px;
+                background: linear-gradient(270deg, #011D33 0%, #3F6972 100%);
+                border-radius: 4px;
+                color: #fff;
+                font-size: 12px;
+                margin-left: 25px;
+            }
+            
+            .aws__wrap {
+                opacity: 0.5;
+                position:relative;
+            }
+            
+            .aws__wrap::before {
+                content: "";
+                display: block;
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: 1;
+                background: transparent;
+            }
+        </style>
+        <h2 class="aws__heading">Amazon S3 (AWS) Settings <span class="aws__heading-pro-tag">PRO</span></h2>
+
+        <div class="aws__wrap">
+            <table class="form-table">
+                <tr>
+                    <th>
+                        <lable for="fma__enable">Enable</lable>
+                    </th>
+                    <td>
+                        <input type="checkbox" id="fma__enable">
+                    </td>
+                </tr>
+                
+                <tr>
+                    <th>
+                        <label for="afm__alias">Alias</label>
+                    </th>
+                    <td>
+                        <input type="text" id="afm__alias" class="regular-text">
+                        <p class="desc">
+                            <strong>Enter a title which will be displayed on File Manager</strong>
+                        </p>
+                    </td>
+                </tr>
+                
+                <tr>
+                    <th>
+                        <label for="afm__app_key">App Key</label>
+                    </th>
+                    <td>
+                        <input type="text" id="afm__app_key" class="regular-text">
+                        <p class="desc">
+                            <strong>Enter your Amazon S3 (AWS) App key. <a href="#">Learn how to get your credentials</a></strong>
+                        </p>
+                    </td>
+                </tr>
+                
+                <tr>
+                    <th>
+                        <label for="afm__app_secret">App Secret</label>
+                    </th>
+                    <td>
+                        <input type="text" id="afm__app_secret" class="regular-text">
+                        <p class="desc">
+                            <strong>Enter your Amazon S3 (AWS) App secret. <a href="#">Learn how to get your credentials</a></strong>
+                        </p>
+                    </td>
+                </tr>
+                
+                <tr>
+                    <th>
+                        <label for="afm__region">Region</label>
+                    </th>
+                    <td>
+                        <input type="text" id="afm__region" class="regular-text">
+                        
+                        <p class="desc">
+                            <strong>
+                                Enter the AWS region where your bucket is located (e.g. us-east-1)
+                            </strong>
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        <label for="afm__bucket">Bucket</label>
+                    </th>
+                    <td>
+                        <input type="text" id="afm__bucket" class="regular-text">
+                        
+                        <p class="desc">
+                            <strong>
+                                Enter the name of your Amazon S3 bucket
+                            </strong>
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        <label for="afm__user_role_access">User Role Access</label>
+                    </th>
+                    <td>
+                        <input type="checkbox" id="editor_role" value class="regular-text">
+                        <label for="editor_role">Editor</label><br>
+                        <input type="checkbox" id="editor_role" value class="regular-text">
+                        <label for="editor_role">Author</label><br>
+                        <input type="checkbox" id="editor_role" value class="regular-text">
+                        <label for="editor_role">Contributor</label><br>
+                        <input type="checkbox" id="editor_role" value class="regular-text">
+                        <label for="editor_role">Subscriber</label><br>
+                        <p class="desc">
+                            <strong>
+                                Select the user roles allowed to access the AWS-connected file manager
+                            </strong>
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        <label for="afm__private_folder_access">Private Folder Access</label>
+                    </th>
+                    <td>
+                        <input type="text" id="afm__private_folder_access" class="regular-text">
+                        
+                        <p class="desc">
+                            <strong>
+                                Enter a folder name to restrict access to that folder only. Leave blank to use the root directory (e.g. awsfolder) 
+                            </strong>
+                        </p>
+                    </td>
+                </tr>
+            </table>';
+
+        submit_button();
+
+        echo '</div>';
+    }
+
 	/**
 	 * Adminer menu
 	 * @since 6.7.2
@@ -535,8 +1011,8 @@ HTML;
 	* Settings
     */
     public function file_manager_advanced_controls(){
-		if(current_user_can('manage_options')) {
-		    include('pages/controls.php');
+		if( current_user_can( 'manage_options' ) ) {
+		    include( 'pages/controls.php' );
 		 }
 	}
 	/**
@@ -642,3 +1118,5 @@ HTML;
         return $wp_roles->roles; 
 	}
 }
+
+

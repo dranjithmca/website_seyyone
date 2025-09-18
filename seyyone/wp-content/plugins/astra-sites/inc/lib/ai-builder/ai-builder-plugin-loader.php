@@ -269,6 +269,7 @@ class Ai_Builder_Plugin_Loader {
 			'screen_url'   => ZIPWP_APP,
 			'redirect_url' => admin_url( 'themes.php?page=ai-builder' ),
 			'source'       => 'starter-templates',
+			'utmSource'    => 'st',
 		);
 
 		if ( ! empty( $partner_id ) ) {
@@ -347,8 +348,9 @@ class Ai_Builder_Plugin_Loader {
 		);
 
 		$query_args = array(
-			'family' => rawurlencode( implode( '|', $font_families ) ),
-			'subset' => rawurlencode( 'latin,latin-ext' ),
+			'family'  => rawurlencode( implode( '|', $font_families ) ),
+			'subset'  => rawurlencode( 'latin,latin-ext' ),
+			'display' => 'swap',
 		);
 
 		return add_query_arg( $query_args, '//fonts.googleapis.com/css' );
@@ -413,7 +415,7 @@ class Ai_Builder_Plugin_Loader {
 			'zipwp_auth_nonce'         => wp_create_nonce( 'zipwp-auth-nonce' ),
 			'adminUrl'                 => admin_url(),
 			'imageDir'                 => AI_BUILDER_URL . 'inc/assets/images/',
-			'supportLink'              => $support_link,
+			'supportLink'              => apply_filters( 'ai_builder_support_link', $support_link ),
 			'logoUrl'                  => apply_filters( 'ai_builder_logo', AI_BUILDER_URL . 'inc/assets/images/logo.svg' ),
 			'placeholder_images'       => Helper::get_image_placeholders(),
 			'reportError'              => $this->should_report_error(),
@@ -468,6 +470,7 @@ class Ai_Builder_Plugin_Loader {
 			'show_zip_plan'            => apply_filters( 'ai_builder_show_zip_plan_details', true ),
 			'hide_site_features'       => apply_filters( 'ai_builder_hidden_site_features', array() ),
 			'hideDashboardButton'      => 'yes' === apply_filters( 'ai_builder_hide_visit_dashboard_button', 'no' ),
+			'hideFinishSetupButton'    => 'yes' === apply_filters( 'ai_builder_hide_finish_setup_button', 'no' ),
 			'isElementorDisabled'      => get_option( 'st-elementor-builder-flag' ),
 			'isBeaverBuilderDisabled'  => get_option( 'st-beaver-builder-flag' ) || ! self::is_legacy_beaver_builder_enabled(),
 			'supportedPageBuilders'    => apply_filters( 'ai_builder_supported_page_builders', array( 'block-editor', 'elementor' ) ),

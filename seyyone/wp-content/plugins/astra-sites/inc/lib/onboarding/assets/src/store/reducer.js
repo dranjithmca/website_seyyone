@@ -11,6 +11,11 @@ if ( astraSitesVars?.default_page_builder ) {
 		astraSitesVars?.default_page_builder === 'brizy'
 			? 'gutenberg'
 			: astraSitesVars?.default_page_builder;
+
+	// If AI builder is disabled but set as default, fallback to gutenberg
+	if ( builderKey === 'ai-builder' && ! astraSitesVars?.showAiBuilder ) {
+		builderKey = 'gutenberg';
+	}
 }
 
 export const siteLogoDefault = {
@@ -64,24 +69,25 @@ export const initialState = {
 			icon: 'ecommerce',
 		},
 		{
-			title: __( 'Website Emails & SMTP', 'astra-sites' ),
-			id: 'smtp',
+			title: __( 'SEO & Search Visibility', 'astra-sites' ),
+			id: 'seo',
 			description: __(
-				'Get emails from your website (forms, etc)',
+				'Optimize your website for search engines',
 				'astra-sites'
 			),
 			enabled: true,
 			compulsory: false,
-			icon: 'envelope',
+			icon: 'arrow-trending-up',
 		},
-		{
-			title: __( 'Automation & Integrations', 'astra-sites' ),
-			id: 'automation-integrations',
-			description: __( 'Automate your website & tasks', 'astra-sites' ),
-			enabled: false,
-			compulsory: false,
-			icon: 'squares-plus',
-		},
+		// Will be added back.
+		// {
+		// 	title: __( 'Automation & Integrations', 'astra-sites' ),
+		// 	id: 'automation-integrations',
+		// 	description: __( 'Automate your website & tasks', 'astra-sites' ),
+		// 	enabled: false,
+		// 	compulsory: false,
+		// 	icon: 'squares-plus',
+		// },
 		{
 			title: __( 'Appointment & Bookings', 'astra-sites' ),
 			id: 'appointment-bookings',
@@ -92,6 +98,17 @@ export const initialState = {
 			enabled: false,
 			compulsory: false,
 			icon: 'calendar',
+		},
+		{
+			title: __( 'Website Emails & SMTP', 'astra-sites' ),
+			id: 'smtp',
+			description: __(
+				'Get emails from your website (forms, etc)',
+				'astra-sites'
+			),
+			enabled: false,
+			compulsory: false,
+			icon: 'envelope',
 		},
 		{
 			title: __( 'Free Live Chat', 'astra-sites' ),
@@ -106,8 +123,8 @@ export const initialState = {
 		},
 	],
 	formDetails: {
-		first_name: '',
-		email: '',
+		first_name: astraSitesVars?.userDetails?.first_name || '',
+		email: astraSitesVars?.userDetails?.email || '',
 		wp_user_type: '',
 		build_website_for: '',
 		opt_in: true,
@@ -216,6 +233,11 @@ export const initialState = {
 	// Limit exceed modal for AI-Builder.
 	limitExceedModal: {
 		open: false,
+	},
+
+	// Page builder API loading state and cache
+	pageBuilderCache: {
+		timestamp: null,
 	},
 };
 

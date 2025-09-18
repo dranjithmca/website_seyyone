@@ -153,6 +153,7 @@ const ImportSite = () => {
 	const importPart1 = async () => {
 		let resetStatus = false;
 		let cfStatus = false;
+		let wooCARStatus = false;
 		let latepointStatus = false;
 		let formsStatus = false;
 		let customizerStatus = false;
@@ -164,7 +165,12 @@ const ImportSite = () => {
 		if ( resetStatus ) {
 			cfStatus = await importCartflowsFlows();
 		}
+
 		if ( cfStatus ) {
+			wooCARStatus = await importCartAbandonmentRecovery();
+		}
+
+		if ( wooCARStatus ) {
 			latepointStatus = await importLatepointTables();
 		}
 
@@ -222,109 +228,294 @@ const ImportSite = () => {
 	};
 
 	/**
-	 * Install Required plugins.
+	 * ========================================
+	 * PLUGIN INSTALLATION QUEUE SYSTEM
+	 * ========================================
+	 *
+	 *
+	 * This system handles sequential plugin installation to avoid:
+	 * - Race conditions in state management
+	 * - Server overload from simultaneous requests
+	 * - Plugin installation conflicts
 	 */
-	const installRequiredPlugins = () => {
-		// Install Bulk.
+
+	// Queue state variables
+	const [ isQueueProcessing, setIsQueueProcessing ] = React.useState( false );
+
+	/**
+	 * Install Required plugins using queue system
+	 */
+	const installRequiredPlugins = async () => {
+		// Check if there are plugins to install.
 		if ( notInstalledList.length <= 0 ) {
 			return;
 		}
 
+		// Update progress.
 		percentage += 2;
 		dispatch( {
 			type: 'set',
-			importStatus: __( 'Installing Required Plugins.', 'astra-sites' ),
+			importStatus: __( 'Preparing plugin installation…', 'astra-sites' ),
 			importPercent: percentage,
 		} );
 
-		notInstalledList.forEach( ( plugin ) => {
-			wp.updates.queue.push( {
-				action: 'install-plugin', // Required action.
-				data: {
-					slug: plugin.slug,
-					init: plugin.init,
-					name: plugin.name,
-					is_ast_request: true,
-					clear_destination: true,
-					ajax_nonce: astraSitesVars?._ajax_nonce,
-					success() {
-						dispatch( {
-							type: 'set',
-							importStatus: sprintf(
-								// translators: Plugin Name.
-								__(
-									'%1$s plugin installed successfully.',
-									'astra-sites'
-								),
-								plugin.name
-							),
-						} );
+		await processPluginQueue();
+	};
 
-						const inactiveList = notActivatedList;
-						inactiveList.push( plugin );
+	/**
+	 * Process the plugin installation queue sequentially
+	 *
+	 * HOW IT WORKS:
+	 * 1. Takes first plugin from queue
+	 * 2. Installs it via Ajax
+	 * 3. Updates state (moves from notInstalledList to notActivatedList)
+	 * 4. Removes plugin from queue
+	 * 5. Repeats until queue is empty OR any plugin fails
+	 */
+	const processPluginQueue = async () => {
+		// Prevent multiple queue processing.
+		if ( isQueueProcessing ) {
+			return;
+		}
 
-						dispatch( {
-							type: 'set',
-							notActivatedList: inactiveList,
-						} );
-						const notInstalledPluginList = notInstalledList;
-						notInstalledPluginList.forEach(
-							( singlePlugin, index ) => {
-								if ( singlePlugin.slug === plugin.slug ) {
-									notInstalledPluginList.splice( index, 1 );
-								}
-							}
-						);
-						dispatch( {
-							type: 'set',
-							notInstalledList: notInstalledPluginList,
-						} );
-					},
-					error( err ) {
-						dispatch( {
-							type: 'set',
-							pluginInstallationAttempts:
-								pluginInstallationAttempts + 1,
-						} );
-						let errText = err;
-						if ( err && undefined !== err.errorMessage ) {
-							errText = err.errorMessage;
-							if ( undefined !== err.errorCode ) {
-								errText = err.errorCode + ': ' + errText;
-							}
-						}
-						// Showing the memory error message instead of json response
-						if ( err && undefined !== err.responseJSON ) {
-							const json = err.responseJSON;
-							if (
-								undefined !== json.data &&
-								undefined !== json.data.message
-							) {
-								errText = json.data.message;
-							}
-						}
-						report(
-							sprintf(
-								// translators: Plugin Name.
-								__(
-									'Could not install the plugin - %s',
-									'astra-sites'
-								),
-								plugin.name
-							),
-							'',
-							errText,
-							'',
-							'',
-							err
-						);
-					},
-				},
+		// Check if queue has plugins
+		if ( notInstalledList.length === 0 ) {
+			return;
+		}
+		percentage += 2;
+		setIsQueueProcessing( true );
+
+		// Process each plugin in the queue
+		while ( notInstalledList.length > 0 ) {
+			const currentPlugin = notInstalledList[ 0 ]; // Get first plugin
+
+			// Update UI with current progress
+			dispatch( {
+				type: 'set',
+				importStatus: sprintf(
+					// translators: Installing Plugin Name.
+					__( 'Installing plugin %1$s', 'astra-sites' ),
+					currentPlugin.name
+				),
+				importPercent: percentage,
 			} );
-		} );
 
-		// Required to set queue.
-		wp.updates.queueChecker();
+			try {
+				// Install the current plugin
+				const installResult = await installSinglePlugin(
+					currentPlugin
+				);
+
+				// Check if installation was successful
+				if ( installResult === false ) {
+					// Installation failed - stop the entire queue processing
+					setIsQueueProcessing( false );
+					return; // Exit immediately - no further plugins should be processed
+				}
+
+				// Remove successfully installed plugin from queue
+				notInstalledList.shift();
+			} catch ( error ) {
+				// Remove failed plugin from queue but STOP processing
+				notInstalledList.shift();
+
+				// Report the error
+				report(
+					sprintf(
+						// translators: Installing Failed Plugin Name.
+						__( 'Failed to install plugin: %s', 'astra-sites' ),
+						currentPlugin.name
+					),
+					'',
+					error,
+					true
+				);
+
+				// CRITICAL FIX: Stop queue processing immediately on any failure
+				setIsQueueProcessing( false );
+				return; // Exit immediately - no further plugins should be processed
+			}
+		}
+
+		// Queue processing completed successfully
+		setIsQueueProcessing( false );
+	};
+
+	/**
+	 * Install a single plugin and update state properly
+	 *
+	 * @param {Object} plugin - Plugin object to install
+	 */
+	const installSinglePlugin = async ( plugin ) => {
+		try {
+			// Prepare AJAX request data using FormData
+			const formData = new FormData();
+			formData.append( 'action', 'astra_sites_install_plugin' );
+			formData.append( 'slug', plugin.slug );
+			formData.append( 'name', plugin.name );
+			formData.append( '_ajax_nonce', astraSitesVars?._ajax_nonce );
+
+			// Include init parameter if provided
+			if ( plugin.init ) {
+				formData.append( 'init', plugin.init );
+			}
+
+			// Make AJAX call using fetch
+			const fetchResponse = await fetch( ajaxurl, {
+				method: 'POST',
+				body: formData,
+			} );
+
+			// Parse response text as JSON
+			const responseText = await fetchResponse.text();
+			let response;
+
+			try {
+				response = JSON.parse( responseText );
+			} catch ( parseError ) {
+				// Report JSON parse error
+				report(
+					sprintf(
+						// translators: Installing Failed Plugin Name.
+						__( 'Failed to install plugin: %s', 'astra-sites' ),
+						plugin.name
+					),
+					__(
+						'Invalid response from server during plugin installation.',
+						'astra-sites'
+					),
+					parseError.message ||
+						__( 'JSON parse error', 'astra-sites' ),
+					'json_parse_error',
+					__(
+						'Please try again. If the problem persists, check server logs for more details.',
+						'astra-sites'
+					),
+					responseText
+				);
+				return false;
+			}
+
+			// Check if installation was unsuccessful
+			if ( ! response.success ) {
+				const errorMessage =
+					response.data?.message ||
+					response.message ||
+					__( 'Plugin installation failed', 'astra-sites' );
+				const errorCode = response.data?.code || 'installation_failed';
+
+				// Report installation failure
+				report(
+					sprintf(
+						// translators: Installing Failed Plugin Name.
+						__( 'Failed to install plugin: %s', 'astra-sites' ),
+						plugin.name
+					),
+					'',
+					errorMessage,
+					errorCode,
+					sprintf(
+						// translators: Resolution html
+						__(
+							'<a href="%1$s">Read article</a> to resolve the issue and continue importing template.',
+							'astra-sites'
+						),
+						'https://wpastra.com/docs/enable-debugging-in-wordpress/#how-to-use-debugging'
+					),
+					JSON.stringify( response )
+				);
+				return false;
+			}
+
+			// Plugin installed successfully - update state
+			updatePluginState( plugin, response );
+			return response;
+		} catch ( error ) {
+			// Determine error type and message
+			let errorMessage =
+				error.message ||
+				__( 'Unknown installation error', 'astra-sites' );
+			let errorCode = 'unknown_error';
+			let solution = sprintf(
+				// translators: Resolution html
+				__(
+					'<a href="%1$s">Read article</a> to resolve the issue and continue importing template.',
+					'astra-sites'
+				),
+				'https://wpastra.com/docs/enable-debugging-in-wordpress/#how-to-use-debugging'
+			);
+
+			// Handle network errors
+			if (
+				error.name === 'TypeError' &&
+				error.message.includes( 'fetch' )
+			) {
+				errorMessage = __(
+					'Network error occurred during plugin installation.',
+					'astra-sites'
+				);
+				errorCode = 'network_error';
+				solution = __(
+					'Please check your internet connection and try again.',
+					'astra-sites'
+				);
+			}
+
+			// Report the error
+			report(
+				sprintf(
+					// translators: Installing Failed Plugin Name.
+					__( 'Failed to install plugin: %s', 'astra-sites' ),
+					plugin.name
+				),
+				'',
+				errorMessage,
+				errorCode,
+				solution,
+				error.stack || error.toString()
+			);
+
+			return false;
+		}
+	};
+
+	/**
+	 * Update plugin state after successful installation
+	 *
+	 * CRITICAL: This function properly handles the state transition:
+	 * - Adds plugin to notActivatedList (for activation)
+	 * - Removes plugin from notInstalledList (no longer needs installation)
+	 *
+	 * @param {Object} plugin   - Original plugin object
+	 * @param {Object} response - API response from installation
+	 */
+	const updatePluginState = ( plugin, response ) => {
+		// Get current state
+		const currentState = storedState[ 0 ];
+		const currentNotActivatedList = currentState.notActivatedList || [];
+		const currentNotInstalledList = currentState.notInstalledList || [];
+
+		// Prepare plugin object for activation list
+		const pluginForActivation = {
+			...plugin,
+			init: response.data?.plugin?.file || plugin.init, // Use file path from response
+		};
+
+		// Create updated lists
+		const updatedNotActivatedList = [
+			...currentNotActivatedList,
+			pluginForActivation,
+		];
+		const updatedNotInstalledList = currentNotInstalledList.filter(
+			( installedPlugin ) => installedPlugin.slug !== plugin.slug
+		);
+
+		// Update state atomically (both lists in single dispatch)
+		dispatch( {
+			type: 'set',
+			notActivatedList: updatedNotActivatedList,
+			notInstalledList: updatedNotInstalledList,
+		} );
 	};
 
 	/**
@@ -367,6 +558,37 @@ const ImportSite = () => {
 					const response = JSON.parse( text );
 					cloneResponse = response;
 					if ( response.success ) {
+						// Check if this is a deprioritization response
+						let deprioritizeStatus = false;
+						if (
+							response.data &&
+							response.data.status === 'deprioritize'
+						) {
+							deprioritizeStatus = true;
+
+							// Add to deferred queue
+							setDeferredPlugins( ( prev ) => {
+								const exists = prev.some(
+									( p ) => p.slug === plugin.slug
+								);
+								if ( ! exists ) {
+									return [
+										...prev,
+										{
+											...plugin,
+											deferReason: response.data.reason,
+											retryAfter:
+												response.data.retry_after,
+											dependency:
+												response.data.dependency,
+										},
+									];
+								}
+								return prev;
+							} );
+						}
+
+						// Remove from active processing list
 						const notActivatedPluginList = notActivatedList;
 						notActivatedPluginList.forEach(
 							( singlePlugin, index ) => {
@@ -379,16 +601,32 @@ const ImportSite = () => {
 							type: 'set',
 							notActivatedList: notActivatedPluginList,
 						} );
-						percentage += 2;
-						dispatch( {
-							type: 'set',
-							importStatus: sprintf(
-								// translators: Plugin Name.
-								__( '%1$s activated.', 'astra-sites' ),
-								plugin.name
-							),
-							importPercent: percentage,
-						} );
+
+						if ( deprioritizeStatus ) {
+							dispatch( {
+								type: 'set',
+								importStatus: sprintf(
+									// translators: Plugin Name.
+									__(
+										'%1$s deferred (requires WooCommerce).',
+										'astra-sites'
+									),
+									plugin.name
+								),
+								importPercent: percentage,
+							} );
+						} else {
+							percentage += 2;
+							dispatch( {
+								type: 'set',
+								importStatus: sprintf(
+									// translators: Plugin Name.
+									__( '%1$s activated.', 'astra-sites' ),
+									plugin.name
+								),
+								importPercent: percentage,
+							} );
+						}
 					}
 				} catch ( error ) {
 					report(
@@ -944,7 +1182,8 @@ const ImportSite = () => {
 	 */
 	const importCartflowsFlows = async () => {
 		const cartflowsUrl =
-			encodeURI( templateResponse[ 'astra-site-cartflows-path' ] ) || '';
+			encodeURI( templateResponse?.[ 'astra-site-cartflows-path' ] ) ||
+			'';
 
 		if ( '' === cartflowsUrl || 'null' === cartflowsUrl ) {
 			return true;
@@ -1002,9 +1241,87 @@ const ImportSite = () => {
 		return status;
 	};
 
+	/**
+	 * 2. Import Cart Abandonment Recovery data.
+	 */
+	const importCartAbandonmentRecovery = async () => {
+		const wooCARUrl = encodeURI(
+			templateResponse?.[ 'astra-site-cart-abandonment-recovery-path' ] ||
+				''
+		);
+
+		if ( '' === wooCARUrl || 'null' === wooCARUrl ) {
+			return true;
+		}
+
+		dispatch( {
+			type: 'set',
+			importStatus: __(
+				'Importing Cart Abandonment Recovery data.',
+				'astra-sites'
+			),
+		} );
+
+		const bodyData = new FormData();
+		bodyData.append(
+			'action',
+			'astra-sites-import-cart-abandonment-recovery'
+		);
+		bodyData.append( '_ajax_nonce', astraSitesVars?._ajax_nonce );
+
+		const status = await fetch( ajaxurl, {
+			method: 'post',
+			body: bodyData,
+		} )
+			.then( ( response ) => response.text() )
+			.then( ( text ) => {
+				try {
+					const data = JSON.parse( text );
+					if ( data.success ) {
+						percentage += 2;
+						dispatch( {
+							type: 'set',
+							importPercent: percentage,
+						} );
+						return true;
+					}
+					throw data.data;
+				} catch ( error ) {
+					report(
+						__(
+							'Importing Cart Abandonment Recovery data failed due to parse JSON error.',
+							'astra-sites'
+						),
+						'',
+						error,
+						'',
+						'',
+						text
+					);
+					return false;
+				}
+			} )
+			.catch( ( error ) => {
+				report(
+					__(
+						'Importing Cart Abandonment Recovery data Failed.',
+						'astra-sites'
+					),
+					'',
+					error
+				);
+				return false;
+			} );
+		return status;
+	};
+
+	/**
+	 * 3. Import LatePoint Tables.
+	 */
 	const importLatepointTables = async () => {
 		const latepointUrl =
-			encodeURI( templateResponse[ 'astra-site-latepoint-path' ] ) || '';
+			encodeURI( templateResponse?.[ 'astra-site-latepoint-path' ] ) ||
+			'';
 
 		if ( '' === latepointUrl || 'null' === latepointUrl ) {
 			return true;
@@ -1067,7 +1384,7 @@ const ImportSite = () => {
 	 */
 	const importForms = async () => {
 		const wpformsUrl =
-			encodeURI( templateResponse[ 'astra-site-wpforms-path' ] ) || '';
+			encodeURI( templateResponse?.[ 'astra-site-wpforms-path' ] ) || '';
 
 		if ( '' === wpformsUrl || 'null' === wpformsUrl ) {
 			return true;
@@ -1205,7 +1522,7 @@ const ImportSite = () => {
 		}
 
 		const wxrUrl =
-			encodeURI( templateResponse[ 'astra-site-wxr-path' ] ) || '';
+			encodeURI( templateResponse?.[ 'astra-site-wxr-path' ] ) || '';
 		if ( 'null' === wxrUrl || '' === wxrUrl ) {
 			const errorTxt = __(
 				'The XML URL for the site content is empty.',
@@ -1283,7 +1600,7 @@ const ImportSite = () => {
 	 */
 	const importSpectraSettings = async () => {
 		const spectraSettings =
-			templateResponse[ 'astra-site-spectra-options' ] || '';
+			templateResponse?.[ 'astra-site-spectra-options' ] || '';
 
 		if ( '' === spectraSettings || 'null' === spectraSettings ) {
 			return true;
@@ -1547,7 +1864,8 @@ const ImportSite = () => {
 			importStatus: __( 'Importing Widgets.', 'astra-sites' ),
 		} );
 
-		const widgetsData = templateResponse[ 'astra-site-widgets-data' ] || '';
+		const widgetsData =
+			templateResponse?.[ 'astra-site-widgets-data' ] || '';
 
 		const widgets = new FormData();
 		widgets.append( 'action', 'astra-sites-import_widgets' );
@@ -1746,7 +2064,23 @@ const ImportSite = () => {
 				themeStatus: true,
 			} );
 		}
-		installRequiredPlugins();
+
+		// Handle async plugin installation with queue system
+		installRequiredPlugins().catch( ( error ) => {
+			console.error(
+				'[useEffect] Error in installRequiredPlugins queue:',
+				error
+			);
+			report(
+				__(
+					'Error occurred during plugin installation process.',
+					'astra-sites'
+				),
+				'',
+				error,
+				true
+			);
+		} );
 	}, [ templateResponse ] );
 
 	/**
@@ -1769,17 +2103,55 @@ const ImportSite = () => {
 		}
 	}, [ xmlImportDone ] );
 
+	// State for deferred plugins (WooCommerce dependency handling)
+	const [ deferredPlugins, setDeferredPlugins ] = React.useState( [] );
+	const [ retryingDeferred, setRetryingDeferred ] = React.useState( false );
+
+	/**
+	 * Retry deferred plugins after WooCommerce is activated
+	 */
+	const retryDeferredPlugins = () => {
+		if ( deferredPlugins.length === 0 || retryingDeferred ) {
+			return;
+		}
+
+		setRetryingDeferred( true );
+
+		// Move deferred plugins back to activation queue
+		const pluginsToRetry = [ ...deferredPlugins ];
+		setDeferredPlugins( [] );
+
+		// Add them back to notActivatedList for retry
+		dispatch( {
+			type: 'set',
+			notActivatedList: [ ...notActivatedList, ...pluginsToRetry ],
+		} );
+
+		setRetryingDeferred( false );
+	};
+
 	// This checks if all the required plugins are installed and activated.
 	useEffect( () => {
 		if ( notActivatedList.length <= 0 && notInstalledList.length <= 0 ) {
+			// Check if we have deferred plugins to retry
+			if ( deferredPlugins.length > 0 && ! retryingDeferred ) {
+				retryDeferredPlugins();
+				return;
+			}
+
+			// All plugins are truly done
 			dispatch( {
 				type: 'set',
 				requiredPluginsDone: true,
 			} );
 		}
-	}, [ notActivatedList.length, notInstalledList.length ] );
+	}, [
+		notActivatedList.length,
+		notInstalledList.length,
+		deferredPlugins.length,
+	] );
 
-	// Whenever a plugin is installed, this code sends an activation request.
+	// Activate plugins one by one using the prioritized list
 	useEffect( () => {
 		// Installed all required plugins.
 		if ( notActivatedList.length > 0 ) {

@@ -217,29 +217,50 @@ export const checkRequiredPlugins = async ( storedState ) => {
 		} );
 };
 
-function getFeaturePluginList( features, selectedEcommercePlugin ) {
+export function getFeaturePluginList(
+	features,
+	selectedEcommercePlugin,
+	templateRequiredPluginsSlugList = []
+) {
 	const requiredPlugins = [];
 
 	features?.forEach( ( feature ) => {
 		switch ( feature ) {
 			case 'ecommerce':
 				if ( selectedEcommercePlugin === 'surecart' ) {
-					requiredPlugins.push( {
-						name: 'SureCart',
-						slug: 'surecart',
-						init: 'surecart/surecart.php',
-					} );
+					if (
+						! templateRequiredPluginsSlugList.includes( 'surecart' )
+					) {
+						requiredPlugins.push( {
+							name: 'SureCart',
+							slug: 'surecart',
+							init: 'surecart/surecart.php',
+						} );
+					}
 				} else if ( selectedEcommercePlugin === 'woocommerce' ) {
-					requiredPlugins.push( {
-						name: 'WooCommerce',
-						slug: 'woocommerce',
-						init: 'woocommerce/woocommerce.php',
-					} );
-					requiredPlugins.push( {
-						name: 'WooPayments',
-						slug: 'woocommerce-payments',
-						init: 'woocommerce-payments/woocommerce-payments.php',
-					} );
+					if (
+						! templateRequiredPluginsSlugList.includes(
+							'woocommerce'
+						)
+					) {
+						requiredPlugins.push( {
+							name: 'WooCommerce',
+							slug: 'woocommerce',
+							init: 'woocommerce/woocommerce.php',
+						} );
+					}
+
+					if (
+						! templateRequiredPluginsSlugList.includes(
+							'woocommerce-payments'
+						)
+					) {
+						requiredPlugins.push( {
+							name: 'WooPayments',
+							slug: 'woocommerce-payments',
+							init: 'woocommerce-payments/woocommerce-payments.php',
+						} );
+					}
 				}
 				break;
 			case 'donations':
@@ -251,7 +272,7 @@ function getFeaturePluginList( features, selectedEcommercePlugin ) {
 				break;
 			case 'automation-integrations':
 				requiredPlugins.push( {
-					name: 'SureTriggers',
+					name: 'OttoKit',
 					slug: 'suretriggers',
 					init: 'suretriggers/suretriggers.php',
 				} );
@@ -261,6 +282,13 @@ function getFeaturePluginList( features, selectedEcommercePlugin ) {
 					name: 'Suremail',
 					slug: 'suremails',
 					init: 'suremails/suremails.php',
+				} );
+				break;
+			case 'seo':
+				requiredPlugins.push( {
+					name: 'SureRank',
+					slug: 'surerank',
+					init: 'surerank/surerank.php',
 				} );
 				break;
 			case 'sales-funnels':
@@ -283,15 +311,20 @@ function getFeaturePluginList( features, selectedEcommercePlugin ) {
 				} );
 				break;
 			case 'appointment-bookings':
-				requiredPlugins.push( {
-					name: 'Latepoint',
-					slug: 'latepoint',
-					init: 'latepoint/latepoint.php',
-				} );
+				if (
+					! templateRequiredPluginsSlugList.includes( 'latepoint' )
+				) {
+					requiredPlugins.push( {
+						name: 'Latepoint',
+						slug: 'latepoint',
+						init: 'latepoint/latepoint.php',
+					} );
+				}
+
 				break;
 			case 'live-chat':
 				requiredPlugins.push( {
-					name: 'WP Live Chat Support',
+					name: '3CX',
 					slug: 'wp-live-chat-support',
 					init: 'wp-live-chat-support/wp-live-chat-support.php',
 				} );
