@@ -20,7 +20,7 @@
 
 // ** Database settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
-define( 'DB_NAME', 'seyyone_wp_dev' );
+define( 'DB_NAME', 'seyyone_wp' );
 
 /** Database username */
 define( 'DB_USER', 'dbinisystems' );
@@ -108,7 +108,6 @@ if ($_SERVER['HTTP_HOST'] === 'localhost:8000') {
 if ( ! defined( 'ABSPATH' ) ) {
 	define( 'ABSPATH', __DIR__ . '/' );
 }
-
 
 /** Sets up WordPress vars and included files. */
 require_once ABSPATH . 'wp-settings.php';
