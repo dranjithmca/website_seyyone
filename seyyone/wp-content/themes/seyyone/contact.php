@@ -115,7 +115,7 @@ get_header();
           <span>73, Anna Nagar, Ramanathapuram,</span>
           <span>Coimbatore-641045. TN, India.</span>
           <span>Mon-Sat 9am to 5pm.</span>
-          <br><span>Phone : 91 (422) 2310240</span>
+          <br><span>Phone : 91 (422) 2310240, 91 (422) 4355684 </span>
           <br><span>Email : info@seyyone.com</span>
         </div>
       </div>
